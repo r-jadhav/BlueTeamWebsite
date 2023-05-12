@@ -1,0 +1,42 @@
+.stickyPhone {
+    position: fixed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    bottom: 0;
+    right: 0;
+}
+
+/* .stickyPhone {
+	background: rgba(8,83,156, 0.75);
+	width: 80px;
+    height: 80px;
+	position: fixed;
+	border-radius: 50%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-right: 20px;
+	top: 90%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+} */
+
+.single_portfolio img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100%;
+    /* height: 400px; */
+    object-fit: fill;
+    position: relative;
+}
+.filters.portfolio-filter {
+    display: none;
+}
+.ReactFlagsSelect-module_selectBtn__19wW7 {
+    color: #fff !important;
+}
