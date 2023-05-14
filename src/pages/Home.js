@@ -1,34 +1,34 @@
 import React from 'react'
 import Testimonials from '../components/Testimonials'
-// import Gallery from '../components/gallery/Gallery'
+import Banner from '../components/Banner'
 
 function Home() {
   return (
     <>
     <div id="pageWrapper">
 		<main>
-			<section className="bannerSec bannerSlide">
+			<Banner/>
+
+			
+			{/* <section className="bannerSec bannerSlide">
 				<div>
 					<div className="bsSlide bgCover overlay text-center position-relative d-flex" 
                     style={{backgroundImage:`url(images/img01.jpg)`}}
                     >
-						{/* <video autoplay loop id="myVideo">
-							<source src="videos/banner.mp4" type="video/mp4"/>
-						</video> */}
 
-						<div className="alignCenter w-100 d-flex align-items-center">
-							<div className="container pt-6 pt-sm-10 pb-22 pt-md-12 pb-md-25 pt-lg-15 pb-lg-35">
-								<div className="caption text-white position-relative">
-									<h1 className="w-100 mb-6 mb-md-9 text-white">
-										<strong className="fwEbold d-block mb-md-2 mb-xl-0">You want to </strong>
-										<strong className="fwEbold d-block mb-3 mt-md-n4 mb-md-2">wash your car</strong>
-										<strong className="fwEbold d-block font-weight-bold headingVI">We have washed thousands of cars of all kinds and will provide you with the service perfectly</strong>
-									</h1>
-									<a href="#" className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-md-4 px-md-6">Purchase Now</a>
-								</div>
+					<div className="alignCenter w-100 d-flex align-items-center">
+						<div className="container pt-6 pt-sm-10 pb-22 pt-md-12 pb-md-25 pt-lg-15 pb-lg-35">
+							<div className="caption text-white position-relative">
+								<h1 className="w-100 mb-6 mb-md-9 text-white">
+									<strong className="fwEbold d-block mb-md-2 mb-xl-0">You want to </strong>
+									<strong className="fwEbold d-block mb-3 mt-md-n4 mb-md-2">wash your car</strong>
+									<strong className="fwEbold d-block font-weight-bold headingVI">We have washed thousands of cars of all kinds and will provide you with the service perfectly</strong>
+								</h1>
+								<a href="#" className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-md-4 px-md-6">Purchase Now</a>
 							</div>
 						</div>
 					</div>
+				</div>
 				</div>
 				<div>
 					<div className="bsSlide bgCover overlay position-relative d-flex" style={{backgroundImage:`url(images/img02.jpg)`}}>
@@ -63,7 +63,7 @@ function Home() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 			<aside className="hlpSec mt-n16 pb-12 pb-md-16">
 				<div className="container">
 					<div className="row helpBlockList no-gutters">

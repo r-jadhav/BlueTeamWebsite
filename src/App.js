@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Faq from './pages/Faq';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="aboutus" element={<AboutUs/>} />
         <Route path="services" element={<Services/>}/>
         <Route path="faq" element={<Faq/>}/>
+        <Route path="privacy-policy" element={<PrivacyPolicy/>}/>
       </Routes>
     <Footer/>
   </Router>

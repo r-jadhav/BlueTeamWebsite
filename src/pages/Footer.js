@@ -138,7 +138,7 @@ function Footer() {
 				<ul className="list-unstyled footerLink d-flex mb-0 justify-content-center justify-content-md-end flex-wrap">
 					<li><a href="javascript:void(0);">Site Map</a></li>
 					<li><a href="javascript:void(0);">Terms and Conditions</a></li>
-					<li><a href="javascript:void(0);">Privacy Policy</a></li>
+					<li><a href="/#/privacy-policy">Privacy Policy</a></li>
 				</ul>
 			</div>
 		</div>
