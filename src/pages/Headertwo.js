@@ -3,11 +3,10 @@ import { NavLink } from 'react-router-dom'
 import ReactFlagsSelect from "react-flags-select";
 import i18next from "i18next";
 
-const Header = () => {
+const Headertwo = () => {
 
-	const [select, setSelect] = useState("EN");
+    const [select, setSelect] = useState("EN");
 	const onSelect = (code) => {
-	  console.log(code);
 	  setSelect(code);
 	  if (code == "AR") {
 		i18next.changeLanguage("ar");
@@ -15,104 +14,105 @@ const Header = () => {
 		i18next.changeLanguage("en");
 	  }
 	};
-	console.log("SELECT", select);
 
   return (
-    <>
-    <header id="header" className="bg-white">
-			<div className="midBar pt-4">
-				<div className="container">
-					<div className="row">
-						<div className="col-6 col-md-4 d-flex justify-content-center">
-							<div className="logo position-relative">
-								<a href="#">
-									<img src="images/logo.png" alt="Auto &amp; Detailing template" className="img-fluid"/>
-								</a>
-							</div>
-						</div>
-						<div className="col-6 col-md-8 d-flex align-items-center justify-content-end position-static">
-							<ul className=" list-unstyled contactList d-flex mb-0 position-relative mr-17 mr-sm-19 mr-md-23 mr-lg-4 mr-xl-0">
-								<li className="d-lg-flex flex-wrap d-none">
-									<span className="time rounded-sm d-block mr-lg-2 pt-lg-2">
-										<span className="far fa-clock p-lg-0 icn"></span>
-									</span>
-									<ul className="list-unstyled mb-0 timeList">
-										<li><time className=" d-none d-lg-block" dateTime="2019-07-15">Hours</time></li>
-										<li><time className=" d-none d-lg-block" dateTime="2019-07-15">6 am - 3 am</time></li>
-									</ul>
-									
-								</li>
-								<li className="d-flex flex-wrap">
-									<span className="ico d-block mr-lg-2 pt-lg-2">
-										<a href="tel:025555292" className="fas fa-phone rounded-sm p-lg-0 icn"></a>
-									</span>
-									<div className="wrap d-none d-lg-block">
-										<span className="text d-block">Call now</span>
-										<a className="tell fwSemibold" href="tel:18001234567">025555292</a>
-									</div>
-								</li>
-							</ul>
-							<div className="btnHolder ml-xl-8 d-none d-md-block">
-								<a href="javascript:void(0);" className="btn btn-warning py-xl-4 text-uppercase fwEbold" data-toggle="modal" data-target="#exampleModal">book appointment</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className="menuHolder">
-				<div className="container position-relative">
-					<nav className="navbar navHolder d-flex navbar-expand-lg navbar-dark p-0 mt-lg-0 mr-lg-0 position-static">
-						<div className="menuLogo">
-							<a href="#">
-								{/* <img src="images/logo2.png" alt="Auto &amp; Detailing template" className="img-fluid logoWhite">
-								<img src="images/logo.png" alt="Auto &amp; Detailing template" className="img-fluid logoBlack"> */}
-							</a>
-						</div>
-						<a href="javascript:void(0);" className="search position-relative order-lg-2 fas fa-search" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a>
-						<button className="navbar-toggler toggleBar position-relative" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-							<span className="navbar-toggler-icon"></span>
-						</button>
-						<div className="collapse navbar-collapse navCollapse text-uppercase fwBlack" id="navbarNav">
-							<ul className="navbar-nav">
-								<li className="nav-item active dropdown">
-								<NavLink to="" className="nav-link" >Home</NavLink>
-								</li>
-								<li className="nav-item">
-									<NavLink to="/aboutus" className="nav-link" >About Us</NavLink>
-								</li>
-								<li className="nav-item"><NavLink to="/services" className="nav-link">Our services</NavLink></li>
-								<li className="nav-item"><NavLink to="/" className="nav-link">Membership cards</NavLink></li>
-								<li className="nav-item">
-									<a className="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:void(0);">Common questions</a>
-								</li>
-								<li className="nav-item dropdown">
-									<NavLink to="/faq" className="nav-link" >Faq</NavLink>
-								</li>
-								<li className="nav-item dropdown">
-									<a className="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:void(0);">Contact us</a>
-								</li>
-							</ul>
-						</div>
-						<ReactFlagsSelect
-							onSelect={onSelect}
-							countries={["GB","AR" ]}
-							selected={select}
-							customLabels={{ GB: "EN", AR: "AR" }}
-						/>
-						<div id="collapseExample" className="collapse searchFormCollapse position-absolute">
-							<form className="sForm rounded-sm overflow-hidden input-group position-relative">
-								<input type="text" className="form-control form-control-sm pr-2" placeholder="Find Freelancers"/>
-								<div className="input-group-prepend mr-0">
-									<button type="submit" className="btn buttonReset text-white fas fa-search"></button>
-								</div>
-							</form>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</header>
+    <>	 
+        <header id="header" class="bg-white">
+            <div class="midBar pt-2 pt-lg-6 pb-lg-6 pt-xl-8 pb-xl-7">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-4">
+                            <div class="logo position-relative">
+                                <a href="homepage.html">
+                                    <img src="images/logo.png" alt="Auto &amp; Detailing template" class="img-fluid"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-8 d-flex align-items-center justify-content-end position-static">
+                            <ul class=" list-unstyled contactList d-flex mb-0 position-relative mr-17 mr-sm-19 mr-md-23 mr-lg-4 mr-xl-0">
+                                <li class="d-lg-flex flex-wrap d-none">
+                                    <span class="time rounded-sm d-block mr-lg-2 pt-lg-2">
+                                        <span class="far fa-clock p-lg-0 icn"></span>
+                                    </span>
+                                    <ul class="list-unstyled mb-0 timeList">
+                                    <li><time className=" d-none d-lg-block" dateTime="2019-07-15">Mon-Sat: 6:00 am - 3:00 am</time></li>
+										<li><time className=" d-none d-lg-block" dateTime="2019-07-15">Sun: 6:00 am - 3:00 am</time></li>
+                                    </ul>
+                                    
+                                </li>
+                                <li class="d-flex flex-wrap">
+                                    <span class="ico d-block mr-lg-2 pt-lg-2">
+                                        <a href="tel:1-800-123-4567" class="fas fa-phone rounded-sm p-lg-0 icn"></a>
+                                    </span>
+                                    <div class="wrap d-none d-lg-block">
+                                        <span class="text d-block">Have any Question?</span>
+										<a className="tell fwSemibold" href="tel:+971 800 2827">+971 800 2827</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btnHolder ml-xl-8 d-none d-md-block">
+                            <a href="#" className="btn btn-warning py-xl-4 text-uppercase fwEbold" data-toggle="modal" data-target="#exampleModal">book appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="sticky-wrap-menuHolder">
+            <div class="menuHolder">
+                <div class="container position-relative">
+                    <nav class="navbar navHolder d-flex navbar-expand-lg navbar-dark p-0 mt-lg-0 mr-lg-0 position-static">
+                        <div class="menuLogo">
+                            <a href="homepage.html">
+                                <img src="images/logo.png" alt="Auto &amp; Detailing template" class="img-fluid logoWhite"/>
+                                <img src="images/logo.png" alt="Auto &amp; Detailing template" class="img-fluid logoBlack"/>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0);" class="search position-relative order-lg-2 fas fa-search" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a>
+                        <button class="navbar-toggler toggleBar position-relative" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse navCollapse text-uppercase fwBlack" id="navbarNav">
+                           <ul className="navbar-nav">
+									<li className="nav-item active dropdown">
+									<NavLink to="/" className="nav-link" >Home</NavLink>
+									</li>
+									<li className="nav-item">
+										<NavLink to="/aboutus" className="nav-link" >About Us</NavLink>
+									</li>
+									<li className="nav-item"><NavLink to="/services" className="nav-link">Our services</NavLink></li>
+									<li className="nav-item"><NavLink to="/" className="nav-link">Membership cards</NavLink></li>
+									<li className="nav-item dropdown">
+										<NavLink to="/faq" className="nav-link" >Faq</NavLink>
+									</li>
+									<li className="nav-item dropdown">
+										<a className="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Contact us</a>
+									</li>
+								</ul>
+                        </div>
 
-		<div className="modal pr-0 fade" id="exampleModal" >
+                        <ReactFlagsSelect
+                        onSelect={onSelect}
+                        countries={["GB","AR" ]}
+                        selected={select}
+                        customLabels={{ GB: "EN", AR: "AR" }}
+                    />
+
+                        {/* <div id="collapseExample" class="collapse searchFormCollapse position-absolute">
+                            <form class="sForm rounded-sm overflow-hidden input-group position-relative">
+                                <input type="text" class="form-control form-control-sm pr-2" placeholder="Find Freelancers"/>
+                                <div class="input-group-prepend mr-0">
+                                    <button type="submit" class="btn buttonReset text-white fas fa-search"></button>
+                                </div>
+                            </form>
+                        </div> */}
+                    </nav>
+                </div>
+            </div>
+            </div>
+           
+        </header>
+
+        <div className="modal pr-0 fade" id="exampleModal" >
 			<div className="modal-dialog appointPopup" role="document">
 				<div className="modal-content">
 					<div className="modal-header py-3 py-sm-4 py-md-5 px-7 px-sm-12 px-md-14 text-center position-relative">
@@ -187,7 +187,7 @@ const Header = () => {
 													<strong className="font-weight-normal"> - 13.00</strong>
 												</h4>
 												<span className="timeLimit d-block">5 Hours</span>
-												<a href="javascript:void(0);" className="info text-capitalize">more info...</a>
+												<a href="#" className="info text-capitalize">more info...</a>
 											</label>
 										</div>
 									</li>
@@ -200,7 +200,7 @@ const Header = () => {
 													<strong className="font-weight-normal"> - 25.99</strong>
 												</h4>
 												<span className="timeLimit d-block">5 Hours</span>
-												<a href="javascript:void(0);" className="info text-capitalize">more info...</a>
+												<a href="#" className="info text-capitalize">more info...</a>
 											</label>
 										</div>
 									</li>
@@ -213,7 +213,7 @@ const Header = () => {
 													<strong className="font-weight-normal"> - 39.99</strong>
 												</h4>
 												<span className="timeLimit d-block">5 Hours</span>
-												<a href="javascript:void(0);" className="info text-capitalize">more info...</a>
+												<a href="#" className="info text-capitalize">more info...</a>
 											</label>
 										</div>
 									</li>
@@ -226,7 +226,7 @@ const Header = () => {
 													<strong className="font-weight-normal"> - 24.00</strong>
 												</h4>
 												<span className="timeLimit d-block">5 Hours</span>
-												<a href="javascript:void(0);" className="info text-capitalize">more info...</a>
+												<a href="#" className="info text-capitalize">more info...</a>
 											</label>
 										</div>
 									</li>
@@ -239,7 +239,7 @@ const Header = () => {
 													<strong className="font-weight-normal"> - 18.59</strong>
 												</h4>
 												<span className="timeLimit d-block">5 Hours</span>
-												<a href="javascript:void(0);" className="info text-capitalize">more info...</a>
+												<a href="#" className="info text-capitalize">more info...</a>
 											</label>
 										</div>
 									</li>
@@ -338,9 +338,8 @@ const Header = () => {
 				</div>
 			</div>
 		</div>
-
     </>
   )
 }
 
-export default Header
+export default Headertwo

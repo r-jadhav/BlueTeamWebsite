@@ -7,7 +7,7 @@ function Footer() {
 		width: "400px",
 		height: "500px",
 		floating: 'True',
-		floatingIcon:<BsWhatsapp color='#fff' size={25}/>,
+		// floatingIcon:<BsWhatsapp color='#fff' size={25}/>,
 	  };
 
 	const steps = [
@@ -73,8 +73,8 @@ function Footer() {
 						<div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
 							<div className="txtHolder w-100">
 								<h6 className="h6 text-capitalize fwEbold text-white mb-4 mb-sm-5 mb-lg-6">about us</h6>
-								<p>Plutim is the first mobile car wash and maintenance company in the country</p>
-								<a href="About%20us.html" className="btn btn-outline-light text-uppercase fwEbold py-lg-3">about more</a>
+								<p>bluteam is the first mobile car wash and maintenance company in the country</p>
+								<a href="#/aboutus" className="btn btn-outline-light text-uppercase fwEbold py-lg-3">about more</a>
 							</div>
 						</div>
 						<div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
@@ -118,10 +118,10 @@ function Footer() {
 									</div>
 								</form>
 								<ul className="socialFNetwork d-flex mb-0 pt-4 list-unstyled bdrTop justify-content-center justify-content-sm-start">
-									<li><a href="javascript:void(0);" className="fab fa-facebook-square"></a></li>
-									<li><a href="javascript:void(0);" className="fab fa-twitter-square"></a></li>
-									<li><a href="javascript:void(0);" className="fab fa-linkedin"></a></li>
-									<li><a href="javascript:void(0);" className="fas fa-rss-square"></a></li>
+									<li><a href="https://www.facebook.com/Blueteamcarservices/" target='_blank' className="fab fa-facebook-square"></a></li>
+									{/* <li><a href="javascript:void(0);" className="fab fa-twitter-square"></a></li>
+									<li><a href="javascript:void(0);" className="fab fa-linkedin"></a></li> */}
+									<li><a href="https://www.instagram.com/blueteam.ae/?hl=en" target='_blank' className="fab fa-instagram"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -136,16 +136,23 @@ function Footer() {
 			</div>
 			<div className="col-12 col-md-6">
 				<ul className="list-unstyled footerLink d-flex mb-0 justify-content-center justify-content-md-end flex-wrap">
-					<li><a href="javascript:void(0);">Site Map</a></li>
-					<li><a href="javascript:void(0);">Terms and Conditions</a></li>
+					<li><a href="/#/terms-condition">Terms and Conditions</a></li>
 					<li><a href="/#/privacy-policy">Privacy Policy</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	
+	<span id="back-top" class="text-center rounded-circle fa fa-angle-up"></span>
 	<div className='stickyPhone'>
-	<ChatBot steps={steps} {...config}/>
+		<a href="tel:+971 800 2827">
+		<img src="images/whatsapp.svg" alt="images description" width="55" className="img-fluid"/>
+
+			{/* <img src="images/whatsapp.svg" /> */}
+			{/* <BsWhatsapp color='#fff' size={70}/> */}
+		</a>
+	</div>
+	<div className='stickyChat'>
+		<ChatBot steps={steps} {...config}/>
 	</div>
 
 	

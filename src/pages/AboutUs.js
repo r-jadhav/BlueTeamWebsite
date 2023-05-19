@@ -7,13 +7,13 @@ const AboutUs = () => {
 	const { t } = useTranslation();
   return (
     <>
-        <section class="abtWSec pt-10 pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6">
+        <section class="abtWSec pt-10 pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                    <header class="header text-center ltrSpce mb-8 mb-sm-10 mb-xl-15">
-                        <h2 class="headingI fwEbold mb-2 mb-md-3 mb-lg-4">{t("AboutHeading")}</h2>
-                    </header>
+                    <div class="header text-center ltrSpce mb-8 mb-sm-10 mb-xl-15">
+                        <h2 class="headingI fwEbold mb-2 mb-md-3 mb-lg-4 abtHead">{t("AboutHeading")}</h2>
+                    </div>
                 </div>
             </div>
             <div class="row mb-2 mb-sm-4 mb-lg-10" style={{alignItems:'center'}}>
@@ -49,16 +49,16 @@ const AboutUs = () => {
 							<span class="icoHolder flex-shrink-0 d-block d-lg-flex align-items-center justify-content-center mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
 								<img src="images/ico08.svg" alt="image description" class="img-fluid" width="61" height="61"/>
 							</span>
-							<div class="wrap font-weight-light">
+							<div class="wrap font-weight-light text-white">
 								<div className='d-block font-weight-normal mb-1'><strong style={{fontSize:43}}>90%</strong></div>
-								<p>Clients The sick</p>
+								<p>Satisfactory</p>
 							</div>
 						</li>
 						<li class="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
 							<span class="icoHolder flex-shrink-0 d-block d-lg-flex align-items-cente justify-content-centerr mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
 								<img src="images/ico09.svg" alt="image description" class="img-fluid" width="61" height="61"/>
 							</span>
-							<div class="wrap font-weight-light">
+							<div class="wrap font-weight-light text-white">
                                 <div className='d-block font-weight-normal mb-1'><strong style={{fontSize:43}}>16+</strong></div>
 								<p>Team the work</p>
 							</div>
@@ -67,7 +67,7 @@ const AboutUs = () => {
 							<span class="icoHolder flex-shrink-0 d-block d-lg-flex align-items-center justify-content-center mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
 								<img src="images/ico10.svg" alt="image description" class="img-fluid" width="61" height="61"/>
 							</span>
-							<div class="wrap font-weight-light">
+							<div class="wrap font-weight-light text-white">
                             <div className='d-block font-weight-normal mb-1'><strong style={{fontSize:43}}>11 </strong></div>
 								<p>Year Experience</p>
 							</div>
@@ -79,10 +79,10 @@ const AboutUs = () => {
 				<div class="container">
                 <div class="row">
                 <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                    <header class="header text-center ltrSpce mb-8 mb-sm-10 mb-xl-15">
+                    <div class="header text-center ltrSpce mb-8 mb-sm-10 mb-xl-15">
                         <h2 class="headingI fwEbold mb-2 mb-md-3 mb-lg-4">We offer Distinguished service </h2>
                         <p>We have partnered with Turtlewax to provide you with the most advanced fair price estimates</p>
-                    </header>
+                    </div>
                 </div>
             </div>
 					<div class="row justify-content-center">

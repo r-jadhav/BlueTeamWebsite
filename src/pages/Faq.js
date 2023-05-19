@@ -9,9 +9,9 @@ const Faq = () => {
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-xl-10 offset-xl-1">
-							<header class="header ltrSpce text-center mb-8 mb-sm-10 mb-md-12 mb-xl-14 px-lg-20 px-xl-4">
+							<div class="header ltrSpce text-center mb-8 mb-sm-10 mb-md-12 mb-xl-14 px-lg-20 px-xl-4">
 								<h1 class="h2 fwEbold mb-2">{t("FaqMainHead")}</h1>
-							</header>
+							</div>
 						</div>
 					</div>
 					<div class="row">
@@ -24,7 +24,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans1")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans1")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -34,7 +34,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans2")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans2")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -44,7 +44,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans3")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans3")}</div>
 									</div>
 								</div>
 								 <div class="card">
@@ -54,7 +54,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans4")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans4")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -64,7 +64,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans5")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans5")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -74,7 +74,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans6")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans6")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -84,7 +84,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans7")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans7")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -94,7 +94,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans8")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans8")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -104,7 +104,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans9")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans9")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -114,7 +114,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans10")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans10")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -124,7 +124,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans11")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans11")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -134,7 +134,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans12")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans12")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -144,7 +144,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans13")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans13")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -154,7 +154,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans14")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans14")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -164,7 +164,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans15")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans15")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -174,7 +174,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans16")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans16")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -184,7 +184,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans17")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans17")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -194,7 +194,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse18" class="collapse" aria-labelledby="heading18" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans18")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans18")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -204,7 +204,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse19" class="collapse" aria-labelledby="heading19" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans19")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans19")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -214,7 +214,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse20" class="collapse" aria-labelledby="heading20" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans20")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans20")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -224,7 +224,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse21" class="collapse" aria-labelledby="heading21" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans21")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans21")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -234,7 +234,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse22" class="collapse" aria-labelledby="heading22" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans22")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans22")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -244,7 +244,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse23" class="collapse" aria-labelledby="heading23" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans23")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans23")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -254,7 +254,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse24" class="collapse" aria-labelledby="heading24" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans24")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans24")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -264,7 +264,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse25" class="collapse" aria-labelledby="heading25" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans25")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans25")}</div>
 									</div>
 								</div>
 								<div class="card">
@@ -274,7 +274,7 @@ const Faq = () => {
 							      		</h2>
 							    	</div>
 							    	<div id="collapse26" class="collapse" aria-labelledby="heading26" data-parent="#accordionGeneral">
-							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 mt-n1 pt-0">{t("Faqans26")}</div>
+							      		<div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">{t("Faqans26")}</div>
 									</div>
 								</div>
 							</div>

@@ -1,69 +1,26 @@
 import React from 'react'
 import Testimonials from '../components/Testimonials'
 import Banner from '../components/Banner'
+import Gallery from '../components/gallery/Gallery'
+import { useTranslation } from "react-i18next";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import HomeServicesSlider from '../components/HomeServicesSlider';
 
-function Home() {
+const Home = () =>{
+	const { t } = useTranslation();
+
+	React.useEffect(() => {
+		AOS.init();
+	  }, [])
+	 
+	  
   return (
     <>
     <div id="pageWrapper">
 		<main>
+
 			<Banner/>
-
-			
-			{/* <section className="bannerSec bannerSlide">
-				<div>
-					<div className="bsSlide bgCover overlay text-center position-relative d-flex" 
-                    style={{backgroundImage:`url(images/img01.jpg)`}}
-                    >
-
-					<div className="alignCenter w-100 d-flex align-items-center">
-						<div className="container pt-6 pt-sm-10 pb-22 pt-md-12 pb-md-25 pt-lg-15 pb-lg-35">
-							<div className="caption text-white position-relative">
-								<h1 className="w-100 mb-6 mb-md-9 text-white">
-									<strong className="fwEbold d-block mb-md-2 mb-xl-0">You want to </strong>
-									<strong className="fwEbold d-block mb-3 mt-md-n4 mb-md-2">wash your car</strong>
-									<strong className="fwEbold d-block font-weight-bold headingVI">We have washed thousands of cars of all kinds and will provide you with the service perfectly</strong>
-								</h1>
-								<a href="#" className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-md-4 px-md-6">Purchase Now</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				<div>
-					<div className="bsSlide bgCover overlay position-relative d-flex" style={{backgroundImage:`url(images/img02.jpg)`}}>
-						<div className="alignCenter d-flex w-100 align-items-center">
-							<div className="container pt-6 pt-sm-10 pb-22 pt-md-12 pb-md-25 pt-lg-15 pb-lg-35">
-								<div className="caption text-white position-relative text-center text-xxl-left">
-									<h1 className="heading w-100 mb-7 mb-md-10 text-white">
-										<strong className="d-block fwEbold  mb-md-2 mb-xl-0">We made it </strong>
-										<strong className="d-block fwEbold mb-4">easy for you</strong>
-										<strong className="d-block fwSemibold headingXII">It is the first mobile car washing and maintenance company in the country</strong>
-									</h1>
-									<a href="#" className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-lg-4 px-lg-5">Services &amp; Pricing</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div className="bsSlide bgCover overlay position-relative d-flex align-items-center text-center"
-					style={{backgroundImage:`url(images/img03.jpg)`}}
-                     >
-						<div className="alignCenter d-flex w-100 align-items-center">
-							<div className="container pt-6 pt-sm-10 pb-22 pt-md-12 pb-md-25 pt-lg-15 pb-lg-35">
-								<div className="caption text-white position-relative mb">
-									<h1 className="w-100 mb-9 text-white">
-										<strong className="fwEbold d-block  mb-md-2 mb-xl-0">Anywhere</strong>
-										<strong className="d-block font-weight-bold headingVI">At full speed we will get you to maintain your car in place</strong>
-									</h1>
-									<a href="#" className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-lg-4 px-lg-6">About us more</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section> */}
 			<aside className="hlpSec mt-n16 pb-12 pb-md-16">
 				<div className="container">
 					<div className="row helpBlockList no-gutters">
@@ -74,7 +31,7 @@ function Home() {
 								</span>
 								<h2 className="headingIX mb-2 ">Find Locations</h2>
 								<p>Find a convenient car wash store, or Auto detail center near you.</p>
-								<a href="location.html" className="btn btn-light text-uppercase fwEbold py-3 mb-2">find location <span className="fas fa-chevron-right icn"></span></a>
+								<a href="#" className="btn btn-light text-uppercase fwEbold py-3 mb-2">find location <span className="fas fa-chevron-right icn"></span></a>
 							</article>
 							<article className="hlpBlock col-12 col-lg-4 w-100 text-center p-7 p-lg-5 p-xl-8" data-background="bgTheme">
 								<span className="icoHolder mb-5 d-block mx-auto">
@@ -82,7 +39,7 @@ function Home() {
 								</span>
 								<h2 className="headingIX mb-2">Unlimited wash Club</h2>
 								<p>Save big on your next car wash with our great deals!</p>
-								<a href="Unlimited%20Wash%20Club.html" className="btn btn-light text-uppercase fwEbold py-3 mb-2">join wash club <span className="fas fa-chevron-right icn"></span></a>
+								<a href="#" className="btn btn-light text-uppercase fwEbold py-3 mb-2">join wash club <span className="fas fa-chevron-right icn"></span></a>
 							</article>
 							<article className="hlpBlock col-12 col-lg-4 w-100 text-center p-7 p-lg-5 p-xl-8" data-background="warning">
 								<span className="icoHolder mb-5 d-block mx-auto">
@@ -90,89 +47,18 @@ function Home() {
 								</span>
 								<h2 className="headingIX mb-2">Shop gift Cards</h2>
 								<p>Purchase giftcards, wash pass, wash book from our online store</p>
-								<a href="shop%20single%20product.html" className="btn btn-light text-uppercase fwEbold py-3 mb-2">go to store <span className="fas fa-chevron-right icn"></span></a>
+								<a href="#" className="btn btn-light text-uppercase fwEbold py-3 mb-2">go to store <span className="fas fa-chevron-right icn"></span></a>
 							</article>
 						</div>
 					</div>
 				</div>
 			</aside>
-			<section className="wsiSec py-10 pt-md-14 pb-md-12">
-				<div className="container">
-					<div className="row">
-						<div className="col-12">
-							<header className="header text-center ltrSpce mb-8 mb-md-11">
-								<h2 className="h2 fwEbold mb-3">Main services</h2>
-								<p>We provide full service for car washing, maintenance and polishing</p>
-							</header>
-						</div>
-					</div>
-					<div className="row d-block">
-						<div className="SpecializedSlider">
-							<div>
-								<div className="col-12">
-									<article className="sBlock text-center mb-1 mb-sm-4 mb-lg-8">
-										<div className="imgHolder overflow-hidden rounded mb-5 overlayI w-100 position-relative mx-auto">
-											<img src="images/img04.png" alt="image description" className="img-fluid"/>
-											<div className="btnHolder position-absolute">
-												<a href="service-detail.html" className="btn btn-light py-2 text-uppercase font-weight-bold">view detail</a>
-											</div>
-										</div>
-										<h3 className="headingIX mb-2"><a href="service-detail.html">Mobile vehicle maintenance</a></h3>
-										{/* <p>In a hurry and need a car wash?</p> */}
-									</article>
-								</div>
-							</div>
-							<div>
-								<div className="col-12">
-									<article className="sBlock text-center mb-1 mb-sm-4 mb-lg-8">
-										<div className="imgHolder overflow-hidden rounded mb-5 overlayI w-100 position-relative mx-auto">
-											<img src="images/img05.png" alt="image description" className="img-fluid"/>
-											<div className="btnHolder position-absolute">
-												<a href="service-detail2.html" className="btn btn-light py-2 text-uppercase font-weight-bold">view detail</a>
-											</div>
-										</div>
-										<h3 className="headingIX mb-2"><a href="service-detail2.html">Hidden cars</a></h3>
-										{/* <p>Keep your car like Showroom model</p> */}
-									</article>
-								</div>
-							</div>
-							<div>
-								<div className="col-12">
-									<article className="sBlock text-center mb-1 mb-sm-4 mb-lg-8">
-										<div className="imgHolder overflow-hidden rounded mb-5 overlayI w-100 position-relative mx-auto">
-											<img src="images/img06.png" alt="image description" className="img-fluid"/>
-											<div className="btnHolder position-absolute">
-												<a href="service-detail3.html" className="btn btn-light py-2 text-uppercase font-weight-bold">view detail</a>
-											</div>
-										</div>
-										<h3 className="headingIX mb-2"><a href="service-detail3.html">Auto polish</a></h3>
-										{/* <p>Clean on both the inside &amp; outside.</p> */}
-									</article>
-								</div>
-							</div>
-							<div>
-								<div className="col-12">
-									<article className="sBlock text-center mb-1 mb-sm-4 mb-lg-8">
-										<div className="imgHolder overflow-hidden rounded mb-5 overlayI w-100 position-relative mx-auto">
-											<img src="images/img05.png" alt="image description" className="img-fluid"/>
-											<div className="btnHolder position-absolute">
-												<a href="service-detail2.html" className="btn btn-light py-2 text-uppercase font-weight-bold">view detail</a>
-											</div>
-										</div>
-										<h3 className="headingIX mb-2"><a href="service-detail2.html">External and internal washing of cars</a></h3>
-										{/* <p>Keep your car like Showroom model</p> */}
-									</article>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			<HomeServicesSlider/>
 			<aside className="olneBook bgTheme py-7">
 				<div className="container">
 					<div className="d-md-flex align-items-center justify-content-center text-center text-md-left">
 						<h3 className="h4 text-white fwSemibold mb-4 mb-md-0">Easy Online Carwash Booking System</h3>
-						<a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" className="btn btn-primary fwEbold text-uppercase py-3 py-lg-4 ml-md-4 ml-lg-6">bOOK aPPOINTMENT</a>
+						<a href="#" data-toggle="modal" data-target="#exampleModal" className="btn btn-primary fwEbold text-uppercase py-3 py-lg-4 ml-md-4 ml-lg-6">bOOK aPPOINTMENT</a>
 					</div>
 				</div>
 			</aside>
@@ -234,12 +120,12 @@ function Home() {
 						<div className="col-12 col-md-7 col-lg-6">
 							<div className="txtHolder pt-7 pt-md-6 pt-xl-16 text-center text-md-left">
 								<h3 className="headingIV mb-4">
-									<strong className="d-block font-weight-bold">Plutim 11 years of experience</strong>
+									<strong className="d-block font-weight-bold">{t("About_sub_Heading")}</strong>
 									{/* <strong className="d-block font-weight-bold">in Carwash &amp; Detailing Industry</strong> */}
 								</h3>
-								<p>Plutim is the first mobile car washing and maintenance company in the country, we are an Emirati company 
-                        / National aiming to create meaningful jobs where cleaners feel appreciated and recognized as individuals, and that their work affects the lives of others, we are deeply committed to the quality of the environment and services. Our methods are effective, effective and environmentally friendly, as we use wet wipes made of fine fibers to use them with our water-free methods that provide the option to consume water</p>
-								<a href="javascript:void(0);" className="btn btn-outline-primary fwEbold text-uppercase py-3 px-6">about more</a>
+								<p>{t("About_des1")}</p>
+								<p>{t("About_des2")}</p>
+								{/* <a href="/#/aboutus" className="btn btn-outline-primary fwEbold text-uppercase py-3 px-6">about more</a> */}
 							</div>
 						</div>
 					</div>
@@ -283,7 +169,8 @@ function Home() {
 						<span className="icoHolder mr-3">
 							<img src="images/ico14.svg" alt="image description" width="40" height="43"/>
 						</span>
-						<h3 className="h5 mb-0 font-weight-normal text-white fIStyle">Join our car wash club and Get <strong className="font-weight-bold">20% Discount</strong> &amp; Unlimited Wash Scheme!</h3>
+						<h3 className="h5 mb-0 font-weight-normal text-white fIStyle">Enjoy BlueTeam's  <strong className="font-weight-bold"> special membership </strong> packages </h3>
+						<p>You will get a Discount on any of our services through BlueTeam's membership cards. Look at the membership card packages and get great deals. </p>
 					</div>
 				</div>
 			</aside>
@@ -291,14 +178,14 @@ function Home() {
 				<div className="container">
 					<div className="row">
 						<div className="col-12">
-							<header className="header text-center mb-8 mb-md-11">
+							<div className="header text-center mb-8 mb-md-11">
 								<h2 className="h3 fwEbold mb-3">Keep Your Car Clean Everyday of The Year!</h2>
 								<p>See some of Images from Our Gallery.</p>
-							</header>
+							</div>
 						</div>
 					</div>
 					<div className="gridImgHolder mb-6 mb-lg-9">
-					{/* <Gallery/> */}
+					<Gallery/>
 					</div>
 					<div className="row">
 						<div className="col-12 col-lg-10 offset-lg-1">

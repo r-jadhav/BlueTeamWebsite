@@ -1,12 +1,15 @@
 import './App.css';
 import {HashRouter as Router, Routes,Route, } from 'react-router-dom'
-import Footer from './pages/Footer';
-import Header from './pages/Header';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Faq from './pages/Faq';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsCondition from './pages/TermsCondition';
+import Contact from './pages/Contact';
+import Membership from './pages/Membership';
 
 const App = () => {
   return (
@@ -19,6 +22,9 @@ const App = () => {
         <Route path="services" element={<Services/>}/>
         <Route path="faq" element={<Faq/>}/>
         <Route path="privacy-policy" element={<PrivacyPolicy/>}/>
+        <Route path="terms-condition" element={<TermsCondition/>}/>
+        <Route path="contactus" element={<Contact/>}/>
+        <Route path="membership" element={<Membership/>}/>
       </Routes>
     <Footer/>
   </Router>

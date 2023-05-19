@@ -6,39 +6,44 @@ import '../assets/css/style.css';
 
 const content = [
 	{
-		title1: 'Welcome to Dental Planet',
-        title2: 'Welcome to Dental Planet',
-		description: 'Give Your Family Healthy Bright Teeth & Gums',
+		title1: '',
+        title2: '',
+		description: '',
 		src: 'videos/banner.mp4',
         type:'video'
 	},
 	{
-		title1: 'You want to',
-        title2: 'wash your car',
-		description:'We have washed thousands of cars of all kinds and will provide you with the service perfectly',
-		src: 'images/img01.jpg',
+		title1: 'You need a',
+        title2: 'car wash',
+		description:'We have 11 years of experience in car wash for all types of cars, we will give you the best car wash ever.',
+		src: 'images/img01.png',
         type:'image'
 	},
 	{
 		title1: 'We made it',
         title2: 'easy for you',
-		description:'It is the first mobile car washing and maintenance company in the country',
+		description:'BlueTeam provides you with all services you need including car wash, polishing, and maintenance. All at one stop!!',
 		src: 'images/img03.jpg',
+        type:'image'
+	},
+    {
+		title1: 'Anywhere',
+        title2: 'services',
+		description:'As quickly as possible, we will reach you and deliver high-quality service for your car.',
+		src: 'images/img02.jpg',
         type:'image'
 	}
 ];
 
 const settings = {
     dots: true,
-    // infinite: true,
-    speed: 500,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 5000,
-    beforeChange: (current, next) => {
-      setCurrentSlideIndex(next);
-    }
+    autoplay: true,
+    autoplaySpeed: 15000,
+    delay: 5000,
+    speed: 1000,
   };
 
 
@@ -50,7 +55,7 @@ function Banner() {
                 {content.map((slide, index) => (
                 <div key={index}>
                     {slide.type === 'video' ? (
-                        <video src={slide.src} controls={false} autoPlay={true} width="100%" muted loop />
+                            <video src={slide.src} controls={false} autoPlay={true} width="100%" muted loop />
                     ) : (
                  <div>
                     <div className="bsSlide bgCover overlay text-center position-relative d-flex" 
@@ -58,14 +63,14 @@ function Banner() {
                     >
 
                     <div className="alignCenter w-100 d-flex align-items-center">
-                        <div className="container pt-6 pt-sm-10 pb-22 pt-md-12 pb-md-25 pt-lg-15 pb-lg-35">
+                        <div className="container pt-90 pt-sm-10 pb-22 pt-md-12 pb-md-25 pt-lg-15 pb-lg-35">
                             <div className="caption text-white position-relative">
                                 <h1 className="w-100 mb-6 mb-md-9 text-white">
                                     <strong className="fwEbold d-block mb-md-2 mb-xl-0">{slide.title1}</strong>
                                     <strong className="fwEbold d-block mb-3 mt-md-n4 mb-md-2">{slide.title2}</strong>
-                                    <strong className="fwEbold d-block font-weight-bold headingVI">We have washed thousands of cars of all kinds and will provide you with the service perfectly</strong>
+                                    <strong className="fwEbold d-block font-weight-bold headingVI">{slide.description}</strong>
                                 </h1>
-                                <a href="#" className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-md-4 px-md-6">Purchase Now</a>
+                                {/* <a href="#" className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-md-4 px-md-6">Purchase Now</a> */}
                             </div>
                         </div>
                     </div>
