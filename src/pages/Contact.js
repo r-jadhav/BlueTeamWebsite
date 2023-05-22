@@ -1,6 +1,9 @@
 import React from 'react'
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Contact = () => {
+	const { t } = useTranslation();
   return (
     <>
         <div id="pageWrapper">
@@ -12,8 +15,10 @@ const Contact = () => {
 					<div class="row">
 						<div class="col-12 col-xl-10 offset-xl-1">
 							<header class="header ltrSpce text-center mb-6 mb-md-8 mb-lg-12 mb-xl-14">
-								<h1 class="fwEbold h2 text-capitalize mb-2">contact us</h1>
-								<p>You can communicate with us comfortably with the following information or send a message</p>
+								<h1 class="fwEbold h2 text-capitalize mb-2">{t("contact-us")}</h1>
+								<p>{i18next.language == "ar"
+                          ? 'يمكنك التواصل معنا عبر العناوين والأرقام الموضحة أدناه، أو عن طريق إرسال رسالة'
+                          : 'You can communicate with us comfortably with the following information or send a message'}</p>
 							</header>
 						</div>
 					</div>
@@ -31,7 +36,8 @@ const Contact = () => {
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="text-capitalize" for="contactEmailAddress">email address</label>
+									<label class="text-capitalize" for="contactEmailAddress">{i18next.language == "ar"
+                          ? 'عنوان البريد الإلكتروني ' : 'email address'}</label>
 									<input type="text" class="form-control" id="contactEmailAddress"/>
 								</div>
 								<div class="form-group">
@@ -44,11 +50,13 @@ const Contact = () => {
 									</select>
 								</div>
 								<div class="form-group">
-									<label class="text-capitalize" for="contactMessage">message</label>
+									<label class="text-capitalize" for="contactMessage">{i18next.language == "ar"
+                          ? 'الرسالة' : 'message'}</label>
 									<textarea class="form-control" id="contactMessage"></textarea>
 								</div>
 								<div class="form-group">
-									<button type="submit" class="btn btnTheme text-uppercase fwEbold">send message</button>
+									<button type="submit" class="btn btn-warning text-uppercase fwEbold">{i18next.language == "ar"
+                          ? 'إرسال الرسالة ' : 'send message'}</button>
 								</div>
 							</form>
 						</div>
@@ -56,10 +64,11 @@ const Contact = () => {
 							<ul class="contSideList list-unstyled mb-8 mb-lg-11 pt-md-1">
 								<li class="d-flex">
 									<div class="ico mr-2 mr-lg-3 mt-1">
-										<img src="images/ico16.svg" alt="images description" width="37" height="37"/>
+										<img src="images/ico16.svg" alt="images description" width="37" height="37" className="contact-icon"/>
 									</div>
 									<ul class="list-unstyled mb-0 wrap text-capitalize fwSemibold">
-										<li class="mb-lg-2">Call us anytime:</li>
+										<li class="mb-lg-2">{i18next.language == "ar"
+                          ? 'اتصل بنا في أي وقت' : 'Call us anytime:'} </li>
 										<li>
 											<a href="tel:025555292" class="tell">025555292</a>
 										</li>
@@ -67,30 +76,37 @@ const Contact = () => {
 								</li>
 								<li class="d-flex">
 									<div class="ico mr-2 mr-lg-3 mt-1">
-										<img src="images/ico17.svg" alt="images description" width="39" height="39"/>
+										<img src="images/ico17.svg" alt="images description" width="39" height="39" className="contact-icon"/>
 									</div>
 									<div class="addressWrap">
-										<h2 class="headingXI text-capitalize fwSemibold mb-2">address</h2>
+										<h2 class="headingXI text-capitalize fwSemibold mb-2">{i18next.language == "ar"
+                          ? 'العنوان' : 'address'}</h2>
 										<ul class="list-unstyled mb-0">
-											<li class="mb-1">M40, Mussafah Complex - Abu Dhabi </li>
-											<li>- United Arab Emirates</li>
+											<li class="mb-1">{i18next.language == "ar"
+                          ? 'مصفح M14 محل 3 و 4 - أبو ظبي' : 'Mussafah M14 SHOP 3 AND 4 - Abu Dhabi'} </li>
+											<li>{i18next.language == "ar"
+                          ? '- الإمارات العربية المتحدة' : '- United Arab Emirates'} </li>
 										</ul>
 									</div>
 								</li>
 								<li class="d-flex mb-md-0">
 									<div class="ico mr-2 mr-lg-3 mt-1">
-										<img src="images/ico18.svg" alt="images description" width="39" height="39"/>
+										<img src="images/ico18.svg" alt="images description" width="39" height="39" className="contact-icon"/>
 									</div>
 									<div class="tmeWrap">
-										<h2 class="headingXI text-capitalize fwSemibold mb-2">working hours:</h2>
+										<h2 class="headingXI text-capitalize fwSemibold mb-2">{i18next.language == "ar"
+                          ? 'ساعات عملنا' : 'working hours:'}</h2>
 										<ul class="list-unstyled tmeList mb-0">
-											<li class="mb-1">Mon-Sat: 6:00 am - 3:00 am</li>
-											<li>Sun: 6:00 am - 3:00 am</li>
+											<li class="mb-1">{i18next.language == "ar"
+                          ? 'من الإثنين إلى السبت: 6:00 صباحًا - 3:00 ظهراً' : 'Mon-Sat: 6:00 am - 3:00 am'}</li>
+											<li>{i18next.language == "ar"
+                          ? ' الأحد: 6:00 صباحاً - 3:00 ظهراً' : 'Sun: 6:00 am - 3:00 am'}</li>
 										</ul>
 									</div>
 								</li>
 							</ul>
-							<h3 class="headingIX mb-3">Have any questions?</h3>
+							<h3 class="headingIX mb-3">{i18next.language == "ar"
+                          ? 'لديك سؤال؟' : 'Have any questions?'}</h3>
 							<ul class="list-unstyled MailList mb-7">
 								<li class="mb-1"><a href="mailto:info@blueteamuae.com">info@blueteamuae.com</a></li>
 							</ul>

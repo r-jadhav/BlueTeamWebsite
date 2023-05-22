@@ -14,7 +14,7 @@ function Items({data}){
 	};
 
     return (
-        <div className="row ">
+        <div className="">
 
             <div className="filters-content gridImgHolder mb-6 mb-lg-9">
 				          <div className="row portfolio-grid justify-content-center">

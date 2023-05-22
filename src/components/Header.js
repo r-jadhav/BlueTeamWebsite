@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ReactFlagsSelect from "react-flags-select";
 import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
-const Headertwo = () => {
+const Header = () => {
+  const { t } = useTranslation();
   const [select, setSelect] = useState("AR");
   const onSelect = (code) => {
     setSelect(code);
@@ -43,7 +45,7 @@ const Headertwo = () => {
                           className=" d-none d-lg-block"
                           dateTime="2019-07-15"
                         >
-                          Mon-Sat: 6:00 am - 3:00 am
+                          Mon-Sat: {i18next.language == "ar" ? '6 صباحا - 3 فجراً' : '6:00 am - 3:00 am'}
                         </time>
                       </li>
                       <li>
@@ -51,7 +53,7 @@ const Headertwo = () => {
                           className=" d-none d-lg-block"
                           dateTime="2019-07-15"
                         >
-                          Sun: 6:00 am - 3:00 am
+                          Sun: {i18next.language == "ar" ? '6 صباحا - 3 فجراً' : '6:00 am - 3:00 am'}
                         </time>
                       </li>
                     </ul>
@@ -64,7 +66,8 @@ const Headertwo = () => {
                       ></a>
                     </span>
                     <div class="wrap d-none d-lg-block">
-                      <span class="text d-block">Have any Question?</span>
+                      <span class="text d-block">{i18next.language == "ar"
+                          ? 'لديك سؤال؟' : 'Have any questions?'}</span>
                       <a className="tell fwSemibold" href="tel:+971 800 2827">
                         +971 800 2827
                       </a>
@@ -78,7 +81,7 @@ const Headertwo = () => {
                     data-toggle="modal"
                     data-target="#exampleModal"
                   >
-                    book appointment
+                     {t("book-Appoint")} 
                   </a>
                 </div>
               </div>
@@ -94,7 +97,7 @@ const Headertwo = () => {
                     <img
                       src="images/logo.png"
                       alt="Auto &amp; Detailing template"
-                      class="img-fluid logoWhite"
+                      class="img-fluid logoWhite p-3"
                     />
                     <img
                       src="images/logo.png"
@@ -129,32 +132,32 @@ const Headertwo = () => {
                   <ul className="navbar-nav">
                     <li className="nav-item active dropdown">
                       <NavLink to="/" className="nav-link">
-                        Home
+                        {t("home")} 
                       </NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink to="/aboutus" className="nav-link">
-                        About Us
+                        {t("AboutHeading")} 
                       </NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink to="/services" className="nav-link">
-                        Our services
+                        {t("Services")} 
                       </NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink to="/membership" className="nav-link">
-                        Membership cards
+                        {t("Membership-Cards")} 
                       </NavLink>
                     </li>
                     <li className="nav-item dropdown">
                       <NavLink to="/faq" className="nav-link">
-                        Faq
+                        {t("faq")} 
                       </NavLink>
                     </li>
                     <li className="nav-item dropdown">
                       <NavLink to="/contactus" className="nav-link">
-                        Contact Us
+                        {t("contact-us")} 
                       </NavLink>
                     </li>
                   </ul>
@@ -612,4 +615,4 @@ const Headertwo = () => {
   );
 };
 
-export default Headertwo;
+export default Header;

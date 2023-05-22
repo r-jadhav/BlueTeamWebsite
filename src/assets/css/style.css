@@ -184,6 +184,12 @@ font-weight: 900;
 .fwEbold {
   font-weight: 700 !important;
 }
+.hlpBlock[data-background=bgTheme] {
+  background-color: #9f9f9c;
+}
+.navCollapse .nav-item .nav-link:before {
+  background-color: transparent!important;
+}
 @media(max-width:768px){
     header {
         position: fixed;

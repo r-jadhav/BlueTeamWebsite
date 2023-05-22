@@ -78,7 +78,7 @@ const HomeServicesSlider = ()  => {
             <div className="row">
                 <div className="col-12">
                     <div className="header text-center ltrSpce mb-8 mb-md-11">
-                        <h2 className="h2 fwEbold mb-3 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">The main services </h2>
+                        <h2 className="h2 fwEbold mb-3 aos-init aos-animate" data-aos="fade-top" data-aos-delay="100">The main services </h2>
                         <p className='aos-init aos-animate'>We offer you full car services including car wash, polishing, maintenance, and others. Explore our services below </p>
                     </div>
                 </div>

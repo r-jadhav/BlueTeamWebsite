@@ -2,9 +2,15 @@ import React from 'react'
 import { BsStopwatch } from "react-icons/bs";
 import { AiOutlineLike, AiOutlineProfile } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import i18next from "i18next";
 
 const AboutUs = () => {
 	const { t } = useTranslation();
+	React.useEffect(() => {
+		AOS.init();
+	  }, [])
   return (
     <>
         <section class="abtWSec pt-10 pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6 mt-5">
@@ -19,7 +25,9 @@ const AboutUs = () => {
             <div class="row mb-2 mb-sm-4 mb-lg-10" style={{alignItems:'center'}}>
                 <div class="col-12 col-lg-6">
                     <span class="d-block imgHolder mb-4 mb-sm-6 mb-lg-0 rounded overflow-hidden w-100">
-                        <img src="images/img106.jpg" alt="image description" class="img-fluid"/>
+                        <img src="images/img106.jpg" alt="image description" class="img-fluid"
+						data-aos="fade-right"
+						/>
                     </span>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -42,7 +50,7 @@ const AboutUs = () => {
             </div>
         </div>
         </section>
-        <aside class="cntrHolder bgTheme pt-8 pt-md-10 pb-4">
+		<aside class="cntrHolder bgTheme pt-8 pt-md-10 pb-4">
 				<div class="container">
 					<ul class="list-unstyled d-flex flex-wrap counterList text-center  text-lg-left justify-content-center mb-0">
 						<li class="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
@@ -51,7 +59,7 @@ const AboutUs = () => {
 							</span>
 							<div class="wrap font-weight-light text-white">
 								<div className='d-block font-weight-normal mb-1'><strong style={{fontSize:43}}>90%</strong></div>
-								<p>Satisfactory</p>
+								<p>{i18next.language == "ar" ? 'رضا العملاء': 'Satisfactory' }</p>
 							</div>
 						</li>
 						<li class="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
@@ -60,7 +68,7 @@ const AboutUs = () => {
 							</span>
 							<div class="wrap font-weight-light text-white">
                                 <div className='d-block font-weight-normal mb-1'><strong style={{fontSize:43}}>16+</strong></div>
-								<p>Team the work</p>
+								<p>{i18next.language == "ar" ? 'فريق عمل': 'Teams' }</p>
 							</div>
 						</li>
 						<li class="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
@@ -69,7 +77,7 @@ const AboutUs = () => {
 							</span>
 							<div class="wrap font-weight-light text-white">
                             <div className='d-block font-weight-normal mb-1'><strong style={{fontSize:43}}>11 </strong></div>
-								<p>Year Experience</p>
+							<p>{i18next.language == "ar" ? 'سنة خبرة ': 'Year Experience' }</p>
 							</div>
 						</li>
 					</ul>
@@ -91,8 +99,8 @@ const AboutUs = () => {
 								<span class="icoHolder mb-3 mb-xl-4 mx-auto rounded-circle d-flex align-items-center justify-content-center">
                                     <AiOutlineProfile color='#0b4b8a' size={40}/>
 								</span>
-								<h2 class="headingIX fwSemibold mb-1">Estimates</h2>
-								<p>We offer you the most accurate and fair laundry </p>
+								<h2 class="headingIX fwSemibold mb-1">Estimations</h2>
+								<p>We offer you the most accurate & fair car wash price estimates</p>
 								{/* <a href="location.html" class="btn btn-light text-uppercase font-weight-bold py-3">find location</a> */}
 							</article>
 						</div>
@@ -101,8 +109,8 @@ const AboutUs = () => {
 								<span class="icoHolder mb-3 mb-xl-4 mx-auto rounded-circle d-flex align-items-center justify-content-center">
                                     <AiOutlineLike color='#0b4b8a' size={40}/>
 								</span>
-								<h2 class="headingIX fwSemibold mb-1">Confidence</h2>
-								<p>Save big on your next car wash with our great deals!</p>
+								<h2 class="headingIX fwSemibold mb-1">Trust</h2>
+								<p>Reliable team, which is certified for high-quality performance.</p>
 								{/* <a href="Unlimited%20Wash%20Club.html" class="btn btn-light text-uppercase font-weight-bold py-3">JOIN WASH CLUB</a> */}
 							</article>
 						</div>
@@ -111,8 +119,8 @@ const AboutUs = () => {
 								<span class="icoHolder mb-3 mb-xl-4 mx-auto rounded-circle d-flex align-items-center justify-content-center">
                                     <BsStopwatch color='#0b4b8a' size={40}/>
 								</span>
-								<h2 class="headingIX fwSemibold mb-1">Guarantees</h2>
-								<p>Cleaning, polishing, wax anywhere, anytime</p>
+								<h2 class="headingIX fwSemibold mb-1">Warranties</h2>
+								<p>Clean, polish, and wax anywhere, anytime.</p>
 								{/* <a href="javascript:void(0);" class="btn btn-light text-uppercase font-weight-bold py-3">Go to Store</a> */}
 							</article>
 						</div>
@@ -124,9 +132,11 @@ const AboutUs = () => {
 				<div class="alignCenter w-100 d-flex align-items-center">
 					<div class="container py-12 py-18 d-flex justify-content-end">
 						<div class="discountOverClub text-center bg-white rounded py-6 px-4 p-sm-6 p-lg-10 pb-lg-11 position-relative">
-							<h4 class="headingIV text-capitalize font-weight-bold mb-3">Surprise malfunctions ؟ We repair your car in place</h4>
-							<p>Call us and pray to fix your car immediately</p>
-							<a href="javascript:void(0);" class="btn btn-primary text-uppercase px-8 py-3 fwEbold">Book now</a>
+							<h4 class="headingIV text-capitalize font-weight-bold mb-3">
+							{i18next.language == "ar" ? 'أعطال مفاجئة؟  نحن نصلح سيارتك في مكانها ' : 'Surprise malfunctions ؟ We repair your car in place'}
+							</h4>
+							<p>{i18next.language == "ar" ? 'اتصل بنا الآن لإصلاح سيارتك على الفور ' : 'Call us and pray to fix your car immediately'}</p>
+							<a href="javascript:void(0);" class="btn btn-primary text-uppercase px-8 py-3 fwEbold">{i18next.language == "ar" ? 'احجز الآن' : 'Book now'}</a>
 						</div>
 					</div>
 				</div>

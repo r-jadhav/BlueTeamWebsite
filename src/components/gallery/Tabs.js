@@ -4,7 +4,7 @@ function Tabs({filterCategory, tabsData}){
 
  <section className="portfolio_area">
            
-            <div className="filters portfolio-filter">
+            <div className="filters portfolio-filter d-flex justify-content-center">
                 <ul>
  {
   tabsData.map((category, index)=>{
