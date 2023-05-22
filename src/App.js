@@ -10,6 +10,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsCondition from './pages/TermsCondition';
 import Contact from './pages/Contact';
 import Membership from './pages/Membership';
+import Packages from './pages/Packages';
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
         <Route path="terms-condition" element={<TermsCondition/>}/>
         <Route path="contactus" element={<Contact/>}/>
         <Route path="membership" element={<Membership/>}/>
+        <Route path="packages" element={<Packages/>}/>
+        
       </Routes>
     <Footer/>
   </Router>

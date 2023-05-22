@@ -3,9 +3,8 @@ import ChatBot from "react-simple-chatbot";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
-
+import { Icon } from "@iconify/react";
 const Footer = () => {
-
   const { t } = useTranslation();
 
   const config = {
@@ -45,16 +44,25 @@ const Footer = () => {
               <ul className="contList list-unstyled mb-0 d-flex flex-wrap justify-content-center">
                 <li className="d-flex align-items-center mb-md-0">
                   <div className="ico mr-1">
-                    <img
+                    {/* <img
                       src="images/ico16.svg"
                       alt="images description"
                       width="25"
                       height="39"
                       className="img-fluid contact-icon"
+                    /> */}
+                    <Icon
+                      icon="solar:phone-outline"
+                      color="#fff"
+                      fontSize={50}
                     />
                   </div>
                   <ul className="list-unstyled mb-0 wrap">
-                    <li className="mb-lg-1">{i18next.language == "ar" ? 'اتصل بنا الآن' : 'Call us now:' }</li>
+                    <li className="mb-lg-1">
+                      {i18next.language == "ar"
+                        ? "اتصل بنا الآن"
+                        : "Call us now:"}
+                    </li>
                     <li>
                       <a href="tel:+971-502-000-787" className="tell">
                         +971-502-000-787
@@ -64,16 +72,14 @@ const Footer = () => {
                 </li>
                 <li className="d-flex align-items-center mb-md-0">
                   <div className="ico mr-1">
-                    <img
-                      src="images/ico17.svg"
-                      alt="images description"
-                      width="25"
-                      height="36"
-                      className="img-fluid contact-icon"
-                    />
+                    <Icon icon="bytesize:location" color="#fff" fontSize={50} />
                   </div>
                   <ul className="list-unstyled mb-0">
-                    <li className="mb-lg-1">{i18next.language == "ar" ? 'راسلنا عبر البريد الإلكتروني ' : 'Email us now:' }</li>
+                    <li className="mb-lg-1">
+                      {i18next.language == "ar"
+                        ? "راسلنا عبر البريد الإلكتروني "
+                        : "Email us now:"}
+                    </li>
                     <li>
                       <a href="mailto:info@blueteamuae.com" className="mail">
                         info@blueteamuae.com
@@ -83,17 +89,16 @@ const Footer = () => {
                 </li>
                 <li className="d-flex align-items-center mb-md-0">
                   <div className="ico mr-2">
-                    <img
-                      src="images/ico18.svg"
-                      alt="images description"
-                      width="39"
-                      height="39"
-                      className="img-fluid contact-icon"
-                    />
+                  <Icon icon="ion:time-outline" color="#fff" fontSize={50} />
                   </div>
                   <ul className="list-unstyled mb-0 ftimeList">
-                    <li className="mb-lg-1">{i18next.language == "ar" ? 'ساعات عملنا' : 'Our Hours' }</li>
-                    <li>{i18next.language == "ar" ? '6 صباحا - 3 فجراً' : '6:00 am - 3:00 am'}
+                    <li className="mb-lg-1">
+                      {i18next.language == "ar" ? "ساعات عملنا" : "Our Hours"}
+                    </li>
+                    <li>
+                      {i18next.language == "ar"
+                        ? "6 صباحا - 3 فجراً"
+                        : "6:00 am - 3:00 am"}
                     </li>
                   </ul>
                 </li>
@@ -113,40 +118,40 @@ const Footer = () => {
                   href="#/aboutus"
                   className="btn btn-outline-dark text-uppercase fwEbold py-lg-3 text-dark"
                 >
-                  {i18next.language == "ar" ? 'المزيد' : 'about more' }
+                  {i18next.language == "ar" ? "المزيد" : "about more"}
                 </a>
               </div>
             </div>
             <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
               <div className="w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
-                  {i18next.language == "ar" ? 'المواقع' : 'Location pages' }
+                  {i18next.language == "ar" ? "المواقع" : "Location pages"}
                 </h6>
                 <ul className="fLink list-unstyled text-capitalize">
                   <li>
-                      <NavLink to="/aboutus" className="text-dark">
-                        {t("AboutHeading")} 
-                      </NavLink>
+                    <NavLink to="/aboutus" className="text-dark">
+                      {t("AboutHeading")}
+                    </NavLink>
                   </li>
                   <li>
-                      <NavLink to="/services" className="text-dark">
-                        {t("Services")}
-                      </NavLink>
+                    <NavLink to="/services" className="text-dark">
+                      {t("Services")}
+                    </NavLink>
                   </li>
                   <li>
-                      <NavLink to="/membership" className="text-dark">
-                        {t("Membership-Cards")} 
-                      </NavLink>
+                    <NavLink to="/membership" className="text-dark">
+                      {t("Membership-Cards")}
+                    </NavLink>
                   </li>
                   <li>
-                      <NavLink to="/faq" className="text-dark">
-                        {t("faq")} 
-                      </NavLink>
+                    <NavLink to="/faq" className="text-dark">
+                      {t("faq")}
+                    </NavLink>
                   </li>
                   <li>
-                      <NavLink to="/contactus" className="text-dark">
-                       {t("contact-us")}
-                      </NavLink>
+                    <NavLink to="/contactus" className="text-dark">
+                      {t("contact-us")}
+                    </NavLink>
                   </li>
                 </ul>
               </div>
@@ -154,24 +159,38 @@ const Footer = () => {
             <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
               <div className="w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
-                {i18next.language == "ar" ? 'خدماتنا' : 'Our Services'}
+                  {i18next.language == "ar" ? "خدماتنا" : "Our Services"}
                 </h6>
                 <ul className="fLink list-unstyled text-capitalize">
                   <ul className="fLink list-unstyled text-capitalize">
                     <li>
-                      <a href="#" className="text-dark">{i18next.language == "ar" ? 'غسيل السيارة' : 'Car Wash' }</a>
+                      <a href="#" className="text-dark">
+                        {i18next.language == "ar" ? "غسيل السيارة" : "Car Wash"}
+                      </a>
                     </li>
                     <li>
-                      <a href="#" className="text-dark">{i18next.language == "ar" ? 'صيانة السيارة' : 'Car Detailing' }</a>
+                      <a href="#" className="text-dark">
+                        {i18next.language == "ar"
+                          ? "صيانة السيارة"
+                          : "Car Detailing"}
+                      </a>
                     </li>
                     <li>
-                      <a href="#" className="text-dark">{i18next.language == "ar" ? 'المرآب ' : 'Car Garage' }</a>
+                      <a href="#" className="text-dark">
+                        {i18next.language == "ar" ? "المرآب " : "Car Garage"}
+                      </a>
                     </li>
                     <li>
-                      <a href="#" className="text-dark">{i18next.language == "ar" ? 'غسيل الدراجة' : 'Bike Wash' }</a>
+                      <a href="#" className="text-dark">
+                        {i18next.language == "ar"
+                          ? "غسيل الدراجة"
+                          : "Bike Wash"}
+                      </a>
                     </li>
                     <li>
-                      <a href="#" className="text-dark">{i18next.language == "ar" ? 'غسيل القارب' : 'Boat Wash' }</a>
+                      <a href="#" className="text-dark">
+                        {i18next.language == "ar" ? "غسيل القارب" : "Boat Wash"}
+                      </a>
                     </li>
                   </ul>
                 </ul>
@@ -180,18 +199,25 @@ const Footer = () => {
             <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-sm-4 mb-lg-0">
               <div className="wrapHolder w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
-                {i18next.language == "ar" ? 'النشرة الإخبارية ' : 'Newsletter'}
+                  {i18next.language == "ar"
+                    ? "النشرة الإخبارية "
+                    : "Newsletter"}
                 </h6>
                 <p className="text-dark">
-                {i18next.language == "ar" ? 'قم بالتسجيل لمعرفة المزيد عن عروضنا الخاصة ، وبطاقات العضوية، وأخبارنا' : 'Signup today for know about specials offers, coupons &amp; news.' }
-                  
+                  {i18next.language == "ar"
+                    ? "قم بالتسجيل لمعرفة المزيد عن عروضنا الخاصة ، وبطاقات العضوية، وأخبارنا"
+                    : "Signup today for know about specials offers, coupons &amp; news."}
                 </p>
                 <form className="emailForm1 mb-6">
                   <div className="input-group">
                     <input
                       type="email"
                       className="form-control px-4"
-                      placeholder={i18next.language == "ar" ? 'عنوان البريد الإلكتروني ' : "Email Address"}
+                      placeholder={
+                        i18next.language == "ar"
+                          ? "عنوان البريد الإلكتروني "
+                          : "Email Address"
+                      }
                     />
                     <div className="input-group-prepend mr-0">
                       <button
@@ -224,12 +250,15 @@ const Footer = () => {
           </div>
         </div>
       </aside>
-      <footer id="footer" className="py-5 py-md-6">
+      <footer style={{border:'1px solid #d7cece'}} id="footer" className="py-5 py-md-6">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-12 col-md-6">
               <span className="txt d-block text-center text-md-left mb-4 mb-md-0">
-                ©2023 <a href="homepage.html">Blue Team.</a>{i18next.language == "ar" ? 'جميع الحقوق محفوظة ' : "All Rights Reserved"}
+                ©2023 <a href="homepage.html">Blue Team.</a>
+                {i18next.language == "ar"
+                  ? "جميع الحقوق محفوظة "
+                  : "All Rights Reserved"}
               </span>
             </div>
             <div className="col-12 col-md-6">
@@ -260,6 +289,6 @@ const Footer = () => {
       </footer>
     </>
   );
-}
+};
 
 export default Footer;

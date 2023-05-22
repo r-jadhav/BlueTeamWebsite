@@ -50,7 +50,7 @@
     padding: 0px 28px;
 }
 .bgTheme {
-    background-color: #9f9f9c !important;
+    background-color: #3b3b3b !important;
 }
 .bg-primary {
     background-color: #9f9f9c !important;
@@ -110,9 +110,9 @@ button:focus {
 .home-categ {
     width: 125px !important;
 }
-aside.footerAside.position-relative.text-white.bgCover {
+/* aside.footerAside.position-relative.text-white.bgCover {
     box-shadow: 0px 0px 20px 0px #d3d3d3;
-}
+} */
 @media(max-width:991px){
     .contactList > li:nth-child(n+2) {
         margin-left: 4px;
@@ -168,4 +168,24 @@ aside.footerAside.position-relative.text-white.bgCover {
         padding-top: 100px !important;
     }
 }
+.ReactFlagsSelect-module_label__27pw9, .ReactFlagsSelect-module_secondaryLabel__37t1D {
+    font-size: 1em;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+}
 
+.ReactFlagsSelect-module_selectBtn__19wW7 {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    font-family: inherit;
+    color: #fff !important;
+    border: thin solid #fff !important;
+    border-radius: 4px;
+    background: transparent;
+}

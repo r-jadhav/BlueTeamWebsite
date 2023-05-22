@@ -45,7 +45,10 @@ const Header = () => {
                           className=" d-none d-lg-block"
                           dateTime="2019-07-15"
                         >
-                          Mon-Sat: {i18next.language == "ar" ? '6 صباحا - 3 فجراً' : '6:00 am - 3:00 am'}
+                          Mon-Sat:{" "}
+                          {i18next.language == "ar"
+                            ? "6 صباحا - 3 فجراً"
+                            : "6:00 am - 3:00 am"}
                         </time>
                       </li>
                       <li>
@@ -53,7 +56,10 @@ const Header = () => {
                           className=" d-none d-lg-block"
                           dateTime="2019-07-15"
                         >
-                          Sun: {i18next.language == "ar" ? '6 صباحا - 3 فجراً' : '6:00 am - 3:00 am'}
+                          Sun:{" "}
+                          {i18next.language == "ar"
+                            ? "6 صباحا - 3 فجراً"
+                            : "6:00 am - 3:00 am"}
                         </time>
                       </li>
                     </ul>
@@ -66,8 +72,11 @@ const Header = () => {
                       ></a>
                     </span>
                     <div class="wrap d-none d-lg-block">
-                      <span class="text d-block">{i18next.language == "ar"
-                          ? 'لديك سؤال؟' : 'Have any questions?'}</span>
+                      <span class="text d-block">
+                        {i18next.language == "ar"
+                          ? "لديك سؤال؟"
+                          : "Have any questions?"}
+                      </span>
                       <a className="tell fwSemibold" href="tel:+971 800 2827">
                         +971 800 2827
                       </a>
@@ -81,7 +90,7 @@ const Header = () => {
                     data-toggle="modal"
                     data-target="#exampleModal"
                   >
-                     {t("book-Appoint")} 
+                    {t("book-Appoint")}
                   </a>
                 </div>
               </div>
@@ -132,32 +141,32 @@ const Header = () => {
                   <ul className="navbar-nav">
                     <li className="nav-item active dropdown">
                       <NavLink to="/" className="nav-link">
-                        {t("home")} 
+                        {t("home")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink to="/aboutus" className="nav-link">
-                        {t("AboutHeading")} 
+                        {t("AboutHeading")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink to="/services" className="nav-link">
-                        {t("Services")} 
+                        {t("Services")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink to="/membership" className="nav-link">
-                        {t("Membership-Cards")} 
+                        {t("Membership-Cards")}
                       </NavLink>
                     </li>
                     <li className="nav-item dropdown">
                       <NavLink to="/faq" className="nav-link">
-                        {t("faq")} 
+                        {t("faq")}
                       </NavLink>
                     </li>
                     <li className="nav-item dropdown">
                       <NavLink to="/contactus" className="nav-link">
-                        {t("contact-us")} 
+                        {t("contact-us")}
                       </NavLink>
                     </li>
                   </ul>
