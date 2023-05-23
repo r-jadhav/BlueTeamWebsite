@@ -88,10 +88,11 @@ const Testimonials = () => {
     <>
       <aside className="customerSec pt-10 pt-lg-12">
         <div className="container">
-          <div className="header text-center ltrSpce font-weight-light mb-14">
+          <div className="header text-center mb-14">
             <h3 className="fwEbold h2 text-capitalize mb-4">
             {i18next.language == "ar" ? 'آراء العملاء ': 'customers feedback' }
             </h3>
+            <p className="psudo">{i18next.language == "ar" ? '': "What Clients Say's ?" }</p>
           </div>
         </div>
         <div

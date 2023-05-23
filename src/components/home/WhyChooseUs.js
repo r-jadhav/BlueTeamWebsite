@@ -7,8 +7,8 @@ export default function WhyChooseUs() {
         <div class="row">
           <div class="col-12">
             <header class="header text-center font-weight-light mb-11">
-              <h4 class="fwEbold headingII mb-3">Why Choose Us?</h4>
-              <p>
+              <h4 class="fwEbold pt-12 mb-3">Why Choose Us?</h4>
+              <p className="psudo">
                 Here’s Why our product beats all other competitors in market.
               </p>
             </header>

@@ -110,9 +110,20 @@ button:focus {
 .home-categ {
     width: 125px !important;
 }
-/* aside.footerAside.position-relative.text-white.bgCover {
-    box-shadow: 0px 0px 20px 0px #d3d3d3;
-} */
+.socialFNetwork a {
+    color: #222 !important;
+}
+.ReactFlagsSelect-module_selectOptions__3LNBJ li span.ReactFlagsSelect-module_label__27pw9 {
+    color: #222;
+}
+.psudo::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #0b4b8a !important;
+    width: 12%;
+    margin: auto;
+    padding-top: 10px;
+}
 @media(max-width:991px){
     .contactList > li:nth-child(n+2) {
         margin-left: 4px;

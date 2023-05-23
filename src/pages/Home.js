@@ -113,7 +113,7 @@ const Home = () => {
                     <h2 className="h3 fwEbold mb-3">
                       {t("gallery_main_head")}
                     </h2>
-                    <p>{t("gallery_sub_head")}</p>
+                    <p className="psudo">{t("gallery_sub_head")}</p>
                   </div>
                 </div>
               </div>

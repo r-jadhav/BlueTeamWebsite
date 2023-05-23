@@ -6,13 +6,13 @@ export default function Services({ services }) {
   const { t } = useTranslation();
 
   return (
-    <section class="wsisSec pt-12 pt-lg-16 pb-4">
+    <section class="wsisSec pt-6 pt-lg-6 pb-4">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
             <div class="header ltrSpce text-center mb-10 mb-xl-11">
               <h1 class="headingI fwEbold mb-2 mb-xl-4">Categories</h1>
-              <p>{t("category_subtitle")}</p>
+              <p className="psudo">{t("category_subtitle")}</p>
             </div>
           </div>
         </div>

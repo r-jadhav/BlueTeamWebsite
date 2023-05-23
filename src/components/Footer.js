@@ -106,7 +106,7 @@ const Footer = () => {
             </address>
           </div>
         </div>
-        <div className="container pt-10 pb-8 pt-lg-13 pb-lg-16">
+        <div className="container pt-10 pt-lg-13">
           <div className="row">
             <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
               <div className="txtHolder w-100">
@@ -114,12 +114,22 @@ const Footer = () => {
                   {t("AboutHeading")}
                 </h6>
                 <p className="text-dark"> {t("About_footer")} </p>
-                <a
-                  href="#/aboutus"
-                  className="btn btn-outline-dark text-uppercase fwEbold py-lg-3 text-dark"
-                >
-                  {i18next.language == "ar" ? "المزيد" : "about more"}
-                </a>
+                <ul className="socialFNetwork d-flex mb-0 pt-4 list-unstyled bdrTop justify-content-center justify-content-sm-start">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/Blueteamcarservices/"
+                      target="_blank"
+                      className="fab fa-facebook-square"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/blueteam.ae/?hl=en"
+                      target="_blank"
+                      className="fab fa-instagram"
+                    ></a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
@@ -196,60 +206,68 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-sm-4 mb-lg-0">
-              <div className="wrapHolder w-100">
-                <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
-                  {i18next.language == "ar"
-                    ? "النشرة الإخبارية "
-                    : "Newsletter"}
-                </h6>
-                <p className="text-dark">
-                  {i18next.language == "ar"
-                    ? "قم بالتسجيل لمعرفة المزيد عن عروضنا الخاصة ، وبطاقات العضوية، وأخبارنا"
-                    : "Signup today for know about specials offers, coupons &amp; news."}
-                </p>
-                <form className="emailForm1 mb-6">
-                  <div className="input-group">
-                    <input
-                      type="email"
-                      className="form-control px-4"
-                      placeholder={
-                        i18next.language == "ar"
-                          ? "عنوان البريد الإلكتروني "
-                          : "Email Address"
-                      }
-                    />
-                    <div className="input-group-prepend mr-0">
-                      <button
-                        type="submit"
-                        className="btn btnTheme rounded-right fas fa-paper-plane"
-                      ></button>
-                    </div>
-                  </div>
-                </form>
-                <ul className="socialFNetwork d-flex mb-0 pt-4 list-unstyled bdrTop justify-content-center justify-content-sm-start">
-                  <li>
-                    <a
-                      href="https://www.facebook.com/Blueteamcarservices/"
-                      target="_blank"
-                      className="fab fa-facebook-square"
-                    ></a>
-                  </li>
-                  {/* <li><a href="javascript:void(0);" className="fab fa-twitter-square"></a></li>
-									<li><a href="javascript:void(0);" className="fab fa-linkedin"></a></li> */}
-                  <li>
-                    <a
-                      href="https://www.instagram.com/blueteam.ae/?hl=en"
-                      target="_blank"
-                      className="fab fa-instagram"
-                    ></a>
-                  </li>
-                </ul>
+            <div class="col-12 col-sm-6 col-lg-3 d-md-flex mb-sm-4 mb-lg-0">
+              <div class="txtHolder w-100">
+                <h6 class="h6 text-capitalize fwEbold mb-4 mb-lg-6">contact info</h6>
+                <address class="mb-0">
+                  <ul class="contList2 list-unstyled mb-0 justify-content-center">
+                    <li class="d-flex mb-6">
+                      <div class="ico pr-3 flex-shrink-0 d-flex align-items-center">
+                        <Icon
+                            icon="solar:phone-outline"
+                            color="#0b4b8a"
+                            fontSize={30}
+                          />
+                      </div>
+                      <div class="wrap">
+                        <span class="d-block mb-lg-1 text-dark">{i18next.language == "ar"
+                            ? "اتصل بنا في أي وقت"
+                            : "Call us anytime:"}{" "}</span>
+                        <a href="tel:18001234567" class="text-dark">1-800-123-4567</a>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-6">
+                      <div class="ico pr-3 flex-shrink-0 d-flex align-items-center">
+                        <Icon icon="bytesize:location" color="#0b4b8a" fontSize={30} />
+                      </div>
+                      <ul class="list-unstyled mb-0">
+                          <li class="mb-1 text-dark">
+                              {i18next.language == "ar"
+                              ? "مصفح M14 محل 3 و 4 - أبو ظبي"
+                              : "Mussafah M14 SHOP 3 AND 4 - Abu Dhabi"}{" "}
+                          </li>
+                          <li class="text-dark">
+                            {i18next.language == "ar"
+                              ? "- الإمارات العربية المتحدة"
+                              : "- United Arab Emirates"}{" "}
+                          </li>
+                      </ul>
+                    </li>
+                    <li class="d-flex mb-6">
+                      <div class="ico pr-3 flex-shrink-0 d-flex align-items-center">
+                        <Icon icon="ion:time-outline" color="#0b4b8a" fontSize={30} />
+                      </div>
+                      <ul class="list-unstyled mb-0 ftimeList">
+                        <li class="mb-1 text-dark">
+                            {i18next.language == "ar"
+                              ? "من الإثنين إلى السبت: 6:00 صباحًا - 3:00 ظهراً"
+                              : "Mon-Sat: 6:00 am - 3:00 am"}
+                          </li>
+                          <li className="text-dark">
+                            {i18next.language == "ar"
+                              ? " الأحد: 6:00 صباحاً - 3:00 ظهراً"
+                              : "Sun: 6:00 am - 3:00 am"}
+                          </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </address>
               </div>
-            </div>
+						</div>
           </div>
         </div>
       </aside>
+
       <footer style={{border:'1px solid #d7cece'}} id="footer" className="py-5 py-md-6">
         <div className="container">
           <div className="row align-items-center">

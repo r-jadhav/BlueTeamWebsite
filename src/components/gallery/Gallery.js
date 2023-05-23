@@ -20,10 +20,14 @@ function Gallery() {
       return;
     }
     const filteredData = Data.filter((value) => {
-      console.log(value);
-      return i18next.language == "ar" ? value.categoryAR : value.categoryEN;
+      return i18next.language == "ar" ? value.categoryAR === category : value.categoryEN === category;
     });
-    console.log(filteredData)
+
+    // const filteredData = Data.filter((value) => {
+    //   const itemCategory = i18next.language === "ar" ? value.categoryAR : value.categoryEN;
+    //   return itemCategory === category || itemCategory === "all";
+    // });
+
     setData(filteredData);
   };
   return (
