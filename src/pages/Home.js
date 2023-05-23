@@ -8,10 +8,12 @@ import "aos/dist/aos.css";
 import api from "../constant/api";
 import i18next from "i18next";
 import WhyChooseUs from "../components/home/WhyChooseUs";
+import Services from "../components/home/Services";
+import { Icon } from "@iconify/react";
 
 const Home = () => {
   const { t } = useTranslation();
-  const [getService, setService] = React.useState();
+  const [services, setService] = React.useState();
 
   const getServices = () => {
     api.get("/service/getServicecategory").then((res) => {
@@ -30,109 +32,8 @@ const Home = () => {
         <main>
           <Banner />
           <WhyChooseUs></WhyChooseUs>
-          {/* <aside className="hlpSec mt-n16 pb-12 pb-md-16">
-            <div className="container">
-              <div className="row helpBlockList no-gutters">
-                <div className="col-12 d-flex flex-wrap hlpBlockList">
-                  <article
-                    className="hlpBlock col-12 col-lg-4 w-100 text-center p-7 p-lg-5 p-xl-8"
-                    data-background="primary"
-                  >
-                    <span className="icoHolder mb-5 d-block mx-auto">
-                      <span className="ico icon-ico28">
-                        <img
-                          data-aos="zoom-in"
-                          src="images/estimate.png"
-                          width={80}
-                        />
-                      </span>
-                    </span>
-                    <h2 className="headingIX mb-2 ">Estimations</h2>
-                    <p>
-                      We offer you the most accurate & fair car wash price
-                      estimates
-                    </p>
-                  </article>
-                  <article
-                    className="hlpBlock col-12 col-lg-4 w-100 text-center p-7 p-lg-5 p-xl-8"
-                    data-background="bgTheme"
-                  >
-                    <span className="icoHolder mb-5 d-block mx-auto">
-                      <span className="ico icon-ico29">
-                        <img
-                          data-aos="zoom-in"
-                          src="images/trust.png"
-                          width={80}
-                        />
-                      </span>
-                    </span>
-                    <h2 className="headingIX mb-2">Trust</h2>
-                    <p>
-                      Reliable team, which is certified for high-quality
-                      performance.
-                    </p>
-                  </article>
-                  <article
-                    className="hlpBlock col-12 col-lg-4 w-100 text-center p-7 p-lg-5 p-xl-8"
-                    data-background="primary"
-                  >
-                    <span className="icoHolder mb-5 d-block mx-auto">
-                      <span className="ico icon-ico29">
-                        <img
-                          data-aos="zoom-in"
-                          src="images/guarantee.png"
-                          width={80}
-                        />
-                      </span>
-                    </span>
-                    <h2 className="headingIX mb-2">Warranties</h2>
-                    <p>Clean, polish, and wax anywhere, anytime.</p>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </aside> */}
-
-          <section class="wsisSec pt-12 pt-lg-16 pb-4">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-                  <div class="header ltrSpce text-center mb-10 mb-xl-11">
-                    <h1 class="headingI fwEbold mb-2 mb-xl-4">Categories</h1>
-                    <p>{t("category_subtitle")}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row justify-content-center">
-                {getService?.map((ele) => {
-                  return (
-                    <div
-                      class="col-12 col-md-6 col-lg-2 d-flex justify-content-center"
-                      key={ele.service_category_id}
-                    >
-                      <div class="sBlock mb-8 mb-lg-11 text-center text-md-left">
-                        <div class="imgHolder overflow-hidden position-relative mx-auto">
-                          <img
-                            src={`http://blueteam.xyz/uploads/${ele.service_category_img}`}
-                            data-aos="flip-right"
-                            alt="image description"
-                            class="img-fluid home-categ"
-                          />
-                        </div>
-                        <h2 class="headingIX mb-2">
-                          <a href="#">
-                            {i18next.language == "ar"
-                              ? ele.service_category_name_ar
-                              : ele.service_category_name_en}
-                          </a>
-                        </h2>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
+         
+          <Services services={services}></Services>
 
           <aside className="olneBook bgTheme py-7">
             <div className="container">
@@ -181,16 +82,11 @@ const Home = () => {
             </div>
           </section>
 
-          <aside className="dscntclb bg-primary pt-6 pb-7">
+          <aside className="dscntclb bgTheme pt-6 pb-7">
             <div className="container">
               <div className="d-flex align-items-center text-white justify-content-center">
                 <span className="icoHolder mr-3">
-                  <img
-                    src="images/ico14.svg"
-                    alt="image description"
-                    width="40"
-                    height="43"
-                  />
+                 <Icon icon="bxs:offer" fontSize={50} color="#fff"></Icon>
                 </span>
                 <h3 className="h5 mb-0 font-weight-normal text-white fIStyle">
                   Enjoy BlueTeam's{" "}

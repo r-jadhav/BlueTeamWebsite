@@ -90,11 +90,11 @@ export default function WhyChooseUs() {
               </div>
               <div class="txtHolder">
                 <h5 class="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Eco Hand Wash
+                Estimations
                 </h5>
                 <p>
-                  Leave your car with us and less than 5 hours later we’ll have
-                  your showroom model vehicles.
+                We offer you the most accurate & fair car wash price
+                      estimates
                 </p>
               </div>
             </div>
@@ -111,11 +111,11 @@ export default function WhyChooseUs() {
               </div>
               <div class="txtHolder">
                 <h5 class="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Online Booking
+                Trust
                 </h5>
                 <p>
-                  We’ll automatically bill the card on the same day you signed
-                  up each month until you cancel.
+                Reliable team, which is certified for high-quality
+                      performance.
                 </p>
               </div>
             </div>
@@ -132,11 +132,10 @@ export default function WhyChooseUs() {
               </div>
               <div class="txtHolder">
                 <h5 class="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Great Result
+                Warranties
                 </h5>
                 <p>
-                  These services compliment your regular oil change service to
-                  ensure that your vehicle properly.
+                Clean, polish, and wax anywhere, anytime.
                 </p>
               </div>
             </div>
