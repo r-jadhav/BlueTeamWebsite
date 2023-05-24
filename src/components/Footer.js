@@ -295,7 +295,11 @@ const Footer = () => {
           <ChatBot steps={steps} {...config} />
         </div>
         <div className="stickyPhone">
+<<<<<<< HEAD
           <a href="https://api.whatsapp.com/send?phone=971502000787" target="_blank">
+=======
+          <a href="https://api.whatsapp.com/send?phone=971502000787">
+>>>>>>> 45742ac0325a40d7c5afe9bc8e05ad743a56062f
             <img
               src="images/whatsapp.svg"
               alt="images description"

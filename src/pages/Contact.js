@@ -2,12 +2,17 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Icon } from "@iconify/react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const Contact = () => {
   const { t } = useTranslation();
+<<<<<<< HEAD
   React.useEffect(() => {
     window.scroll(0, 0);
   }, []);
+=======
+  const analytics = getAnalytics();
+>>>>>>> 45742ac0325a40d7c5afe9bc8e05ad743a56062f
   return (
     <>
       <div id="pageWrapper">
@@ -88,8 +93,15 @@ const Contact = () => {
                     </div>
                     <div class="form-group">
                       <button
-                        type="submit"
+                        type="button"
                         class="btn btn-warning text-uppercase fwEbold"
+                        onClick={()=>{
+                          logEvent(analytics, 'select_content', {
+                            content_type: 'image',
+                            content_id: 'P12453',
+                            items: [{ name: 'Kittens' }]
+                          });
+                        }}
                       >
                         {i18next.language == "ar"
                           ? "إرسال الرسالة "
