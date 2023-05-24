@@ -206,49 +206,49 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3 d-md-flex mb-sm-4 mb-lg-0">
-              <div class="txtHolder w-100">
-                <h6 class="h6 text-capitalize fwEbold mb-4 mb-lg-6">contact info</h6>
-                <address class="mb-0">
-                  <ul class="contList2 list-unstyled mb-0 justify-content-center">
-                    <li class="d-flex mb-6">
-                      <div class="ico pr-3 flex-shrink-0 d-flex align-items-center">
+            <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-sm-4 mb-lg-0">
+              <div className="txtHolder w-100">
+                <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">contact info</h6>
+                <address className="mb-0">
+                  <ul className="contList2 list-unstyled mb-0 justify-content-center">
+                    <li className="d-flex mb-6">
+                      <div className="ico pr-3 flex-shrink-0 d-flex align-items-center">
                         <Icon
                             icon="solar:phone-outline"
                             color="#0b4b8a"
                             fontSize={30}
                           />
                       </div>
-                      <div class="wrap">
-                        <span class="d-block mb-lg-1 text-dark">{i18next.language == "ar"
+                      <div className="wrap">
+                        <span className="d-block mb-lg-1 text-dark">{i18next.language == "ar"
                             ? "اتصل بنا في أي وقت"
                             : "Call us anytime:"}{" "}</span>
-                        <a href="tel:18001234567" class="text-dark">1-800-123-4567</a>
+                        <a href="tel:18001234567" className="text-dark">1-800-123-4567</a>
                       </div>
                     </li>
-                    <li class="d-flex mb-6">
-                      <div class="ico pr-3 flex-shrink-0 d-flex align-items-center">
+                    <li className="d-flex mb-6">
+                      <div className="ico pr-3 flex-shrink-0 d-flex align-items-center">
                         <Icon icon="bytesize:location" color="#0b4b8a" fontSize={30} />
                       </div>
-                      <ul class="list-unstyled mb-0">
-                          <li class="mb-1 text-dark">
+                      <ul className="list-unstyled mb-0">
+                          <li className="mb-1 text-dark">
                               {i18next.language == "ar"
                               ? "مصفح M14 محل 3 و 4 - أبو ظبي"
                               : "Mussafah M14 SHOP 3 AND 4 - Abu Dhabi"}{" "}
                           </li>
-                          <li class="text-dark">
+                          <li className="text-dark">
                             {i18next.language == "ar"
                               ? "- الإمارات العربية المتحدة"
                               : "- United Arab Emirates"}{" "}
                           </li>
                       </ul>
                     </li>
-                    <li class="d-flex mb-6">
-                      <div class="ico pr-3 flex-shrink-0 d-flex align-items-center">
+                    <li className="d-flex mb-6">
+                      <div className="ico pr-3 flex-shrink-0 d-flex align-items-center">
                         <Icon icon="ion:time-outline" color="#0b4b8a" fontSize={30} />
                       </div>
-                      <ul class="list-unstyled mb-0 ftimeList">
-                        <li class="mb-1 text-dark">
+                      <ul className="list-unstyled mb-0 ftimeList">
+                        <li className="mb-1 text-dark">
                             {i18next.language == "ar"
                               ? "من الإثنين إلى السبت: 6:00 صباحًا - 3:00 ظهراً"
                               : "Mon-Sat: 6:00 am - 3:00 am"}

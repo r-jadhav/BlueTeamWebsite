@@ -10,6 +10,7 @@ import i18next from "i18next";
 import WhyChooseUs from "../components/Home/WhyChooseUs";
 import Services from "../components/Home/Services";
 import { Icon } from "@iconify/react";
+import $ from 'jquery'; 
 
 const Home = () => {
   const { t } = useTranslation();
@@ -25,6 +26,7 @@ const Home = () => {
     getServices();
     AOS.init();
     window.scroll(0, 0);
+  
   }, []);
 
   return (
@@ -57,10 +59,10 @@ const Home = () => {
 
           <section className="abtSec pt-12 pt-md-15 ">
             <div className="container">
-              <div class="row">
-                <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-                  <div class="header ltrSpce text-center mb-10 mb-xl-11">
-                    <h1 class="headingI fwEbold mb-2 mb-xl-4">About Blue Team</h1>
+              <div className="row">
+                <div className="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                  <div className="header ltrSpce text-center mb-10 mb-xl-11">
+                    <h1 className="headingI fwEbold mb-2 mb-xl-4">About Blue Team</h1>
                     <p className="psudo">Best Car Wash Service in UAE</p>
                   </div>
                 </div>
@@ -119,7 +121,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-12">
                   <div className="header text-center mb-8 mb-md-11">
-                    <h3 class="h3 fwEbold">{t("gallery_main_head")}</h3>
+                    <h3 className="h3 fwEbold">{t("gallery_main_head")}</h3>
                     <p className="psudo">{t("gallery_sub_head")}</p>
                   </div>
                 </div>
@@ -130,20 +132,20 @@ const Home = () => {
             </div>
           </section>
 
-          <aside class="cntrHolder bgTheme pt-8 pt-md-10 pb-4">
-            <div class="container">
-              <ul class="list-unstyled d-flex flex-wrap counterList text-center  text-lg-left justify-content-center mb-0">
-                <li class="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
-                  <span class="icoHolder flex-shrink-0 d-block d-lg-flex align-items-center justify-content-center mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
+          <aside className="cntrHolder bgTheme pt-8 pt-md-10 pb-4">
+            <div className="container">
+              <ul className="list-unstyled d-flex flex-wrap counterList text-center  text-lg-left justify-content-center mb-0">
+                <li className="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
+                  <span className="icoHolder flex-shrink-0 d-block d-lg-flex align-items-center justify-content-center mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
                     <img
                       src="images/ico08.svg"
                       alt="image description"
-                      class="img-fluid"
+                      className="img-fluid"
                       width="61"
                       height="61"
                     />
                   </span>
-                  <div class="wrap font-weight-light text-white">
+                  <div className="wrap font-weight-light text-white">
                     <div className="d-block font-weight-normal mb-1">
                       <strong style={{ fontSize: 43 }}>90%</strong>
                     </div>
@@ -154,34 +156,34 @@ const Home = () => {
                     </p>
                   </div>
                 </li>
-                <li class="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
-                  <span class="icoHolder flex-shrink-0 d-block d-lg-flex align-items-cente justify-content-centerr mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
+                <li className="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
+                  <span className="icoHolder flex-shrink-0 d-block d-lg-flex align-items-cente justify-content-centerr mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
                     <img
                       src="images/ico09.svg"
                       alt="image description"
-                      class="img-fluid"
+                      className="img-fluid"
                       width="61"
                       height="61"
                     />
                   </span>
-                  <div class="wrap font-weight-light text-white">
+                  <div className="wrap font-weight-light text-white">
                     <div className="d-block font-weight-normal mb-1">
                       <strong style={{ fontSize: 43 }}>16+</strong>
                     </div>
                     <p>{i18next.language == "ar" ? "فريق عمل" : "Teams"}</p>
                   </div>
                 </li>
-                <li class="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
-                  <span class="icoHolder flex-shrink-0 d-block d-lg-flex align-items-center justify-content-center mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
+                <li className="d-lg-flex flex-wrap justify-content-center align-items-center mb-7">
+                  <span className="icoHolder flex-shrink-0 d-block d-lg-flex align-items-center justify-content-center mx-auto ml-lg-0 mr-lg-3 mb-2 mb-lg-0">
                     <img
                       src="images/ico10.svg"
                       alt="image description"
-                      class="img-fluid"
+                      className="img-fluid"
                       width="61"
                       height="61"
                     />
                   </span>
-                  <div class="wrap font-weight-light text-white">
+                  <div className="wrap font-weight-light text-white">
                     <div className="d-block font-weight-normal mb-1">
                       <strong style={{ fontSize: 43 }}>11 </strong>
                     </div>

@@ -11,35 +11,37 @@ const Header = () => {
     setSelect(code);
     if (code == "AR") {
       i18next.changeLanguage("ar");
+      $('.navCollapse .nav-item .nav-link').css({"font-size":"20px","font-family":"'Cairo', sans-serif;"});
     } else {
       i18next.changeLanguage("en");
+      $('.navCollapse .nav-item .nav-link').css({"font-size":"15px"});
     }
   };
 
   return (
     <>
-      <header id="header" class="bg-white">
-        <div class="midBar pt-2 pt-lg-6 pb-lg-6 pt-xl-8 pb-xl-7">
-          <div class="container">
-            <div class="row">
-              <div class="col-6 col-md-4">
-                <div class="logo position-relative">
+      <header id="header" className="bg-white">
+        <div className="midBar pt-2 pt-lg-6 pb-lg-6 pt-xl-8 pb-xl-7">
+          <div className="container">
+            <div className="row">
+              <div className="col-6 col-md-4">
+                <div className="logo position-relative">
                   <a href="homepage.html">
                     <img
                       src="images/logo.png"
                       alt="Auto &amp; Detailing template"
-                      class="img-fluid"
+                      className="img-fluid"
                     />
                   </a>
                 </div>
               </div>
-              <div class="col-6 col-md-8 d-flex align-items-center justify-content-end position-static">
-                <ul class=" list-unstyled contactList d-flex mb-0 position-relative mr-17 mr-sm-19 mr-md-23 mr-lg-4 mr-xl-0">
-                  <li class="d-lg-flex flex-wrap d-none">
-                    <span class="time rounded-sm d-block mr-lg-2 pt-lg-2">
-                      <span class="far fa-clock p-lg-0 icn"></span>
+              <div className="col-6 col-md-8 d-flex align-items-center justify-content-end position-static">
+                <ul className=" list-unstyled contactList d-flex mb-0 position-relative mr-17 mr-sm-19 mr-md-23 mr-lg-4 mr-xl-0">
+                  <li className="d-lg-flex flex-wrap d-none">
+                    <span className="time rounded-sm d-block mr-lg-2 pt-lg-2">
+                      <span className="far fa-clock p-lg-0 icn"></span>
                     </span>
-                    <ul class="list-unstyled mb-0 timeList">
+                    <ul className="list-unstyled mb-0 timeList">
                       <li>
                         <time
                           className=" d-none d-lg-block"
@@ -64,15 +66,15 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-                  <li class="d-flex flex-wrap">
-                    <span class="ico d-block mr-lg-2 pt-lg-2">
+                  <li className="d-flex flex-wrap">
+                    <span className="ico d-block mr-lg-2 pt-lg-2">
                       <a
                         href="tel:1-800-123-4567"
-                        class="fas fa-phone rounded-sm p-lg-0 icn"
+                        className="fas fa-phone rounded-sm p-lg-0 icn"
                       ></a>
                     </span>
-                    <div class="wrap d-none d-lg-block">
-                      <span class="text d-block">
+                    <div className="wrap d-none d-lg-block">
+                      <span className="text d-block">
                         {i18next.language == "ar"
                           ? "لديك سؤال؟"
                           : "Have any questions?"}
@@ -83,7 +85,7 @@ const Header = () => {
                     </div>
                   </li>
                 </ul>
-                <div class="btnHolder ml-xl-8 d-none d-md-block">
+                <div className="btnHolder ml-xl-8 d-none d-md-block">
                   <a
                     href="#"
                     className="btn btn-warning py-xl-4 text-uppercase fwEbold"
@@ -98,33 +100,33 @@ const Header = () => {
           </div>
         </div>
         <div className="sticky-wrap-menuHolder">
-          <div class="menuHolder">
-            <div class="container position-relative">
-              <nav class="navbar navHolder d-flex navbar-expand-lg navbar-dark p-0 mt-lg-0 mr-lg-0 position-static">
-                <div class="menuLogo">
+          <div className="menuHolder">
+            <div className="container position-relative">
+              <nav className="navbar navHolder d-flex navbar-expand-lg navbar-dark p-0 mt-lg-0 mr-lg-0 position-static">
+                <div className="menuLogo">
                   <a href="homepage.html">
                     <img
                       src="images/logo.png"
                       alt="Auto &amp; Detailing template"
-                      class="img-fluid logoWhite p-3"
+                      className="img-fluid logoWhite p-3"
                     />
                     <img
                       src="images/logo.png"
                       alt="Auto &amp; Detailing template"
-                      class="img-fluid logoBlack"
+                      className="img-fluid logoBlack"
                     />
                   </a>
                 </div>
                 <a
                   href="javascript:void(0);"
-                  class="search position-relative order-lg-2 fas fa-search"
+                  className="search position-relative order-lg-2 fas fa-search"
                   data-toggle="collapse"
                   data-target="#collapseExample"
                   aria-expanded="false"
                   aria-controls="collapseExample"
                 ></a>
                 <button
-                  class="navbar-toggler toggleBar position-relative"
+                  className="navbar-toggler toggleBar position-relative"
                   type="button"
                   data-toggle="collapse"
                   data-target="#navbarNav"
@@ -132,10 +134,10 @@ const Header = () => {
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <span class="navbar-toggler-icon"></span>
+                  <span className="navbar-toggler-icon"></span>
                 </button>
                 <div
-                  class="collapse navbar-collapse navCollapse text-uppercase fwBlack"
+                  className="collapse navbar-collapse navCollapse text-uppercase fwBlack"
                   id="navbarNav"
                 >
                   <ul className="navbar-nav">
@@ -180,11 +182,11 @@ const Header = () => {
                   placeholder="Language"
                 />
 
-                {/* <div id="collapseExample" class="collapse searchFormCollapse position-absolute">
-                            <form class="sForm rounded-sm overflow-hidden input-group position-relative">
-                                <input type="text" class="form-control form-control-sm pr-2" placeholder="Find Freelancers"/>
-                                <div class="input-group-prepend mr-0">
-                                    <button type="submit" class="btn buttonReset text-white fas fa-search"></button>
+                {/* <div id="collapseExample" className="collapse searchFormCollapse position-absolute">
+                            <form className="sForm rounded-sm overflow-hidden input-group position-relative">
+                                <input type="text" className="form-control form-control-sm pr-2" placeholder="Find Freelancers"/>
+                                <div className="input-group-prepend mr-0">
+                                    <button type="submit" className="btn buttonReset text-white fas fa-search"></button>
                                 </div>
                             </form>
                         </div> */}

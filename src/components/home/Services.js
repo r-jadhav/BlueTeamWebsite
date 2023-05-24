@@ -6,33 +6,33 @@ export default function Services({ services }) {
   const { t } = useTranslation();
 
   return (
-    <section class="wsisSec pt-6 pt-lg-6 pb-4">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-            <div class="header ltrSpce text-center mb-10 mb-xl-11">
-            <h3 class="h3 fwEbold mb-4">{i18next.language == "ar" ? 'الفئات' : 'Categories '}</h3>
+    <section className="wsisSec pt-6 pt-lg-6 pb-4">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+            <div className="header ltrSpce text-center mb-10 mb-xl-11">
+            <h3 className="h3 fwEbold mb-4">{i18next.language == "ar" ? 'الفئات' : 'Categories '}</h3>
               <p className="psudo">{t("category_subtitle")}</p>
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div className="row justify-content-center">
           {services?.map((ele) => {
             return (
               <div
-                class="col-12 col-md-6 col-lg-2 d-flex justify-content-center"
+                className="col-12 col-md-6 col-lg-2 d-flex justify-content-center"
                 key={ele.service_category_id}
               >
-                <div class="sBlock mb-8 mb-lg-11 text-center text-md-left">
-                  <div class="imgHolder overflow-hidden position-relative mx-auto">
+                <div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
+                  <div className="imgHolder overflow-hidden position-relative mx-auto">
                     <img
                       src={`http://blueteam.xyz/uploads/${ele.service_category_img}`}
                       data-aos="flip-right"
                       alt="image description"
-                      class="img-fluid home-categ"
+                      className="img-fluid home-categ"
                     />
                   </div>
-                  <h2 class="headingIX mb-2">
+                  <h2 className="headingIX mb-2">
                     <a href="#">
                       {i18next.language == "ar"
                         ? ele.service_category_name_ar

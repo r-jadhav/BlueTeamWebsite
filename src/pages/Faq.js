@@ -8,26 +8,26 @@ const Faq = () => {
   }, []);
   return (
     <>
-      <section class="abtWSec pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-xl-10 offset-xl-1">
-              <div class="header ltrSpce text-center mb-8 mb-sm-10 mb-md-12 mb-xl-14 px-lg-20 px-xl-4">
-                <h3 class="h3 fwEbold mb-2">{t("FaqMainHead")}</h3>
+      <section className="abtWSec pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-xl-10 offset-xl-1">
+              <div className="header ltrSpce text-center mb-8 mb-sm-10 mb-md-12 mb-xl-14 px-lg-20 px-xl-4">
+                <h3 className="h3 fwEbold mb-2">{t("FaqMainHead")}</h3>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-12">
+          <div className="row">
+            <div className="col-12">
               <div
-                class="accordion accordWrap mb-8 mb-sm-12 mb-lg-14"
+                className="accordion accordWrap mb-8 mb-sm-12 mb-lg-14"
                 id="accordionGeneral"
               >
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="headingOne">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="headingOne">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapseOne"
@@ -40,20 +40,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapseOne"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="headingOne"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans1")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading2">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading2">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse2"
@@ -66,20 +66,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse2"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading2"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans2")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading3">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading3">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse3"
@@ -92,20 +92,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse3"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading3"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans3")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading4">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading4">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse4"
@@ -118,20 +118,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse4"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading4"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans4")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading5">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading5">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse5"
@@ -144,20 +144,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse5"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading5"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans5")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading6">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading6">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse6"
@@ -170,20 +170,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse6"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading6"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans6")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading7">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading7">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse7"
@@ -196,20 +196,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse7"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading7"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans7")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading8">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading8">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse8"
@@ -222,20 +222,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse8"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading8"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans8")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading9">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading9">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse9"
@@ -248,20 +248,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse9"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading9"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans9")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading10">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading10">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse10"
@@ -274,20 +274,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse10"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading10"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans10")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading11">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading11">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse11"
@@ -300,20 +300,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse11"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading11"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans11")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading12">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading12">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse12"
@@ -326,20 +326,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse12"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading12"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans12")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading13">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading13">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse13"
@@ -352,20 +352,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse13"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading13"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans13")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading14">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading14">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse14"
@@ -378,20 +378,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse14"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading14"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans14")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading15">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading15">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse15"
@@ -404,20 +404,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse15"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading15"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans15")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading16">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading16">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse16"
@@ -430,20 +430,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse16"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading16"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans16")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading17">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading17">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse17"
@@ -456,20 +456,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse17"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading17"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans17")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading18">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading18">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse18"
@@ -482,20 +482,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse18"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading18"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans18")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading19">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading19">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse19"
@@ -508,20 +508,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse19"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading19"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans19")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading20">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading20">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse20"
@@ -534,20 +534,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse20"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading20"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans20")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading21">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading21">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse21"
@@ -560,20 +560,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse21"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading21"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans21")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading22">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading22">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse22"
@@ -586,20 +586,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse22"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading22"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans22")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading23">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading23">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse23"
@@ -612,20 +612,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse23"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading23"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans23")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading24">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading24">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse24"
@@ -638,20 +638,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse24"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading24"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans24")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading25">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading25">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse25"
@@ -664,20 +664,20 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse25"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading25"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans25")}
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header p-0 border-0" id="heading26">
-                    <h2 class="mb-0">
+                <div className="card">
+                  <div className="card-header p-0 border-0" id="heading26">
+                    <h2 className="mb-0">
                       <button
-                        class="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
+                        className="btn position-relative btn-link py-3 pl-7 pr-4 px-md-11 w-100 text-left collapsed"
                         type="button"
                         data-toggle="collapse"
                         data-target="#collapse26"
@@ -690,11 +690,11 @@ const Faq = () => {
                   </div>
                   <div
                     id="collapse26"
-                    class="collapse"
+                    className="collapse"
                     aria-labelledby="heading26"
                     data-parent="#accordionGeneral"
                   >
-                    <div class="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
+                    <div className="card-body pl-7 pr-4 px-md-11 pb-7 pt-7 mt-n1 pt-0">
                       {t("Faqans26")}
                     </div>
                   </div>
