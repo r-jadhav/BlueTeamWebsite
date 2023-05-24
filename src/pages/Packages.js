@@ -1,6 +1,9 @@
 import React from "react";
 
 export default function Packages() {
+  React.useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <section class="wsisSec pt-12 pt-lg-16 pb-4">
       <div class="container">

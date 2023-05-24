@@ -8,8 +8,8 @@ const Footer = () => {
   const { t } = useTranslation();
 
   const config = {
-    width: "700px",
-    height: "700px",
+    // width: "700px",
+    // height: "700px",
     floating: "True",
     // floatingIcon:<BsWhatsapp color='#fff' size={25}/>,
   };
@@ -295,7 +295,7 @@ const Footer = () => {
           <ChatBot steps={steps} {...config} />
         </div>
         <div className="stickyPhone">
-          <a href="https://api.whatsapp.com/send?phone=971502000787">
+          <a href="https://api.whatsapp.com/send?phone=971502000787" target="_blank">
             <img
               src="images/whatsapp.svg"
               alt="images description"

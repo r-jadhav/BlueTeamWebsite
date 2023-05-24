@@ -11,7 +11,7 @@ export default function Services({ services }) {
         <div class="row">
           <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
             <div class="header ltrSpce text-center mb-10 mb-xl-11">
-              <h1 class="headingI fwEbold mb-2 mb-xl-4">Categories</h1>
+            <h3 class="h3 fwEbold mb-4">{i18next.language == "ar" ? 'الفئات' : 'Categories '}</h3>
               <p className="psudo">{t("category_subtitle")}</p>
             </div>
           </div>

@@ -6,25 +6,29 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 
 const Contact = () => {
   const { t } = useTranslation();
+  React.useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const analytics = getAnalytics();
   return (
     <>
       <div id="pageWrapper">
         <main>
-          <section class="contactSec py-10 py-sm-12 pb-md-14 pt-lg-14 pb-lg-16 pb-xl-18">
+          <section class="abtWSec pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6">
             <div class="container">
               <div class="row">
                 <div class="col-12 col-xl-10 offset-xl-1">
-                  <header class="header ltrSpce text-center mb-6 mb-md-8 mb-lg-12 mb-xl-14">
-                    <h1 class="fwEbold h2 text-capitalize mb-2">
+                  <div class="header ltrSpce text-center mb-6 mb-md-8 mb-lg-12 mb-xl-14">
+                    <h3 class="headingI fwEbold h3 text-capitalize mb-2 mb-md-3 mb-lg-4">
+                     {/* h3 fwEbold mb-2  */}
                       {t("contact-us")}
-                    </h1>
+                    </h3>
                     <p>
                       {i18next.language == "ar"
                         ? "يمكنك التواصل معنا عبر العناوين والأرقام الموضحة أدناه، أو عن طريق إرسال رسالة"
                         : "You can communicate with us comfortably with the following information or send a message"}
                     </p>
-                  </header>
+                  </div>
                 </div>
               </div>
               <div class="row flex-row-reverse">

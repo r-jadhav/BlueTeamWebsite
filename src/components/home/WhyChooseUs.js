@@ -1,4 +1,5 @@
 import React from "react";
+import { Icon } from "@iconify/react";
 
 export default function WhyChooseUs() {
   return (
@@ -6,12 +7,12 @@ export default function WhyChooseUs() {
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <header class="header text-center font-weight-light mb-11">
-              <h4 class="fwEbold pt-12 mb-3">Why Choose Us?</h4>
+            <div class="header text-center font-weight-light mb-11">
+              <h3 class="h3 fwEbold mb-4 pt-12"> Why Choose Us? </h3>
               <p className="psudo">
                 Here’s Why our product beats all other competitors in market.
               </p>
-            </header>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -81,20 +82,14 @@ export default function WhyChooseUs() {
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="cBlock d-flex text-secondary mb-6 mb-md-9 mb-xl-13">
               <div class="icoHolder mr-4 mt-1">
-                <img
-                  src="images/ico51.svg"
-                  alt="image description"
-                  width="60"
-                  height="55"
-                />
+                <Icon icon="majesticons:list-box-line" fontSize={50} color="#0b4b8a"></Icon>
               </div>
               <div class="txtHolder">
                 <h5 class="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                Estimations
+                  Estimations
                 </h5>
                 <p>
-                We offer you the most accurate & fair car wash price
-                      estimates
+                  We offer you the most accurate & fair car wash price estimates
                 </p>
               </div>
             </div>
@@ -102,20 +97,15 @@ export default function WhyChooseUs() {
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="cBlock d-flex text-secondary mb-6 mb-md-9 mb-xl-13">
               <div class="icoHolder mr-4 mt-1">
-                <img
-                  src="images/ico52.svg"
-                  alt="image description"
-                  width="60"
-                  height="55"
-                />
+                <Icon icon="majesticons:thumb-up-line" fontSize={50} color="#0b4b8a"></Icon>
               </div>
               <div class="txtHolder">
                 <h5 class="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                Trust
+                  Trust
                 </h5>
                 <p>
-                Reliable team, which is certified for high-quality
-                      performance.
+                  Reliable team, which is certified for high-quality
+                  performance.
                 </p>
               </div>
             </div>
@@ -123,20 +113,13 @@ export default function WhyChooseUs() {
           <div class="col-12 col-md-6 col-lg-4 d-flex">
             <div class="cBlock d-flex text-secondary mb-6 mb-md-9 mb-xl-13">
               <div class="icoHolder mr-4 mt-1">
-                <img
-                  src="images/ico53.svg"
-                  alt="image description"
-                  width="60"
-                  height="55"
-                />
+                <Icon icon="majesticons:timer-line" fontSize={50} color="#0b4b8a"></Icon>
               </div>
               <div class="txtHolder">
                 <h5 class="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                Warranties
+                  Warranties
                 </h5>
-                <p>
-                Clean, polish, and wax anywhere, anytime.
-                </p>
+                <p>Clean, polish, and wax anywhere, anytime.</p>
               </div>
             </div>
           </div>
