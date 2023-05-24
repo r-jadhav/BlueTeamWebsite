@@ -13,9 +13,9 @@ const PrivacyPolicy = () => {
           <div class="row">
             <div class="col-12 col-lg-12">
               <div class="headerII ltrSpce mb-8 mb-md-10 mb-lg-12 px-md-6 px-xl-10">
-                <h2 class="h3 text-center fwEbold mb-4 mb-sm-5 mb-xl-6 mx-lg-12">
+                <h3 class="h3 text-center fwEbold mb-4 mb-sm-5 mb-xl-6 mx-lg-12">
                   {t("Privacy-Policy")}
-                </h2>
+                </h3>
                 <h5>{t("We-respect-your-privacy")}</h5>
                 <p> {t("We-respect-your-privacy-des")} </p>
                 <h5>{t("Information-we-collect")}</h5>

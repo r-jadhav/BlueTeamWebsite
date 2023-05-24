@@ -6,13 +6,10 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 
 const Contact = () => {
   const { t } = useTranslation();
-<<<<<<< HEAD
   React.useEffect(() => {
     window.scroll(0, 0);
   }, []);
-=======
   const analytics = getAnalytics();
->>>>>>> 45742ac0325a40d7c5afe9bc8e05ad743a56062f
   return (
     <>
       <div id="pageWrapper">
