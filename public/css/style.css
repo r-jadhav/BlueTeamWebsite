@@ -74,7 +74,7 @@
 }
 .btn-warning:hover,h2.sc-VigVT.lifvqk.rsc-header-title {
 
-    color: #fff;
+    color: #fff !important;
 }
 .ReactFlagsSelect-module_selectBtn__19wW7:after {
     border-top: 5px solid #fff !important;
@@ -124,6 +124,27 @@ button:focus {
     margin: auto;
     padding-top: 10px;
 }
+.ReactFlagsSelect-module_label__27pw9, .ReactFlagsSelect-module_secondaryLabel__37t1D {
+    font-size: 1em;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+.ReactFlagsSelect-module_selectBtn__19wW7 {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    font-family: inherit;
+    color: #fff !important;
+    border: thin solid #fff !important;
+    border-radius: 4px;
+    background: transparent;
+}
 @media(max-width:991px){
     .contactList > li:nth-child(n+2) {
         margin-left: 4px;
@@ -159,11 +180,12 @@ button:focus {
         margin-top: 62px;
     }
     .stickyPhone img.img-fluid {
-        width: 40px;
+        width: 55px;
+        margin-bottom: 12px;
     }
     .godhbL {
-        height: 40px!important;
-        width: 40px !important;
+        height: 55px!important;
+        width: 55px !important;
     }
     .rsc-float-button svg {
         width: 22px !important;
@@ -172,31 +194,26 @@ button:focus {
     .stickyPhone {
         bottom: 85px;
     }
+    .ReactFlagsSelect-module_label__27pw9, .ReactFlagsSelect-module_secondaryLabel__37t1D {
+        color: #000;
+    }
+    .ReactFlagsSelect-module_selectBtn__19wW7:after {
+        border-top: 5px solid #333 !important;
+    }
+    button#rfs-btn {
+        border: 1px solid #0b4b8a  !important;
+        padding: 3px;
+    }
+    .navbar-dark .navbar-toggler {
+        border-color: #333 !important;
+    }
+    .navbar-dark .navbar-toggler-icon {
+        filter: grayscale(100%);
+    }
 }
 
 @media (max-width: 576px){
     .pt-sm-12 {
         padding-top: 100px !important;
     }
-}
-.ReactFlagsSelect-module_label__27pw9, .ReactFlagsSelect-module_secondaryLabel__37t1D {
-    font-size: 1em;
-    padding-left: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #fff;
-}
-
-.ReactFlagsSelect-module_selectBtn__19wW7 {
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-    font-family: inherit;
-    color: #fff !important;
-    border: thin solid #fff !important;
-    border-radius: 4px;
-    background: transparent;
 }

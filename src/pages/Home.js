@@ -1,14 +1,14 @@
 import React from "react";
-import Testimonials from "../components/Testimonials";
-import Banner from "../components/Banner";
-import Gallery from "../components/gallery/Gallery";
+import Testimonials from "../components/Home/Testimonials";
+import Banner from "../components/Home/Banner";
+import Gallery from "../components/Gallery/Gallery";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import api from "../constant/api";
 import i18next from "i18next";
-import WhyChooseUs from "../components/home/WhyChooseUs";
-import Services from "../components/home/Services";
+import WhyChooseUs from "../components/Home/WhyChooseUs";
+import Services from "../components/Home/Services";
 import { Icon } from "@iconify/react";
 
 const Home = () => {
@@ -24,6 +24,7 @@ const Home = () => {
   React.useEffect(() => {
     getServices();
     AOS.init();
+    window.scroll(0, 0);
   }, []);
 
   return (
@@ -32,7 +33,7 @@ const Home = () => {
         <main>
           <Banner />
           <WhyChooseUs></WhyChooseUs>
-         
+
           <Services services={services}></Services>
 
           <aside className="olneBook bgTheme py-7">
@@ -70,7 +71,7 @@ const Home = () => {
                 <div className="col-12 col-md-7 col-lg-6">
                   <div className="txtHolder pt-7 pt-md-6 pt-xl-16 text-center text-md-left">
                     <h3 className="headingIV mb-4">
-                      <strong className="d-block font-weight-bold">
+                      <strong className="d-block font-weight-bold text-capitalize">
                         {t("About_sub_Heading")}
                       </strong>
                     </h3>
@@ -86,15 +87,15 @@ const Home = () => {
             <div className="container">
               <div className="d-flex align-items-center text-white justify-content-center">
                 <span className="icoHolder mr-3">
-                 <Icon icon="bxs:offer" fontSize={50} color="#fff"></Icon>
+                  <Icon icon="bxs:offer" fontSize={50} color="#fff"></Icon>
                 </span>
                 <h3 className="h5 mb-0 font-weight-normal text-white fIStyle">
                   Enjoy BlueTeam's{" "}
                   <strong className="font-weight-bold">
                     {" "}
-                    special membership{" "}
+                    Special Membership{" "}
                   </strong>{" "}
-                  packages{" "}
+                  Packages{" "}
                 </h3>
                 <p>
                   You will get a Discount on any of our services through
@@ -110,9 +111,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-12">
                   <div className="header text-center mb-8 mb-md-11">
-                    <h2 className="h3 fwEbold mb-3">
-                      {t("gallery_main_head")}
-                    </h2>
+                    <h3 class="h3 fwEbold">{t("gallery_main_head")}</h3>
                     <p className="psudo">{t("gallery_sub_head")}</p>
                   </div>
                 </div>

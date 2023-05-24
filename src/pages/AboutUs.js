@@ -1,5 +1,5 @@
 import React from "react";
-import { BsStopwatch } from "react-icons/bs";
+import { BsStopwatch, BsTypeH3 } from "react-icons/bs";
 import { AiOutlineLike, AiOutlineProfile } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
@@ -10,17 +10,18 @@ const AboutUs = () => {
   const { t } = useTranslation();
   React.useEffect(() => {
     AOS.init();
+    window.scroll(0, 0);
   }, []);
   return (
     <>
-      <section class="abtWSec pt-10 pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6 mt-5">
+      <section class="abtWSec pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6">
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
               <div class="header text-center ltrSpce mb-8 mb-sm-10 mb-xl-15">
-                <h2 class="headingI fwEbold mb-2 mb-md-3 mb-lg-4 abtHead">
+                <h3 class="headingI h3 fwEbold mb-2 mb-md-3 mb-lg-4">
                   {t("AboutHeading")}
-                </h2>
+                </h3>
               </div>
             </div>
           </div>
@@ -189,7 +190,7 @@ const AboutUs = () => {
               <h4 class="headingIV text-capitalize font-weight-bold mb-3">
                 {i18next.language == "ar"
                   ? "أعطال مفاجئة؟  نحن نصلح سيارتك في مكانها "
-                  : "Surprise malfunctions ؟ We repair your car in place"}
+                  : "Surprise malfunctions? We repair your car in place"}
               </h4>
               <p>
                 {i18next.language == "ar"

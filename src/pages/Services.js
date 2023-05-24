@@ -13,9 +13,9 @@ const Services = () => {
       console.log(res.data.data);
     });
   };
-
-  useEffect(() => {
+  React.useEffect(() => {
     getServices();
+    window.scroll(0, 0);
   }, []);
 
   return (
@@ -25,7 +25,9 @@ const Services = () => {
           <div class="row">
             <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
               <div class="header ltrSpce text-center mb-10 mb-xl-11">
-                <h1 class="headingI fwEbold mb-2 mb-xl-4">{i18next.language == "ar" ? 'الفئات' : 'Categories '}</h1>
+                <h1 class="headingI fwEbold mb-2 mb-xl-4">
+                  {i18next.language == "ar" ? "الفئات" : "Categories "}
+                </h1>
                 <p>{t("category_subtitle")}</p>
               </div>
             </div>
@@ -35,7 +37,11 @@ const Services = () => {
               return (
                 <div
                   class="col-12 col-md-6 col-lg-4 d-flex"
-				  style={{background:ele.color,margin:10,justifyContent:'center'}}
+                  style={{
+                    background: ele.color,
+                    margin: 10,
+                    justifyContent: "center",
+                  }}
                   key={ele.service_category_id}
                 >
                   <div class="sBlock mb-8 mb-lg-11 text-center text-md-left">
@@ -44,7 +50,7 @@ const Services = () => {
                         src={`http://blueteam.xyz/uploads/${ele.service_category_img}`}
                         alt="image description"
                         class="img-fluid"
-						            style={{minWidth:200,width:'auto'}}
+                        style={{ minWidth: 200, width: "auto" }}
                       />
                       {/* <div class="btnHolder position-absolute">
                         <a
@@ -64,10 +70,10 @@ const Services = () => {
                     </h2>
                     <p>We do all kinds of polishing and ceramics</p>
                     <a href="#" class="readMore fwEbold text-uppercase">
-                    {i18next.language == "ar"
-                          ? 'اطلع على الباقات'
-                          : 'View Packages '}
-				              <span class="fas fa-chevron-right icn"></span>
+                      {i18next.language == "ar"
+                        ? "اطلع على الباقات"
+                        : "View Packages "}
+                      <span class="fas fa-chevron-right icn"></span>
                     </a>
                   </div>
                 </div>

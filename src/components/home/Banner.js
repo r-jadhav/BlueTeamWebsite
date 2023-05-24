@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
-import '../assets/css/slider-animations.css';
-import '../assets/css/style.css';
+import '../../assets/css/slider-animations.css';
+import '../../assets/css/style.css';
 
 const content = [
 	{
@@ -40,7 +40,7 @@ const settings = {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 15000,
     delay: 5000,
     speed: 1000,
