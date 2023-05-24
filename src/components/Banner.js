@@ -5,13 +5,13 @@ import '../assets/css/slider-animations.css';
 import '../assets/css/style.css';
 
 const content = [
-	{
-		title1: '',
-        title2: '',
-		description: '',
-		src: 'videos/banner.mp4',
-        type:'video'
-	},
+	// {
+	// 	title1: '',
+    //     title2: '',
+	// 	description: '',
+	// 	src: 'videos/banner.mp4',
+    //     type:'video'
+	// },
 	{
 		title1: 'You need a',
         title2: 'car wash',
@@ -42,8 +42,8 @@ const settings = {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 15000,
-    delay: 5000,
-    speed: 1000,
+    delay: 10000,
+    speed: 2000,
   };
 
 

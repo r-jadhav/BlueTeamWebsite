@@ -32,7 +32,7 @@ const Home = () => {
         <main>
           <Banner />
           <WhyChooseUs></WhyChooseUs>
-         
+
           <Services services={services}></Services>
 
           <aside className="olneBook bgTheme py-7">
@@ -56,6 +56,14 @@ const Home = () => {
 
           <section className="abtSec pt-12 pt-md-15 ">
             <div className="container">
+              <div class="row">
+                <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                  <div class="header ltrSpce text-center mb-10 mb-xl-11">
+                    <h1 class="headingI fwEbold mb-2 mb-xl-4">About Blue Team</h1>
+                    <p className="psudo">Best Car Wash Service in UAE</p>
+                  </div>
+                </div>
+              </div>
               <div className="row align-items-center">
                 <div className="col-12 col-md-5 col-lg-6">
                   <div className="imgHolder mx-auto mt-md-2 mt-lg-0 mr-md-0 mt-md-0 ml-md-n32 float-lg-right">
@@ -86,7 +94,7 @@ const Home = () => {
             <div className="container">
               <div className="d-flex align-items-center text-white justify-content-center">
                 <span className="icoHolder mr-3">
-                 <Icon icon="bxs:offer" fontSize={50} color="#fff"></Icon>
+                  <Icon icon="bxs:offer" fontSize={50} color="#fff"></Icon>
                 </span>
                 <h3 className="h5 mb-0 font-weight-normal text-white fIStyle">
                   Enjoy BlueTeam's{" "}
