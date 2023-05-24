@@ -295,7 +295,7 @@ const Footer = () => {
           <ChatBot steps={steps} {...config} />
         </div>
         <div className="stickyPhone">
-          <a href="tel:+971 800 2827">
+          <a href="https://api.whatsapp.com/send?phone=971502000787">
             <img
               src="images/whatsapp.svg"
               alt="images description"

@@ -2,9 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Icon } from "@iconify/react";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const analytics = getAnalytics();
   return (
     <>
       <div id="pageWrapper">
@@ -84,8 +86,15 @@ const Contact = () => {
                     </div>
                     <div class="form-group">
                       <button
-                        type="submit"
+                        type="button"
                         class="btn btn-warning text-uppercase fwEbold"
+                        onClick={()=>{
+                          logEvent(analytics, 'select_content', {
+                            content_type: 'image',
+                            content_id: 'P12453',
+                            items: [{ name: 'Kittens' }]
+                          });
+                        }}
                       >
                         {i18next.language == "ar"
                           ? "إرسال الرسالة "
@@ -112,14 +121,18 @@ const Contact = () => {
                         </li>
                         <li>
                           <a href="tel:025555292" class="tell">
-						  +971-502-000-787
+                            +971-502-000-787
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li class="d-flex">
                       <div class="ico mr-2 mr-lg-3 mt-1">
-					  <Icon icon="bytesize:location" color="#0b4b8a" fontSize={50} />
+                        <Icon
+                          icon="bytesize:location"
+                          color="#0b4b8a"
+                          fontSize={50}
+                        />
                       </div>
                       <div class="addressWrap">
                         <h2 class="headingXI text-capitalize fwSemibold mb-2">
@@ -141,7 +154,11 @@ const Contact = () => {
                     </li>
                     <li class="d-flex mb-md-0">
                       <div class="ico mr-2 mr-lg-3 mt-1">
-					  <Icon icon="ion:time-outline" color="#0b4b8a" fontSize={50} />
+                        <Icon
+                          icon="ion:time-outline"
+                          color="#0b4b8a"
+                          fontSize={50}
+                        />
                       </div>
                       <div class="tmeWrap">
                         <h2 class="headingXI text-capitalize fwSemibold mb-2">
