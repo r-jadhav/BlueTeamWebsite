@@ -89,72 +89,12 @@ const Testimonials = () => {
 
   return (
     <>
-      {/* <aside className="customerSec pt-10 pt-lg-12">
-        <div className="container">
-          <div className="header text-center mb-14">
-            <h3 className="fwEbold h2 text-capitalize mb-4">
-            {i18next.language == "ar" ? 'آراء العملاء ': 'customers feedback' }
-            </h3>
-            <p className="psudo">{i18next.language == "ar" ? '': "What Clients Say's ?" }</p>
-          </div>
-        </div>
-        <div
-          className="cutomerFeedback position-relative bgCover"
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-12 col-lg-10 offset-lg-1 feedbackSlide">
-                <Slider {...settings}>
-                  {testimonial.map((data) => {
-                    return (
-                      <div className="col-12" key={data.id}>
-                        <blockquote className="blockquote text-center px-lg-15 px-xl-28 pb-10">
-                          <div className="icoHolder rounded-circle d-flex justify-content-center align-items-center mx-auto mt-n8 mb-8">
-                            <img
-                              src="images/ico15.svg"
-                              alt="image description"
-                              width="36"
-                              height="28"
-                              className="img-fluid"
-                            />
-                          </div>
-                          <q className="d-block mb-7">{i18next.language == "ar" ? data.reviewAR :  data.reviewEN }
-                           
-                            </q>
-                          <cite className="d-block">
-                            <strong className="customer d-block mb-1">
-                              <a
-                                href="javascript:void(0);"
-                                className="fwSemibold"
-                              > {i18next.language == "ar" ? data.nameAR :  data.nameEN }
-                              </a>
-                              <em>{i18next.language == "ar" ? data.customerAR :  data.customerEN }</em>
-                            </strong>
-                          </cite>
-                          <span className="imgHolder mx-auto d-block">
-                            <img
-                              src="images/rating.png"
-                              className="img-fluid"
-                              alt="rating"
-                            />
-                          </span>
-                        </blockquote>
-                      </div>
-                    );
-                  })}
-                </Slider>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside> */}
-
       <aside class="customerSec pt-10 pt-lg-12">
         <div class="container">
           <div class="row">
             <div class="col-12">
               <div class="header ltrSpce text-center mb-6 mb-sm-9 mb-xl-11">
-                <h3 class="h3 fwEbold">{i18next.language == "ar" ? 'آراء العملاء ': 'Customers feedback' }</h3>
+                <h3 class="h3 fwEbold">{i18next.language == "ar" ? 'آراء العملاء ': 'Customers Feedback' }</h3>
                 <p className="psudo">{i18next.language == "ar" ? '': "What Clients Say's ?" }</p>
               </div>
             </div>

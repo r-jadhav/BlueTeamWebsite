@@ -130,9 +130,9 @@ const AboutUs = () => {
           <div class="row">
             <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
               <div class="header text-center ltrSpce mb-8 mb-sm-10 mb-xl-15">
-                <h2 class="headingI fwEbold mb-2 mb-md-3 mb-lg-4">
-                  We offer Distinguished service{" "}
-                </h2>
+                <h3 class="headingI h3 fwEbold mb-2 mb-md-3 mb-lg-4">
+                  We Offer Distinguished Service{" "}
+                </h3>
                 <p>
                   We have partnered with Turtlewax to provide you with the most
                   advanced fair price estimates
