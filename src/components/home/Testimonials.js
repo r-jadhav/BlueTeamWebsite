@@ -89,6 +89,7 @@ const Testimonials = () => {
 
   return (
     <>
+<<<<<<< HEAD
       {/* <aside className="customerSec pt-10 pt-lg-12">
         <div className="container">
           <div className="header text-center mb-14">
@@ -155,6 +156,14 @@ const Testimonials = () => {
             <div className="col-12">
               <div className="header ltrSpce text-center mb-6 mb-sm-9 mb-xl-11">
                 <h3 className="h3 fwEbold">{i18next.language == "ar" ? 'آراء العملاء ': 'Customers feedback' }</h3>
+=======
+      <aside class="customerSec pt-10 pt-lg-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="header ltrSpce text-center mb-6 mb-sm-9 mb-xl-11">
+                <h3 class="h3 fwEbold">{i18next.language == "ar" ? 'آراء العملاء ': 'Customers Feedback' }</h3>
+>>>>>>> 83e01950b95b364f9e9642af4f3c5eb799766953
                 <p className="psudo">{i18next.language == "ar" ? '': "What Clients Say's ?" }</p>
               </div>
             </div>
