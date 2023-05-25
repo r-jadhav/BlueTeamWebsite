@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Icon } from "@iconify/react";
 import { getAnalytics, logEvent } from "firebase/analytics";
-import api from "../constant/api";
+import api from "../constant/api"; 
 import Input from "react-phone-number-input/input";
 import message from "../constant/Message";
 import { ToastContainer } from "react-toastify";
@@ -39,10 +39,14 @@ const Contact = () => {
           .then((res) => {
             if (res.status == 200) {
               if (res.data.msg == "Success") {
+                logEvent(analytics, "contact_enquiry");
                 message(
                   "Thanks For Contacting Us. Our 24*7 support will reach you soon",
                   "success"
                 );
+                setTimeout(() => {
+                  window.location.reload()
+                }, 2500);
               } else {
                 message("Try Again Later", "error");
               }
@@ -165,7 +169,7 @@ const Contact = () => {
                         className="btn btn-warning text-uppercase fwEbold"
                         onClick={() => {
                           submitContact();
-                          logEvent(analytics, "select_content");
+                          
                         }}
                       >
                         {i18next.language == "ar"

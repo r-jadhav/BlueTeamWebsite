@@ -16,7 +16,6 @@ const resources = {
 i18next
 
   .use(initReactI18next)
-
   .init({
     resources,
 

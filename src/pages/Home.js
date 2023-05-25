@@ -10,15 +10,20 @@ import i18next from "i18next";
 import WhyChooseUs from "../components/Home/WhyChooseUs";
 import Services from "../components/Home/Services";
 import { Icon } from "@iconify/react";
-import $ from 'jquery'; 
+import message from "../constant/Message";
+import BookingEnquiry from "../components/Home/BookingEnquiry";
+import About from "../components/Home/About";
 
 const Home = () => {
   const { t } = useTranslation();
   const [services, setService] = React.useState();
+  const [show, setShow] = React.useState(false);
 
   const getServices = () => {
     api.get("/service/getServicecategory").then((res) => {
       setService(res.data.data);
+    }).catch(err=>{
+      message("Please Check your internet Connection", "error");
     });
   };
 
@@ -26,14 +31,15 @@ const Home = () => {
     getServices();
     AOS.init();
     window.scroll(0, 0);
-  
   }, []);
 
   return (
     <>
+    <BookingEnquiry show={show} setShow={setShow}></BookingEnquiry>
       <div id="pageWrapper">
         <main>
-          <Banner />
+         
+          <Banner setShow={setShow} />
           <WhyChooseUs></WhyChooseUs>
 
           <Services services={services}></Services>
@@ -57,41 +63,7 @@ const Home = () => {
             </div>
           </aside>
 
-          <section className="abtSec pt-12 pt-md-15 ">
-            <div className="container">
-              <div className="row">
-                <div className="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-                  <div className="header ltrSpce text-center mb-10 mb-xl-11">
-                    <h1 className="headingI fwEbold mb-2 mb-xl-4">About Blue Team</h1>
-                    <p className="psudo">Best Car Wash Service in UAE</p>
-                  </div>
-                </div>
-              </div>
-              <div className="row align-items-center">
-                <div className="col-12 col-md-5 col-lg-6">
-                  <div className="imgHolder mx-auto mt-md-2 mt-lg-0 mr-md-0 mt-md-0 ml-md-n32 float-lg-right">
-                    <img
-                      src="images/img28.png"
-                      alt="image description"
-                      className="img-fluid"
-                      data-aos="fade-right"
-                    />
-                  </div>
-                </div>
-                <div className="col-12 col-md-7 col-lg-6">
-                  <div className="txtHolder pt-7 pt-md-6 pt-xl-16 text-center text-md-left">
-                    <h3 className="headingIV mb-4">
-                      <strong className="d-block font-weight-bold text-capitalize">
-                        {t("About_sub_Heading")}
-                      </strong>
-                    </h3>
-                    <p>{t("About_des1")}</p>
-                    <p>{t("About_des2")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+         <About></About>
 
           <aside className="dscntclb bgTheme pt-6 pb-7">
             <div className="container">

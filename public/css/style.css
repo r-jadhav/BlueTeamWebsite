@@ -217,3 +217,10 @@ button:focus {
         padding-top: 100px !important;
     }
 }
+.border-white{
+    border: 1px solid #fff !important;
+}
+.border-white:hover{
+    background: #fff !important;
+    color: #0b4b8a !important;
+}

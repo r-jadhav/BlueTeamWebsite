@@ -15,7 +15,12 @@ export default function WhyChooseUs() {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div
+          className="row"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           <div className="col-12 col-md-6 col-lg-4 d-flex">
             <div className="cBlock d-flex text-secondary mb-6 mb-md-9 mb-xl-13">
               <div className="icoHolder mr-4 mt-1">
@@ -82,7 +87,11 @@ export default function WhyChooseUs() {
           <div className="col-12 col-md-6 col-lg-4 d-flex">
             <div className="cBlock d-flex text-secondary mb-6 mb-md-9 mb-xl-13">
               <div className="icoHolder mr-4 mt-1">
-                <Icon icon="majesticons:list-box-line" fontSize={50} color="#0b4b8a"></Icon>
+                <Icon
+                  icon="majesticons:list-box-line"
+                  fontSize={50}
+                  color="#0b4b8a"
+                ></Icon>
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
@@ -97,7 +106,11 @@ export default function WhyChooseUs() {
           <div className="col-12 col-md-6 col-lg-4 d-flex">
             <div className="cBlock d-flex text-secondary mb-6 mb-md-9 mb-xl-13">
               <div className="icoHolder mr-4 mt-1">
-                <Icon icon="majesticons:thumb-up-line" fontSize={50} color="#0b4b8a"></Icon>
+                <Icon
+                  icon="majesticons:thumb-up-line"
+                  fontSize={50}
+                  color="#0b4b8a"
+                ></Icon>
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
@@ -113,7 +126,11 @@ export default function WhyChooseUs() {
           <div className="col-12 col-md-6 col-lg-4 d-flex">
             <div className="cBlock d-flex text-secondary mb-6 mb-md-9 mb-xl-13">
               <div className="icoHolder mr-4 mt-1">
-                <Icon icon="majesticons:timer-line" fontSize={50} color="#0b4b8a"></Icon>
+                <Icon
+                  icon="majesticons:timer-line"
+                  fontSize={50}
+                  color="#0b4b8a"
+                ></Icon>
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">

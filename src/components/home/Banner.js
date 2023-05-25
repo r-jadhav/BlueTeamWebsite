@@ -3,6 +3,7 @@ import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 import "../../assets/css/slider-animations.css";
 import "../../assets/css/style.css";
+import { logEvent ,getAnalytics} from "firebase/analytics";
 
 const content = [
   {
@@ -36,13 +37,14 @@ const settings = {
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false,
-  autoplaySpeed: 15000,
-  delay: 10000,
-  speed: 2000,
+  autoplay: true,
+  duration: 5000,
+  // speed: 5000,
 };
 
-function Banner() {
+function Banner({ setShow }) {
+  const analytics = getAnalytics();
+
   return (
     <section className="bannerSec bannerSlide">
       <div className="bsSlide bgCover overlay text-center position-relative d-flex">
@@ -78,12 +80,15 @@ function Banner() {
                               {slide.description}
                             </strong>
                           </h1>
-                          <a
-                            href="#"
+                          <button
+                            onClick={() => {
+                              logEvent(analytics, "banner_booknow");
+                              setShow(true);
+                            }}
                             className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-md-4 px-md-6"
                           >
                             Book Now
-                          </a>
+                          </button>
                         </div>
                       </div>
                     </div>

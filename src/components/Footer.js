@@ -4,8 +4,11 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Icon } from "@iconify/react";
+import { getAnalytics, logEvent } from "firebase/analytics";
+
 const Footer = () => {
   const { t } = useTranslation();
+  const analytics = getAnalytics();
 
   const config = {
     // width: "700px",
@@ -89,7 +92,7 @@ const Footer = () => {
                 </li>
                 <li className="d-flex align-items-center mb-md-0">
                   <div className="ico mr-2">
-                  <Icon icon="ion:time-outline" color="#fff" fontSize={50} />
+                    <Icon icon="ion:time-outline" color="#fff" fontSize={50} />
                   </div>
                   <ul className="list-unstyled mb-0 ftimeList">
                     <li className="mb-lg-1">
@@ -208,67 +211,85 @@ const Footer = () => {
             </div>
             <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-sm-4 mb-lg-0">
               <div className="txtHolder w-100">
-                <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">contact info</h6>
+                <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
+                  contact info
+                </h6>
                 <address className="mb-0">
                   <ul className="contList2 list-unstyled mb-0 justify-content-center">
                     <li className="d-flex mb-6">
                       <div className="ico pr-3 flex-shrink-0 d-flex align-items-center">
                         <Icon
-                            icon="solar:phone-outline"
-                            color="#0b4b8a"
-                            fontSize={30}
-                          />
+                          icon="solar:phone-outline"
+                          color="#0b4b8a"
+                          fontSize={30}
+                        />
                       </div>
                       <div className="wrap">
-                        <span className="d-block mb-lg-1 text-dark">{i18next.language == "ar"
+                        <span className="d-block mb-lg-1 text-dark">
+                          {i18next.language == "ar"
                             ? "اتصل بنا في أي وقت"
-                            : "Call us anytime:"}{" "}</span>
-                        <a href="tel:18001234567" className="text-dark">1-800-123-4567</a>
+                            : "Call us anytime:"}{" "}
+                        </span>
+                        <a href="tel:18001234567" className="text-dark">
+                          1-800-123-4567
+                        </a>
                       </div>
                     </li>
                     <li className="d-flex mb-6">
                       <div className="ico pr-3 flex-shrink-0 d-flex align-items-center">
-                        <Icon icon="bytesize:location" color="#0b4b8a" fontSize={30} />
+                        <Icon
+                          icon="bytesize:location"
+                          color="#0b4b8a"
+                          fontSize={30}
+                        />
                       </div>
                       <ul className="list-unstyled mb-0">
-                          <li className="mb-1 text-dark">
-                              {i18next.language == "ar"
-                              ? "مصفح M14 محل 3 و 4 - أبو ظبي"
-                              : "Mussafah M14 SHOP 3 AND 4 - Abu Dhabi"}{" "}
-                          </li>
-                          <li className="text-dark">
-                            {i18next.language == "ar"
-                              ? "- الإمارات العربية المتحدة"
-                              : "- United Arab Emirates"}{" "}
-                          </li>
+                        <li className="mb-1 text-dark">
+                          {i18next.language == "ar"
+                            ? "مصفح M14 محل 3 و 4 - أبو ظبي"
+                            : "Mussafah M14 SHOP 3 AND 4 - Abu Dhabi"}{" "}
+                        </li>
+                        <li className="text-dark">
+                          {i18next.language == "ar"
+                            ? "- الإمارات العربية المتحدة"
+                            : "- United Arab Emirates"}{" "}
+                        </li>
                       </ul>
                     </li>
                     <li className="d-flex mb-6">
                       <div className="ico pr-3 flex-shrink-0 d-flex align-items-center">
-                        <Icon icon="ion:time-outline" color="#0b4b8a" fontSize={30} />
+                        <Icon
+                          icon="ion:time-outline"
+                          color="#0b4b8a"
+                          fontSize={30}
+                        />
                       </div>
                       <ul className="list-unstyled mb-0 ftimeList">
                         <li className="mb-1 text-dark">
-                            {i18next.language == "ar"
-                              ? "من الإثنين إلى السبت: 6:00 صباحًا - 3:00 ظهراً"
-                              : "Mon-Sat: 6:00 am - 3:00 am"}
-                          </li>
-                          <li className="text-dark">
-                            {i18next.language == "ar"
-                              ? " الأحد: 6:00 صباحاً - 3:00 ظهراً"
-                              : "Sun: 6:00 am - 3:00 am"}
-                          </li>
+                          {i18next.language == "ar"
+                            ? "من الإثنين إلى السبت: 6:00 صباحًا - 3:00 ظهراً"
+                            : "Mon-Sat: 6:00 am - 3:00 am"}
+                        </li>
+                        <li className="text-dark">
+                          {i18next.language == "ar"
+                            ? " الأحد: 6:00 صباحاً - 3:00 ظهراً"
+                            : "Sun: 6:00 am - 3:00 am"}
+                        </li>
                       </ul>
                     </li>
                   </ul>
                 </address>
               </div>
-						</div>
+            </div>
           </div>
         </div>
       </aside>
 
-      <footer style={{border:'1px solid #d7cece'}} id="footer" className="py-5 py-md-6">
+      <footer
+        style={{ border: "1px solid #d7cece" }}
+        id="footer"
+        className="py-5 py-md-6"
+      >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-12 col-md-6">
@@ -291,11 +312,18 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="stickyChat">
+        <div className="stickyChat" onClick={()=>{
+          logEvent(analytics, "chatbot_footer");
+        }}>
           <ChatBot steps={steps} {...config} />
         </div>
-        <div className="stickyPhone">
-          <a href="https://api.whatsapp.com/send?phone=971502000787" target="_blank">
+        <div className="stickyPhone" onClick={()=>{
+          logEvent(analytics, "whatsapp_footer_button");
+        }}>
+          <a
+            href="https://api.whatsapp.com/send?phone=971502000787"
+            target="_blank"
+          >
             <img
               src="images/whatsapp.svg"
               alt="images description"
