@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <>
-    <BookingEnquiry show={show} setShow={setShow}></BookingEnquiry>
+    <BookingEnquiry category={services} show={show} setShow={setShow}></BookingEnquiry>
       <div id="pageWrapper">
         <main>
          
