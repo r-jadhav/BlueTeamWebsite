@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import ReactFlagsSelect from "react-flags-select";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const Header = () => {
   const { t } = useTranslation();
+  const analytics = getAnalytics();
   const [select, setSelect] = useState("AR");
   const onSelect = (code) => {
     setSelect(code);
@@ -79,7 +81,9 @@ const Header = () => {
                           ? "لديك سؤال؟"
                           : "Have any questions?"}
                       </span>
-                      <a className="tell fwSemibold" href="tel:+971 800 2827">
+                      <a onClick={()=>{
+                        logEvent(analytics, "header_call_button");
+                      }} className="tell fwSemibold" href="tel:+971 800 2827">
                         +971 800 2827
                       </a>
                     </div>

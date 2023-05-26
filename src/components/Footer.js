@@ -5,35 +5,192 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Icon } from "@iconify/react";
 import { getAnalytics, logEvent } from "firebase/analytics";
+import api from '../constant/api'
+import message from "../constant/Message";
 
 const Footer = () => {
   const { t } = useTranslation();
   const analytics = getAnalytics();
 
   const config = {
-    // width: "700px",
-    // height: "700px",
     floating: "True",
-    // floatingIcon:<BsWhatsapp color='#fff' size={25}/>,
   };
-
-  const steps = [
+  const handleEnd = ({ steps, values }) => {
+    api.post('/website/addBookingEnquiry',{
+      we_category:values[0],
+      we_package:values[1],
+      we_date:'',
+      we_time:'',
+      we_name:values[2],
+      we_phone:values[3],
+      we_email:'',
+      we_status:'0',
+      we_done_by:'',
+      we_amount:'',
+      we_type:''
+    }).then(res=>{
+      if(res.status == 200){
+        message(
+          "Thanks For Contacting Us. Our 24*7 support will reach you soon",
+          "success"
+        );
+        setTimeout(() => {
+          window.location.reload()
+        }, 600);
+       
+      }else{
+        message('Try Again Later','warning')
+      }
+    }).catch(err=>{
+      message("Please Check your internet Connection", "error");
+    })
+    console.log(steps);
+    console.log(values);
+  };
+  const [botSteps, setBotSteps] = React.useState([
     {
       id: "1",
-      message: "What is your name?",
+      message: "Hello! What kind of service you need?",
       trigger: "2",
     },
     {
       id: "2",
-      user: true,
-      trigger: "3",
+      options: [
+        { value: "غسيل سيارات", label: "غسيل سيارات", trigger: "3" },
+        { value: "تلميع ومخفي", label: "تلميع ومخفي", trigger: "4" },
+        { value: "صيانة السيارات", label: "صيانة السيارات", trigger: "5" },
+        // { value: 4, label: "غسيل الدراجة", trigger: "6" },
+        // { value: 5, label: "غسل القارب", trigger: "7" },
+      ],
     },
     {
       id: "3",
-      message: "Hi {previousValue}, nice to meet you!",
-      end: true,
+      options: [
+        { value: "لباقة الفضية ", label: "لباقة الفضية ", trigger: "7" },
+        { value: "الباقة الذهبية", label: "الباقة الذهبية", trigger: "7" },
+        { value: "الباقة الماسية", label: "الباقة الماسية", trigger: "7" },
+        {
+          value: "الباقة الخاصة ( بريميوم )",
+          label: "الباقة الخاصة ( بريميوم )",
+          trigger: "7",
+        },
+      ],
     },
-  ];
+    {
+      id: "4",
+      options: [
+        { value: "مخفي ضمان  ", label: "مخفي ضمان  ", trigger: "7" },
+
+        { value: "زيرو زيرو ضمان  ", label: "زيرو زيرو ضمان  ", trigger: "7" },
+        {
+          value: "مخفي زيرو زيرو ضمان  ",
+          label: "مخفي زيرو زيرو ضمان  ",
+          trigger: "7",
+        },
+        {
+          value: "زيرو زيرو 5 سنوات كامل",
+          label: "زيرو زيرو 5 سنوات كامل",
+          trigger: "7",
+        },
+        {
+          value: "زيرو زيرو 10 سنوات كامل",
+          label: "زيرو زيرو 10 سنوات كامل",
+          trigger: "7",
+        },
+        {
+          value: "جلاد حماية الأضواء",
+          label: "جلاد حماية الأضواء",
+          trigger: "7",
+        },
+        {
+          value: "جلاد شفاف (MATE ppf)",
+          label: "جلاد شفاف (MATE ppf)",
+          trigger: "",
+        },
+        {
+          value: "جلاد شفاف(ppf)لحماية الصبغ",
+          label: "جلاد شفاف(ppf)لحماية الصبغ",
+          trigger: "",
+        },
+      ],
+    },
+    {
+      id: "5",
+      options: [
+        {
+          value: "تبديل مساحات الزجاج ",
+          label: "تبديل مساحات الزجاج ",
+          trigger: "7",
+        },
+        {
+          value: "الصيانة الشاملة للمركبة ( ميجر سرفيس",
+          label: "الصيانة الشاملة للمركبة ( ميجر سرفيس",
+          trigger: "7",
+        },
+        {
+          value: "فحص المركبة بالكمبيوتر  ",
+          label: "فحص المركبة بالكمبيوتر  ",
+          trigger: "7",
+        },
+        {
+          value: "شحن البطارية وفحص السبب ",
+          label: "شحن البطارية وفحص السبب ",
+          trigger: "7",
+        },
+        {
+          value: "تبديل بطانة الفرامل ",
+          label: "تبديل بطانة الفرامل ",
+          trigger: "7",
+        },
+        { value: "تبديل الإطارات ", label: "تبديل الإطارات ", trigger: "7" },
+        {
+          value: "تعبئة غاز المكيف ",
+          label: "تعبئة غاز المكيف ",
+          trigger: "7",
+        },
+        {
+          value: "الصيانة الدورية للمركبة ",
+          label: "الصيانة الدورية للمركبة ",
+          trigger: "7",
+        },
+        {
+          value: "تبديل بطارية السيارة ",
+          label: "تبديل بطارية السيارة ",
+          trigger: "7",
+        },
+        {
+          value: "تبديل زيت المحرك  ",
+          label: "تبديل زيت المحرك  ",
+          trigger: "7",
+        },
+      ],
+    },
+    {
+      id: "7",
+      message: "What is your name?",
+      trigger: "8",
+    },
+    {
+      id: "8",
+      user: true,
+      trigger: "9",
+    },
+    {
+      id: "9",
+      message: "{previousValue} we need mobile number to contact you",
+      trigger: "10",
+    },
+    {
+      id: "10",
+      user: true,
+      trigger: "11",
+    },
+    {
+      id: "11",
+      message: "Thanks for contacting. Our 24*7 service will reach out soon",
+      end: true,
+    }
+  ]);
 
   return (
     <>
@@ -67,7 +224,7 @@ const Footer = () => {
                         : "Call us now:"}
                     </li>
                     <li>
-                      <a href="tel:+971-502-000-787" className="tell">
+                      <a href="tel:971502000787" className="tell">
                         +971-502-000-787
                       </a>
                     </li>
@@ -230,8 +387,8 @@ const Footer = () => {
                             ? "اتصل بنا في أي وقت"
                             : "Call us anytime:"}{" "}
                         </span>
-                        <a href="tel:18001234567" className="text-dark">
-                          1-800-123-4567
+                        <a href="tel:971502000787" className="text-dark">
+                          +971-502-000-787
                         </a>
                       </div>
                     </li>
@@ -312,14 +469,20 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="stickyChat" onClick={()=>{
-          logEvent(analytics, "chatbot_footer");
-        }}>
-          <ChatBot steps={steps} {...config} />
+        <div
+          className="stickyChat"
+          onClick={() => {
+            logEvent(analytics, "chatbot_footer");
+          }}
+        >
+          <ChatBot handleEnd={handleEnd} steps={botSteps} {...config} />
         </div>
-        <div className="stickyPhone" onClick={()=>{
-          logEvent(analytics, "whatsapp_footer_button");
-        }}>
+        <div
+          className="stickyPhone"
+          onClick={() => {
+            logEvent(analytics, "whatsapp_footer_button");
+          }}
+        >
           <a
             href="https://api.whatsapp.com/send?phone=971502000787"
             target="_blank"
