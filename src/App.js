@@ -11,6 +11,7 @@ import TermsCondition from './pages/TermsCondition';
 import Contact from './pages/Contact';
 import Membership from './pages/Membership';
 import Packages from './pages/Packages';
+import PackagesDetails from './pages/PackagesDetails';
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ const App = () => {
         <Route path="contactus" element={<Contact/>}/>
         <Route path="membership" element={<Membership/>}/>
         <Route path="packages" element={<Packages/>}/>
-        
+        <Route path="packages-details" element={<PackagesDetails/>}/>
       </Routes>
     <Footer/>
   </Router>

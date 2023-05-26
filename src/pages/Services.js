@@ -21,7 +21,7 @@ const Services = () => {
   return (
     <>
       <section className="wsisSec pt-12 pt-lg-16 pb-4">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
             <div className="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
               <div className="header ltrSpce text-center mb-10 mb-xl-11">
@@ -37,14 +37,14 @@ const Services = () => {
               return (
                 <div
                   className="col-12 col-md-6 col-lg-4 d-flex"
-                  style={{
-                    background: ele.color,
-                    margin: 10,
-                    justifyContent: "center",
-                  }}
                   key={ele.service_category_id}
                 >
-                  <div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
+                  <div className="sBlock mb-8 mb-lg-11 text-center text-md-left"  style={{
+                    background: ele.color,
+                    padding: 20,
+                    justifyContent: "center",
+                    boxSizing:'border-box'
+                  }}>
                     <div className="imgHolder overflow-hidden mb-5 position-relative mx-auto d-flex justify-content-center">
                       <img
                         src={`http://blueteam.xyz/uploads/${ele.service_category_img}`}
@@ -52,14 +52,6 @@ const Services = () => {
                         className="img-fluid"
                         style={{ minWidth: 200, width: "auto" }}
                       />
-                      {/* <div className="btnHolder position-absolute">
-                        <a
-                          href="#"
-                          className="btn btn-light py-2 text-uppercase font-weight-bold"
-                        >
-                          view detail
-                        </a>
-                      </div> */}
                     </div>
                     <h2 className="headingIX mb-2">
                       <a href="#">
@@ -69,7 +61,7 @@ const Services = () => {
                       </a>
                     </h2>
                     <p>We do all kinds of polishing and ceramics</p>
-                    <a href="#" className="readMore fwEbold text-uppercase">
+                    <a href="/#/packages" className="readMore fwEbold text-uppercase">
                       {i18next.language == "ar"
                         ? "اطلع على الباقات"
                         : "View Packages "}
@@ -79,59 +71,6 @@ const Services = () => {
                 </div>
               );
             })}
-
-            {/* <div className="col-12 col-md-6 col-lg-4 d-flex">
-							<div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
-								<div className="imgHolder overflow-hidden mb-5 overlayI position-relative mx-auto">
-									<img src="images/img04.png" alt="image description" className="img-fluid"/>
-									<div className="btnHolder position-absolute">
-										<a href="#" className="btn btn-light py-2 text-uppercase font-weight-bold">view detail</a>
-									</div>
-								</div>
-								<h2 className="headingIX mb-2"><a href="#">Polishing and ceramic services</a></h2>
-								<p>We do all kinds of polishing and ceramics</p>
-								<a href="#" className="readMore fwEbold text-uppercase">read more <span className="fas fa-chevron-right icn"></span></a>
-							</div>
-						</div>
-						<div className="col-12 col-md-6 col-lg-4 d-flex">
-							<div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
-								<div className="imgHolder overflow-hidden mb-5 overlayI position-relative mx-auto">
-									<img src="images/img05.png" alt="image description" className="img-fluid"/>
-									<div className="btnHolder position-absolute">
-										<a href="#" className="btn btn-light py-2 text-uppercase font-weight-bold">view detail</a>
-									</div>
-								</div>
-								<h2 className="headingIX mb-2"><a href="#">Washing services</a></h2>
-								<p>We wash and clean your car perfectly</p>
-								<a href="#" className="readMore fwEbold text-uppercase">read more <span className="fas fa-chevron-right icn"></span></a>
-							</div>
-						</div>
-						<div className="col-12 col-md-6 col-lg-4 d-flex">
-							<div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
-								<div className="imgHolder overflow-hidden mb-5 overlayI position-relative mx-auto">
-									<img src="images/img06.png" alt="image description" className="img-fluid"/>
-									<div className="btnHolder position-absolute">
-										<a href="#" className="btn btn-light py-2 text-uppercase font-weight-bold">view detail</a>
-									</div>
-								</div>
-								<h2 className="headingIX mb-2"><a href="#">Mobile vehicle maintenance</a></h2>
-								<p>Just call us anywhere and we will fix your car in place immediately</p>
-								<a href="#" className="readMore fwEbold text-uppercase">read more <span className="fas fa-chevron-right icn"></span></a>
-							</div>
-						</div>
-						<div className="col-12 col-md-6 col-lg-4 d-flex">
-							<div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
-								<div className="imgHolder overflow-hidden mb-5 overlayI position-relative mx-auto">
-									<img src="images/img04.png" alt="image description" className="img-fluid"/>
-									<div className="btnHolder position-absolute">
-										<a href="#" className="btn btn-light py-2 text-uppercase font-weight-bold">view detail</a>
-									</div>
-								</div>
-								<h2 className="headingIX mb-2"><a href="#">Hidden and hangout services</a></h2>
-								<p>We install the hidden types of your car to your liking</p>
-								<a href="#" className="readMore fwEbold text-uppercase">read more <span className="fas fa-chevron-right icn"></span></a>
-							</div>
-						</div> */}
           </div>
         </div>
       </section>

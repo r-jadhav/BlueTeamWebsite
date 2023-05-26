@@ -165,6 +165,9 @@ font-weight: 900;
 .navCollapse .nav-item .nav-link:before {
   background-color: transparent!important;
 }
+.packageSec .bsSlide {
+  min-height: 380px;
+}
 @media(max-width:768px){
     header {
         position: fixed;

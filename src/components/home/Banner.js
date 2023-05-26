@@ -94,8 +94,6 @@ function Banner({ setShow }) {
                     </div>
                   </div>
                 </div>
-
-                // <img src={slide.src} alt={`Slide ${index + 1}`} />
               )}
             </div>
           ))}
@@ -106,29 +104,3 @@ function Banner({ setShow }) {
 }
 
 export default Banner;
-
-// {
-//     title1: 'You want to',
-//     title2: 'wash your car',
-//     description: 'We have washed thousands of cars of all kinds and will provide you with the service perfectly',
-//     button: 'Read More',
-//     src: 'videos/banner.mp4',
-//     type:'video'
-// },
-// {
-//     title1: 'You want to',
-//     title2: 'wash your car',
-//     description: 'We have washed thousands of cars of all kinds and will provide you with the service perfectly',
-//     button: 'Read More',
-//     src: 'videos/banner.mp4',
-//     type:'video'
-// },
-// {
-//     title1: 'You want to',
-//     title2: 'wash your car',
-//     description: 'We have washed thousands of cars of all kinds and will provide you with the service perfectly',
-//     button: 'Read More',
-//     src: 'videos/banner.mp4',
-//     type:'video'
-// },
-// ];

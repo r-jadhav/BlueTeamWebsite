@@ -30,7 +30,7 @@ export default function Packages() {
                 />
                 <div className="btnHolder position-absolute">
                   <a
-                    href="service-detail.html"
+                    href="/#/packages-details"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
                     view detail
@@ -38,7 +38,7 @@ export default function Packages() {
                 </div>
               </div>
               <h2 className="headingIX mb-2">
-                <a href="service-detail.html">Express Exterior</a>
+                <a href="/#/packages-details">Express Exterior</a>
               </h2>
               <p>
                 Because sometimes you don’t just have the need for a clean car.
@@ -46,7 +46,7 @@ export default function Packages() {
                 blow dry in under 3 minutes.
               </p>
               <a
-                href="service-detail.html"
+                href="/#/packages-details"
                 className="readMore fwEbold text-uppercase"
               >
                 read more <span className="fas fa-chevron-right icn"></span>
@@ -63,7 +63,7 @@ export default function Packages() {
                 />
                 <div className="btnHolder position-absolute">
                   <a
-                    href="service-detail2.html"
+                    href="/#/packages-details"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
                     view detail
@@ -71,14 +71,14 @@ export default function Packages() {
                 </div>
               </div>
               <h2 className="headingIX mb-2">
-                <a href="service-detail2.html">Auto Detailing</a>
+                <a href="/#/packages-details">Auto Detailing</a>
               </h2>
               <p>
                 Give all your surfaces the attention they de serve. Professional
                 auto detail cleaning you can afford. No appt needed.
               </p>
               <a
-                href="service-detail2.html"
+                href="/#/packages-details"
                 className="readMore fwEbold text-uppercase"
               >
                 read more <span className="fas fa-chevron-right icn"></span>
@@ -192,7 +192,7 @@ export default function Packages() {
                 />
                 <div className="btnHolder position-absolute">
                   <a
-                    href="service-detail6.html"
+                    href="/#/packages-details"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
                     view detail
@@ -200,14 +200,14 @@ export default function Packages() {
                 </div>
               </div>
               <h2 className="headingIX mb-2">
-                <a href="service-detail6.html">Preventative Maintenance</a>
+                <a href="/#/packages-details">Preventative Maintenance</a>
               </h2>
               <p>
                 Our maintenance technicians are trained and specialize in giving
                 your car the best care to avoid major breakdowns.
               </p>
               <a
-                href="service-detail6.html"
+                href="/#/packages-details"
                 className="readMore fwEbold text-uppercase"
               >
                 read more <span className="fas fa-chevron-right icn"></span>

@@ -22,7 +22,7 @@ const Home = () => {
   const getServices = () => {
     api.get("/service/getServicecategory").then((res) => {
       setService(res.data.data);
-    }).catch(err=>{
+    }).catch(()=>{
       message("Please Check your internet Connection", "error");
     });
   };
@@ -57,7 +57,7 @@ const Home = () => {
                   data-target="#exampleModal"
                   className="btn btn-primary fwEbold text-uppercase py-3 py-lg-4 ml-md-4 ml-lg-6"
                 >
-                  {t("book-Appoint")}{" "}
+                  {t("book-Appoint")}
                 </a>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Home = () => {
                   <Icon icon="bxs:offer" fontSize={50} color="#fff"></Icon>
                 </span>
                 <h3 className="h5 mb-0 font-weight-normal text-white fIStyle">
-                  Enjoy BlueTeam's{" "}
+                  Enjoy BlueTeam's
                   <strong className="font-weight-bold">
                     {" "}
                     Special Membership{" "}
