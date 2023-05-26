@@ -1,9 +1,11 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import Banner from "../components/Service/PackagesDetails/CarWashBanner";
+// import { useParams } from 'react-router-dom';
 
 const PackagesDetails = () => {
-    const [show, setShow] = React.useState(false);
+  // const { id } = useParams();
+  const [show, setShow] = React.useState(false);
 
   return (
     <>

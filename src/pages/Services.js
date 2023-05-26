@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import api from "../constant/api";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const { t } = useTranslation();
@@ -10,7 +11,6 @@ const Services = () => {
   const getServices = () => {
     api.get("/service/getServicecategory").then((res) => {
       setService(res.data.data);
-      console.log(res.data.data);
     });
   };
   React.useEffect(() => {
@@ -54,17 +54,20 @@ const Services = () => {
                       />
                     </div>
                     <h2 className="headingIX mb-2">
-                      <a href="#">
+
+                    <Link to={`/packages/${ele.service_category_id}`}>
                         {i18next.language == "ar"
                           ? ele.service_category_name_ar
                           : ele.service_category_name_en}
-                      </a>
+                        </Link>
                     </h2>
                     <p>We do all kinds of polishing and ceramics</p>
-                    <a href="/#/packages" className="readMore fwEbold text-uppercase">
+                    <a href="/packages" className="readMore fwEbold text-uppercase">
+                    <Link to={`/packages/${ele.service_category_id}`}>
                       {i18next.language == "ar"
                         ? "اطلع على الباقات"
                         : "View Packages "}
+                        </Link>
                       <span className="fas fa-chevron-right icn"></span>
                     </a>
                   </div>

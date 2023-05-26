@@ -27,8 +27,8 @@ const App = () => {
         <Route path="terms-condition" element={<TermsCondition/>}/>
         <Route path="contactus" element={<Contact/>}/>
         <Route path="membership" element={<Membership/>}/>
-        <Route path="packages" element={<Packages/>}/>
-        <Route path="packages-details" element={<PackagesDetails/>}/>
+        <Route path="packages/:id" element={<Packages/>}/>
+        <Route path="packages-details/:id" element={<PackagesDetails/>}/>
       </Routes>
     <Footer/>
   </Router>
@@ -37,6 +37,3 @@ const App = () => {
   );
 }
 export default App;
-
-
-// bootstrap uninstall

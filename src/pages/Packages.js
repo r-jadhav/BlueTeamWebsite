@@ -1,7 +1,20 @@
 import React from "react";
+import api from "../constant/api";
+import i18next from "i18next";
+import { useParams, Link } from 'react-router-dom';
 
-export default function Packages() {
+ const Packages = () => {
+  const { id } = useParams();
+  const [getServiceData, setServiceData] = React.useState();
+
+  const getServicesById = () => {
+    api.post("/service/getServiceByCategoryId",{sp_cat_id:id}).then((res) => {
+      setServiceData(res.data.data);
+    });
+  };
+
   React.useEffect(() => {
+    getServicesById();
     window.scroll(0, 0);
   }, []);
   return (
@@ -20,7 +33,51 @@ export default function Packages() {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-12 col-md-6 col-lg-4 d-flex">
+          {getServiceData && getServiceData.map((ele)=>{
+            return  (
+              <div className="col-12 col-md-6 col-lg-4 d-flex" key={ele.sp_cat_id}>
+              <div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
+                <div className="imgHolder overflow-hidden mb-5 overlayI position-relative mx-auto">
+                      <img
+                          src={`http://blueteam.xyz/uploads/${ele.sp_media_name}`}
+                          alt="image description"
+                          className="img-fluid"
+                          style={{ minWidth: 200, width: "auto" }}
+                        />
+  
+                  <div className="btnHolder position-absolute">
+                    <Link to={`/packages-details/${ele.sp_cat_id}`}> View Detail </Link>
+                  </div>
+                </div>
+                <h2 className="headingIX mb-2">
+                  <Link to={`/packages-details/${ele.sp_cat_id}`}> 
+                      {i18next.language == "ar"
+                            ? ele.sp_name_ar
+                            : ele.sp_name_en}</Link>
+                </h2>
+                <p>
+                  {i18next.language == "ar" ? ele.sp_desp_ar : ele.sp_desp_en}
+                </p>
+                <Link to={`/packages-details/${ele.sp_cat_id}`}> 
+                  read more <span className="fas fa-chevron-right icn"></span>
+                  </Link>
+              </div>
+            </div>
+            )
+          
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Packages
+
+
+
+
+ {/* <div className="col-12 col-md-6 col-lg-4 d-flex">
             <div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
               <div className="imgHolder overflow-hidden mb-5 overlayI position-relative mx-auto">
                 <img
@@ -30,15 +87,15 @@ export default function Packages() {
                 />
                 <div className="btnHolder position-absolute">
                   <a
-                    href="/#/packages-details"
+                    href="/packages-details"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
-                    view detail
+                    View Detail
                   </a>
                 </div>
               </div>
               <h2 className="headingIX mb-2">
-                <a href="/#/packages-details">Express Exterior</a>
+                <a href="/packages-details">Express Exterior</a>
               </h2>
               <p>
                 Because sometimes you don’t just have the need for a clean car.
@@ -46,7 +103,7 @@ export default function Packages() {
                 blow dry in under 3 minutes.
               </p>
               <a
-                href="/#/packages-details"
+                href="/packages-details"
                 className="readMore fwEbold text-uppercase"
               >
                 read more <span className="fas fa-chevron-right icn"></span>
@@ -63,22 +120,22 @@ export default function Packages() {
                 />
                 <div className="btnHolder position-absolute">
                   <a
-                    href="/#/packages-details"
+                    href="/packages-details"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
-                    view detail
+                    View Detail
                   </a>
                 </div>
               </div>
               <h2 className="headingIX mb-2">
-                <a href="/#/packages-details">Auto Detailing</a>
+                <a href="/packages-details">Auto Detailing</a>
               </h2>
               <p>
                 Give all your surfaces the attention they de serve. Professional
                 auto detail cleaning you can afford. No appt needed.
               </p>
               <a
-                href="/#/packages-details"
+                href="/packages-details"
                 className="readMore fwEbold text-uppercase"
               >
                 read more <span className="fas fa-chevron-right icn"></span>
@@ -98,7 +155,7 @@ export default function Packages() {
                     href="service-detail3.html"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
-                    view detail
+                    View Detail
                   </a>
                 </div>
               </div>
@@ -131,7 +188,7 @@ export default function Packages() {
                     href="service-detail4.html"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
-                    view detail
+                    View Detail
                   </a>
                 </div>
               </div>
@@ -163,7 +220,7 @@ export default function Packages() {
                     href="service-detail5.html"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
-                    view detail
+                    View Detail
                   </a>
                 </div>
               </div>
@@ -192,30 +249,25 @@ export default function Packages() {
                 />
                 <div className="btnHolder position-absolute">
                   <a
-                    href="/#/packages-details"
+                    href="/packages-details"
                     className="btn btn-light py-2 text-uppercase font-weight-bold"
                   >
-                    view detail
+                    View Detail
                   </a>
                 </div>
               </div>
               <h2 className="headingIX mb-2">
-                <a href="/#/packages-details">Preventative Maintenance</a>
+                <a href="/packages-details">Preventative Maintenance</a>
               </h2>
               <p>
                 Our maintenance technicians are trained and specialize in giving
                 your car the best care to avoid major breakdowns.
               </p>
               <a
-                href="/#/packages-details"
+                href="/packages-details"
                 className="readMore fwEbold text-uppercase"
               >
                 read more <span className="fas fa-chevron-right icn"></span>
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+          </div> */}

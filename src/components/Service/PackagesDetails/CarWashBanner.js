@@ -7,15 +7,15 @@ import { getAnalytics} from "firebase/analytics";
 
 const content = [
   {
-    src: "images/services/carwash1-min.jpg",
+    src: "../images/services/carwash1-min.jpg",
     type: "image",
   },
   {
-    src: "images/services/carwash2-min.jpg",
+    src: "../images/services/carwash2-min.jpg",
     type: "image",
   },
   {
-    src: "images/services/carwash3-min.jpg",
+    src: "../images/services/carwash3-min.jpg",
     type: "image",
   },
 ];
@@ -54,32 +54,6 @@ const Banner = ({ setShow }) => {
                     className="bsSlide bgCover overlay text-center position-relative d-flex"
                     style={{ backgroundImage: `url(${slide.src})` }}
                   >
-                    {/* <div className="alignCenter w-100 d-flex align-items-center">
-                      <div className="container pt-90 pt-sm-10 pb-22 pt-md-12 pb-md-25 pt-lg-15 pb-lg-35">
-                        <div className="caption text-white position-relative">
-                          <h1 className="w-100 mb-6 mb-md-9 text-white">
-                            <strong className="fwEbold d-block mb-md-2 mb-xl-0">
-                              {slide.title1}
-                            </strong>
-                            <strong className="fwEbold d-block mb-3 mt-md-n4 mb-md-2">
-                              {slide.title2}
-                            </strong>
-                            <strong className="fwEbold d-block font-weight-bold headingVI">
-                              {slide.description}
-                            </strong>
-                          </h1>
-                          <button
-                            onClick={() => {
-                              logEvent(analytics, "banner_booknow");
-                              setShow(true);
-                            }}
-                            className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-md-4 px-md-6"
-                          >
-                            Book Now
-                          </button>
-                        </div>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
               )}
