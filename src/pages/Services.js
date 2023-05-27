@@ -2,9 +2,10 @@ import React from "react";
 import api from "../constant/api";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
-import { Link } from 'react-router-dom';
+import { Link, createSearchParams, useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const [getService, setService] = React.useState();
 
@@ -13,6 +14,7 @@ const Services = () => {
       setService(res.data.data);
     });
   };
+
   React.useEffect(() => {
     getServices();
     window.scroll(0, 0);
@@ -38,13 +40,25 @@ const Services = () => {
                 <div
                   className="col-12 col-md-6 col-lg-4 d-flex"
                   key={ele.service_category_id}
+                  style={{ cursor: "pointer" }}
                 >
-                  <div className="sBlock mb-8 mb-lg-11 text-center text-md-left"  style={{
-                    background: ele.color,
-                    padding: 20,
-                    justifyContent: "center",
-                    boxSizing:'border-box'
-                  }}>
+                  <div
+                    onClick={() => {
+                      navigate({
+                        pathname: "/packages",
+                        search: createSearchParams({
+                          id: ele.service_category_id,
+                        }).toString(),
+                      });
+                    }}
+                    className="sBlock mb-8 mb-lg-11 text-center text-md-left"
+                    style={{
+                      background: ele.color,
+                      padding: 20,
+                      justifyContent: "center",
+                      boxSizing: "border-box",
+                    }}
+                  >
                     <div className="imgHolder overflow-hidden mb-5 position-relative mx-auto d-flex justify-content-center">
                       <img
                         src={`http://blueteam.xyz/uploads/${ele.service_category_img}`}
@@ -54,22 +68,20 @@ const Services = () => {
                       />
                     </div>
                     <h2 className="headingIX mb-2">
-
-                    <Link to={`/packages/${ele.service_category_id}`}>
+                      <p>
                         {i18next.language == "ar"
                           ? ele.service_category_name_ar
                           : ele.service_category_name_en}
-                        </Link>
+                      </p>
                     </h2>
                     <p>We do all kinds of polishing and ceramics</p>
-                    <a href="/packages" className="readMore fwEbold text-uppercase">
-                    <Link to={`/packages/${ele.service_category_id}`}>
+                    <span className="readMore fwEbold text-uppercase">
                       {i18next.language == "ar"
                         ? "اطلع على الباقات"
                         : "View Packages "}
-                        </Link>
+
                       <span className="fas fa-chevron-right icn"></span>
-                    </a>
+                    </span>
                   </div>
                 </div>
               );

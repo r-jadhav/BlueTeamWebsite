@@ -224,8 +224,8 @@ const Footer = () => {
                         : "Call us now:"}
                     </li>
                     <li>
-                      <a href="tel:971502000787" className="tell">
-                        +971-502-000-787
+                      <a href="tel:025555292" className="tell">
+                      025-555-292
                       </a>
                     </li>
                   </ul>
@@ -387,8 +387,8 @@ const Footer = () => {
                             ? "اتصل بنا في أي وقت"
                             : "Call us anytime:"}{" "}
                         </span>
-                        <a href="tel:971502000787" className="text-dark">
-                          +971-502-000-787
+                        <a href="tel:025-555-292" className="text-dark">
+                        025-555-292
                         </a>
                       </div>
                     </li>
@@ -460,10 +460,10 @@ const Footer = () => {
             <div className="col-12 col-md-6">
               <ul className="list-unstyled footerLink d-flex mb-0 justify-content-center justify-content-md-end flex-wrap">
                 <li>
-                  <a href="/#/terms-condition">{t("TermsCondition")}</a>
+                  <a href="/terms-condition">{t("TermsCondition")}</a>
                 </li>
                 <li>
-                  <a href="/#/privacy-policy">{t("Privacy-Policy")}</a>
+                  <a href="/privacy-policy">{t("Privacy-Policy")}</a>
                 </li>
               </ul>
             </div>

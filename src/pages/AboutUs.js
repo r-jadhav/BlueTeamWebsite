@@ -5,15 +5,34 @@ import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import i18next from "i18next";
+import api from "../constant/api";
+import BookingEnquiry from "../components/Home/BookingEnquiry";
 
 const AboutUs = () => {
+  const [services, setService] = React.useState();
+  const [show, setShow] = React.useState(false);
+
   const { t } = useTranslation();
   React.useEffect(() => {
     AOS.init();
     window.scroll(0, 0);
+    getServices()
   }, []);
+  const getServices = () => {
+    api
+      .get("/service/getServicecategory")
+      .then((res) => {
+        setService(res.data.data);
+      })
+     
+  };
   return (
     <>
+    <BookingEnquiry
+        category={services}
+        show={show}
+        setShow={setShow}
+      ></BookingEnquiry>
       <section className="abtWSec pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6">
         <div className="container">
           <div className="row">
@@ -197,12 +216,14 @@ const AboutUs = () => {
                   ? "اتصل بنا الآن لإصلاح سيارتك على الفور "
                   : "Call us and pray to fix your car immediately"}
               </p>
-              <a
-                href="javascript:void(0);"
+              <button
+                onClick={()=>{
+                  setShow(true)
+                }}
                 className="btn btn-primary text-uppercase px-8 py-3 fwEbold"
               >
                 {i18next.language == "ar" ? "احجز الآن" : "Book now"}
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ export default function About() {
             <div className="imgHolder mx-auto mt-md-2 mt-lg-0 mr-md-0 mt-md-0 ml-md-n32 float-lg-right">
               <img
                 src="images/img28.png"
-                alt="image description"
+                alt="image description" 
                 className="img-fluid"
                 data-aos="fade-right"
               />

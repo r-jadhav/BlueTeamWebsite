@@ -19,7 +19,7 @@ const content = [
     title2: "easy for you",
     description:
       "BlueTeam provides you with all services you need including car wash, polishing, and maintenance. All at one stop!!",
-    src: "images/img03.jpg",
+    src: "images/imgslider03.jpg",
     type: "image",
   },
   {
@@ -27,7 +27,7 @@ const content = [
     title2: "services",
     description:
       "As quickly as possible, we will reach you and deliver high-quality service for your car.",
-    src: "images/img02.jpg",
+    src: "images/imgslider02.jpg",
     type: "image",
   },
 ];
@@ -38,7 +38,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  duration: 5000,
+  duration: 4000,
   // speed: 5000,
 };
 

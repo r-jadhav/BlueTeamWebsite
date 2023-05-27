@@ -11,7 +11,7 @@ import moment from "moment/moment";
 
 const Contact = () => {
   const { t } = useTranslation();
-  const [value, setValue] = React.useState();
+  const [value, setValue] = React.useState('');
 
   const [values, setValues] = React.useState({
     wc_name: "",
@@ -26,7 +26,7 @@ const Contact = () => {
   }, []);
   const analytics = getAnalytics();
   const submitContact = () => {
-    if (value == "" || value.length != 11) {
+    if (value == "" || value.length > 16) {
       message("Please Enter Valid Phone Number", "warning");
     } else {
       if (values.name == "") {
@@ -201,7 +201,7 @@ const Contact = () => {
                             href="tel:025555292"
                             className="tell"
                           >
-                            +971-502-000-787
+                            025-555-292
                           </a>
                         </li>
                       </ul>

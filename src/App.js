@@ -12,12 +12,25 @@ import Contact from './pages/Contact';
 import Membership from './pages/Membership';
 import Packages from './pages/Packages';
 import PackagesDetails from './pages/PackagesDetails';
-
+import api from './constant/api';
+import React from "react"
 const App = () => {
+  const [services, setService] = React.useState();
+  const getServices = () => {
+    api
+      .get("/service/getServicecategory")
+      .then((res) => {
+        setService(res.data.data);
+      })
+  };
+  React.useEffect(() => {
+    getServices()
+  }, [])
+  
   return (
    <>
   <Router>
-    <Header/>
+    <Header services={services}/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="aboutus" element={<AboutUs/>} />
@@ -27,8 +40,8 @@ const App = () => {
         <Route path="terms-condition" element={<TermsCondition/>}/>
         <Route path="contactus" element={<Contact/>}/>
         <Route path="membership" element={<Membership/>}/>
-        <Route path="packages/:id" element={<Packages/>}/>
-        <Route path="packages-details/:id" element={<PackagesDetails/>}/>
+        <Route path="packages" element={<Packages/>}/>
+        <Route path="packages-details" element={<PackagesDetails/>}/>
       </Routes>
     <Footer/>
   </Router>

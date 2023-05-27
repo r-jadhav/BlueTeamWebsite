@@ -4,8 +4,10 @@ import ReactFlagsSelect from "react-flags-select";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { getAnalytics, logEvent } from "firebase/analytics";
+import BookingEnquiry from "./Home/BookingEnquiry";
+import api from "../constant/api";
 
-const Header = () => {
+const Header = ({services}) => {
   const { t } = useTranslation();
   const analytics = getAnalytics();
   const [select, setSelect] = useState("AR");
@@ -13,15 +15,20 @@ const Header = () => {
     setSelect(code);
     if (code == "AR") {
       i18next.changeLanguage("ar");
-      $('.navCollapse .nav-item .nav-link').css({"font-size":"20px","font-family":"'Cairo', sans-serif;"});
     } else {
       i18next.changeLanguage("en");
-      $('.navCollapse .nav-item .nav-link').css({"font-size":"15px"});
     }
   };
+ 
+  const [show, setShow] = React.useState(false);
 
+  
+  
   return (
     <>
+    <BookingEnquiry category={services}
+        show={show}
+        setShow={setShow}></BookingEnquiry>
       <header id="header" className="bg-white">
         <div className="midBar pt-2 pt-lg-6 pb-lg-6 pt-xl-8 pb-xl-7">
           <div className="container">
@@ -71,7 +78,7 @@ const Header = () => {
                   <li className="d-flex flex-wrap">
                     <span className="ico d-block mr-lg-2 pt-lg-2">
                       <a
-                        href="tel:1-800-123-4567"
+                        href="tel:+9718002827"
                         className="fas fa-phone rounded-sm p-lg-0 icn"
                       ></a>
                     </span>
@@ -83,21 +90,22 @@ const Header = () => {
                       </span>
                       <a onClick={()=>{
                         logEvent(analytics, "header_call_button");
-                      }} className="tell fwSemibold" href="tel:+971 800 2827">
-                        +971 800 2827
+                      }} className="tell fwSemibold" href="tel:025555292">
+                        025-555-292
                       </a>
                     </div>
                   </li>
                 </ul>
                 <div className="btnHolder ml-xl-8 d-none d-md-block">
-                  <a
-                    href="#"
+                  <button
+                    onClick={()=>{
+                      setShow(true)
+                    }}
                     className="btn btn-warning py-xl-4 text-uppercase fwEbold"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
+                    
                   >
                     {t("book-Appoint")}
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -122,7 +130,7 @@ const Header = () => {
                   </a>
                 </div>
                 <a
-                  href="javascript:void(0);"
+                  href="#"
                   className="search position-relative order-lg-2 fas fa-search"
                   data-toggle="collapse"
                   data-target="#collapseExample"

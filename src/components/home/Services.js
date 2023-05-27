@@ -1,10 +1,11 @@
 import i18next from "i18next";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { createSearchParams, useNavigate } from "react-router-dom";
 
 export default function Services({ services }) {
   const { t } = useTranslation();
-
+  const navigate = useNavigate()
   return (
     <section className="wsisSec pt-6 pt-lg-6 pb-4">
       <div className="container-fluid">
@@ -20,8 +21,19 @@ export default function Services({ services }) {
           {services?.map((ele) => {
             return (
               <div
+              style={{cursor:'pointer'}}
                 className="col-12 col-md-6 col-lg-2 d-flex justify-content-center"
                 key={ele.service_category_id}
+                onClick={()=>{
+                  localStorage.setItem('cat_name',ele.service_category_name_ar)
+                  navigate({
+                    pathname: "/packages",
+                    search: createSearchParams({
+                      id: ele.service_category_id,
+                    }).toString(),
+                    
+                  });
+                }}
               >
                 <div className="sBlock mb-8 mb-lg-11 text-center text-md-left">
                   <div className="imgHolder overflow-hidden position-relative mx-auto">

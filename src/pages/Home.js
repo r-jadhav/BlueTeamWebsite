@@ -20,11 +20,14 @@ const Home = () => {
   const [show, setShow] = React.useState(false);
 
   const getServices = () => {
-    api.get("/service/getServicecategory").then((res) => {
-      setService(res.data.data);
-    }).catch(()=>{
-      message("Please Check your internet Connection", "error");
-    });
+    api
+      .get("/service/getServicecategory")
+      .then((res) => {
+        setService(res.data.data);
+      })
+      .catch(() => {
+        message("Please Check your internet Connection", "error");
+      });
   };
 
   React.useEffect(() => {
@@ -35,10 +38,13 @@ const Home = () => {
 
   return (
     <>
-    <BookingEnquiry category={services} show={show} setShow={setShow}></BookingEnquiry>
+      <BookingEnquiry
+        category={services}
+        show={show}
+        setShow={setShow}
+      ></BookingEnquiry>
       <div id="pageWrapper">
         <main>
-         
           <Banner setShow={setShow} />
           <WhyChooseUs></WhyChooseUs>
 
@@ -50,20 +56,19 @@ const Home = () => {
                 <h3 className="h4 text-white fwSemibold mb-4 mb-md-0">
                   {t("book-Appoint-head")}
                 </h3>
-                <a
-                  href="#"
-                  data-toggle="modal"
-                  data-aos="flip-up"
-                  data-target="#exampleModal"
+                <button
+                  onClick={() => {
+                    setShow(true);
+                  }}
                   className="btn btn-primary fwEbold text-uppercase py-3 py-lg-4 ml-md-4 ml-lg-6"
                 >
                   {t("book-Appoint")}
-                </a>
+                </button>
               </div>
             </div>
           </aside>
 
-         <About></About>
+          <About></About>
 
           <aside className="dscntclb bgTheme pt-6 pb-7">
             <div className="container">
@@ -87,7 +92,39 @@ const Home = () => {
               </div>
             </div>
           </aside>
-
+          <aside
+            className="dscntcSec position-relative d-flex bgCover overlay"
+            style={{ backgroundImage: `url(images/img08.jpg)` }}
+          >
+            <div className="alignCenter w-100 d-flex align-items-center">
+              <div className="container py-12 py-18 d-flex justify-content-end">
+                <div className="discountOverClub text-center bg-white rounded py-6 px-4 p-sm-6 p-lg-10 pb-lg-11 position-relative">
+                  <h4 className="headingIV text-capitalize font-weight-bold mb-3">
+                    Ready to serve your car anytime at BlueTeam workstation
+                  </h4>
+                  <p>
+                    BlueTeam workstation is equipped with the latest car care
+                    equipment and tools to serve your car starting with washing
+                    and ending with maintenance. You can visit our workstation
+                    for any of our services at Mussafah M14 Shop 3 and 4- Abu
+                    Dhabi- United Arab Emirates, at any of the following times:
+                    From Monday to Saturday: 6:00 am - 3:00 pm Sunday: 6:00 am -
+                    3:00 pm
+                  </p>
+                  <a
+                    type="button"
+                    href="tel:025555292"
+                    className="btn btnTheme text-uppercase fwEbold py-2"
+                  >
+                    <span className=" mr-1 mr-lg-2">
+                      <Icon fontSize={15} icon="ic:round-phone"></Icon>
+                    </span>
+                    Call Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </aside>
           <section className="kyccSec pt-10 pt-sm-12 pt-md-16 pt-lg-19 ">
             <div className="container">
               <div className="row">
