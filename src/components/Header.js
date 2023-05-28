@@ -5,7 +5,6 @@ import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import BookingEnquiry from "./Home/BookingEnquiry";
-import api from "../constant/api";
 
 const Header = ({services}) => {
   const { t } = useTranslation();
@@ -23,6 +22,8 @@ const Header = ({services}) => {
   const [show, setShow] = React.useState(false);
   const menuClassName = `navbar-toggler toggleBar position-relative ${i18next.language === 'ar' ? 'left' : 'right'}`;
   
+  const closeMenu = `${menuClassName} nav-link`
+
   return (
     <>
     <BookingEnquiry category={services}
@@ -137,7 +138,7 @@ const Header = ({services}) => {
                   aria-controls="collapseExample"
                 ></a>
                 <button
-                  className={menuClassName}
+                  className={closeMenu}
                   type="button"
                   data-toggle="collapse"
                   data-target="#navbarNav"
@@ -153,37 +154,72 @@ const Header = ({services}) => {
                 >
                   <ul className="navbar-nav">
                     <li className="nav-item active dropdown">
-                      <NavLink to="/" className="nav-link">
+                      <NavLink to="/"
+                      className={closeMenu}
+                      data-toggle="collapse"
+                      data-target="#navbarNav"
+                      id="border"
+                      >
                         {t("home")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/aboutus" className="nav-link">
+                      <NavLink to="/aboutus"
+                        className={closeMenu}
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        id="border"
+                      >
                         {t("AboutHeading")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/services" className="nav-link">
+                      <NavLink to="/services"
+                        className={closeMenu}
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        id="border"
+                      >
                         {t("Services")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/membership" className="nav-link">
+                      <NavLink to="/membership"
+                        className={closeMenu}
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        id="border"
+                      >
                         {t("Membership-Cards")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/mobilefleetmanagement" className="nav-link">
+                      <NavLink to="/mobilefleetmanagement"
+                        className={closeMenu}
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        id="border"
+                      >
                         {t("mobilefleetmanagement")}
                       </NavLink>
                     </li>
                     <li className="nav-item dropdown">
-                      <NavLink to="/faq" className="nav-link">
+                      <NavLink to="/faq"
+                        className={closeMenu}
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        id="border"
+                      >
                         {t("faq")}
                       </NavLink>
                     </li>
                     <li className="nav-item dropdown">
-                      <NavLink to="/contactus" className="nav-link">
+                      <NavLink to="/contactus"
+                         className={closeMenu}
+                         data-toggle="collapse"
+                         data-target="#navbarNav"
+                         id="border"
+                      >
                         {t("contact-us")}
                       </NavLink>
                     </li>
@@ -196,8 +232,6 @@ const Header = ({services}) => {
                   selected={select}
                   customLabels={{ GB: "English", AE: "عربي" }}
                   placeholder={t("language")}
-                  
-                  
                 />
               </nav>
             </div>
