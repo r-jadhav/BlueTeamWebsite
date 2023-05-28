@@ -77,17 +77,10 @@ const Home = () => {
                   <Icon icon="bxs:offer" fontSize={50} color="#fff"></Icon>
                 </span>
                 <h3 className="h5 mb-0 font-weight-normal text-white fIStyle">
-                  Enjoy BlueTeam's
-                  <strong className="font-weight-bold">
-                    {" "}
-                    Special Membership{" "}
-                  </strong>{" "}
-                  Packages{" "}
+                  {t("Special_Membership")}
                 </h3>
                 <p>
-                  You will get a Discount on any of our services through
-                  BlueTeam's membership cards. Look at the membership card
-                  packages and get great deals.{" "}
+                {t("Special_Membership_des")}
                 </p>
               </div>
             </div>
@@ -100,16 +93,10 @@ const Home = () => {
               <div className="container py-12 py-18 d-flex justify-content-end">
                 <div className="discountOverClub text-center bg-white rounded py-6 px-4 p-sm-6 p-lg-10 pb-lg-11 position-relative">
                   <h4 className="headingIV text-capitalize font-weight-bold mb-3">
-                    Ready to serve your car anytime at BlueTeam workstation
+                    {t("Workstation")}
                   </h4>
                   <p>
-                    BlueTeam workstation is equipped with the latest car care
-                    equipment and tools to serve your car starting with washing
-                    and ending with maintenance. You can visit our workstation
-                    for any of our services at Mussafah M14 Shop 3 and 4- Abu
-                    Dhabi- United Arab Emirates, at any of the following times:
-                    From Monday to Saturday: 6:00 am - 3:00 pm Sunday: 6:00 am -
-                    3:00 pm
+                    {t("Workstation_des")}
                   </p>
                   <a
                     type="button"
@@ -119,7 +106,7 @@ const Home = () => {
                     <span className=" mr-1 mr-lg-2">
                       <Icon fontSize={15} icon="ic:round-phone"></Icon>
                     </span>
-                    Call Now
+                    {t("call_now")}
                   </a>
                 </div>
               </div>

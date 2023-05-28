@@ -178,7 +178,7 @@ function BookingEnquiry({
                 <input
                   type="text"
                   className="form-control rounded"
-                  placeholder="Full Name"
+                  placeholder={t("Full_Name")}
                   name="we_name"
                   onChange={handleInputs}
                 />
@@ -187,7 +187,7 @@ function BookingEnquiry({
                 <input
                   type="text"
                   className="form-control rounded"
-                  placeholder="Phone Number"
+                  placeholder={t("phone_no")}
                   name="we_phone"
                   onChange={handleInputs}
                 />
@@ -209,7 +209,7 @@ function BookingEnquiry({
                 <textarea
                   className="form-control rounded"
                   name="we_notes"
-                  placeholder="Notes"
+                  placeholder={t("Notes")}
                   onChange={handleInputs}
                 ></textarea>
               </Col>

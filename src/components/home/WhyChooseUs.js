@@ -94,10 +94,10 @@ export default function WhyChooseUs() {
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Estimations
+                  {t('Estimations')}
                 </h5>
                 <p>
-                  We offer you the most accurate & fair car wash price estimates
+                  {t('Estimations_des')}
                 </p>
               </div>
             </div>
@@ -113,11 +113,10 @@ export default function WhyChooseUs() {
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Trust
+                  {t('Trust')}
                 </h5>
                 <p>
-                  Reliable team, which is certified for high-quality
-                  performance.
+                  {t('Trust_des')}
                 </p>
               </div>
             </div>
@@ -133,9 +132,9 @@ export default function WhyChooseUs() {
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Warranties
+                  {t('Warranties')}
                 </h5>
-                <p>Clean, polish, and wax anywhere, anytime.</p>
+                <p>{t('Warranties_des')}</p>
               </div>
             </div>
           </div>

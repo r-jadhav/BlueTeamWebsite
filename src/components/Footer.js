@@ -364,7 +364,7 @@ const Footer = () => {
             <div className="col-12 col-sm-6 col-lg-4 d-md-flex mb-sm-4 mb-lg-0 text-center-mobile">
               <div className="txtHolder w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
-                  contact info
+                  {t("contact_info")}
                 </h6>
                 <address className="mb-0">
                   <ul className="contList2 list-unstyled mb-0 justify-content-center">

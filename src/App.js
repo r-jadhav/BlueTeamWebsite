@@ -13,6 +13,7 @@ import Membership from './pages/Membership';
 import Packages from './pages/Packages';
 import PackagesDetails from './pages/PackagesDetails';
 import api from './constant/api';
+import MobileFleetManagement from './pages/MobileFleetManagement';
 import React from "react"
 import { useTranslation } from 'react-i18next';
 
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="membership" element={<Membership/>}/>
         <Route path="packages" element={<Packages/>}/>
         <Route path="packages-details" element={<PackagesDetails/>}/>
+        <Route path="mobilefleetmanagement" element={<MobileFleetManagement/>}/>
       </Routes>
     <Footer/>
   </Router>

@@ -90,7 +90,7 @@ const Contact = () => {
                     <div className="formRoW d-flex flex-Wrap">
                       <div className="formCol form-group">
                         <label className="text-capitalize" for="contactName">
-                          Your Name
+                          {t("Full_Name")}
                         </label>
                         <input
                           type="text"
@@ -102,7 +102,7 @@ const Contact = () => {
                       </div>
                       <div className="formCol form-group">
                         <label className="text-capitalize" for="contactPhone">
-                          phone number
+                          {t("phone_no")}
                         </label>
 
                         <Input
@@ -110,7 +110,7 @@ const Contact = () => {
                           country="AE"
                           international
                           withCountryCallingCode
-                          placeholder="Enter phone number"
+                          placeholder={t("phone_no")}
                           value={value}
                           onChange={setValue}
                         />
@@ -133,7 +133,7 @@ const Contact = () => {
                     </div>
                     <div className="form-group">
                       <label className="text-capitalize" for="contactSubject">
-                        subject
+                        {t("Subject")}
                       </label>
                       <select
                         name="wc_subject"
@@ -141,15 +141,15 @@ const Contact = () => {
                         className="custom-select"
                         id="contactSubject"
                       >
-                        <option>Reason for contact</option>
+                        <option> {t("Reason_for_contact")}</option>
                         <option value="On Site Car Service">
-                          On Site Car Service
+                        {t("On_Site_Car_Service")} On Site Car Service
                         </option>
                         <option value="WorkStation Service">
-                          WorkStation Service
+                        {t("WorkStation_Service")}
                         </option>
-                        <option value="Support">Support</option>
-                        <option value="Other">Other</option>
+                        <option value="Support"> {t("Support")}</option>
+                        <option value="Other"> {t("Other")}</option>
                       </select>
                     </div>
                     <div className="form-group">

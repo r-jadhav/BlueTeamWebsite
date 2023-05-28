@@ -172,6 +172,11 @@ const Header = ({services}) => {
                         {t("Membership-Cards")}
                       </NavLink>
                     </li>
+                    <li className="nav-item">
+                      <NavLink to="/mobilefleetmanagement" className="nav-link">
+                        {t("mobilefleetmanagement")}
+                      </NavLink>
+                    </li>
                     <li className="nav-item dropdown">
                       <NavLink to="/faq" className="nav-link">
                         {t("faq")}
@@ -190,19 +195,10 @@ const Header = ({services}) => {
                   countries={["GB", "AE"]}
                   selected={select}
                   customLabels={{ GB: "English", AE: "عربي" }}
-                  placeholder="Language"
+                  placeholder={t("language")}
                   
                   
                 />
-
-                {/* <div id="collapseExample" className="collapse searchFormCollapse position-absolute">
-                            <form className="sForm rounded-sm overflow-hidden input-group position-relative">
-                                <input type="text" className="form-control form-control-sm pr-2" placeholder="Find Freelancers"/>
-                                <div className="input-group-prepend mr-0">
-                                    <button type="submit" className="btn buttonReset text-white fas fa-search"></button>
-                                </div>
-                            </form>
-                        </div> */}
               </nav>
             </div>
           </div>

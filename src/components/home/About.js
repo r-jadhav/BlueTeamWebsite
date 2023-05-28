@@ -9,7 +9,7 @@ export default function About() {
         <div className="row">
           <div className="col-12">
             <div className="header ltrSpce text-center mb-10 mb-xl-11">
-              <h1 className="headingI fwEbold mb-2 mb-xl-4">About Blue Team</h1>
+              <h1 className="headingI fwEbold mb-2 mb-xl-4">{t("About_Blue_Team")}</h1>
               <p className="psudo">{t("about_subheading")}</p>
             </div>
           </div>

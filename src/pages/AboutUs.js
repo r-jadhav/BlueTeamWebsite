@@ -1,6 +1,4 @@
 import React from "react";
-import { BsStopwatch, BsTypeH3 } from "react-icons/bs";
-import { AiOutlineLike, AiOutlineProfile } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -144,8 +142,6 @@ const AboutUs = () => {
           </ul>
         </div>
       </aside>
-    
-
       <aside
         className="dscntcSec position-relative d-flex bgCover overlay"
         style={{ backgroundImage: `url(images/img08.jpg)` }}
