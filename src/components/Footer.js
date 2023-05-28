@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Icon } from "@iconify/react";
 import { getAnalytics, logEvent } from "firebase/analytics";
-import api from '../constant/api'
+import api from "../constant/api";
 import message from "../constant/Message";
 
 const Footer = () => {
@@ -16,34 +16,36 @@ const Footer = () => {
     floating: "True",
   };
   const handleEnd = ({ steps, values }) => {
-    api.post('/website/addBookingEnquiry',{
-      we_category:values[0],
-      we_package:values[1],
-      we_date:'',
-      we_time:'',
-      we_name:values[2],
-      we_phone:values[3],
-      we_email:'',
-      we_status:'0',
-      we_done_by:'',
-      we_amount:'',
-      we_type:''
-    }).then(res=>{
-      if(res.status == 200){
-        message(
-          "Thanks For Contacting Us. Our 24*7 support will reach you soon",
-          "success"
-        );
-        setTimeout(() => {
-          window.location.reload()
-        }, 600);
-       
-      }else{
-        message('Try Again Later','warning')
-      }
-    }).catch(err=>{
-      message("Please Check your internet Connection", "error");
-    })
+    api
+      .post("/website/addBookingEnquiry", {
+        we_category: values[0],
+        we_package: values[1],
+        we_date: "",
+        we_time: "",
+        we_name: values[2],
+        we_phone: values[3],
+        we_email: "",
+        we_status: "0",
+        we_done_by: "",
+        we_amount: "",
+        we_type: "",
+      })
+      .then((res) => {
+        if (res.status == 200) {
+          message(
+            "Thanks For Contacting Us. Our 24*7 support will reach you soon",
+            "success"
+          );
+          setTimeout(() => {
+            window.location.reload();
+          }, 600);
+        } else {
+          message("Try Again Later", "warning");
+        }
+      })
+      .catch((err) => {
+        message("Please Check your internet Connection", "error");
+      });
     console.log(steps);
     console.log(values);
   };
@@ -189,7 +191,7 @@ const Footer = () => {
       id: "11",
       message: "Thanks for contacting. Our 24*7 service will reach out soon",
       end: true,
-    }
+    },
   ]);
 
   return (
@@ -225,7 +227,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="tel:025555292" className="tell">
-                      025-555-292
+                        025-555-292
                       </a>
                     </li>
                   </ul>
@@ -292,7 +294,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
+            <div className="col-12 col-sm-6 col-lg-2 d-md-flex mb-8 mb-sm-4 mb-lg-0">
               <div className="w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
                   {i18next.language == "ar" ? "المواقع" : "Location pages"}
@@ -366,7 +368,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-sm-4 mb-lg-0">
+            <div className="col-12 col-sm-6 col-lg-4 d-md-flex mb-sm-4 mb-lg-0">
               <div className="txtHolder w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
                   contact info
@@ -381,16 +383,19 @@ const Footer = () => {
                           fontSize={30}
                         />
                       </div>
-                      <div className="wrap">
-                        <span className="d-block mb-lg-1 text-dark">
-                          {i18next.language == "ar"
+                      <ul className="list-unstyled mb-0">
+                        <li className="mb-1 text-dark">
+                        {i18next.language == "ar"
                             ? "اتصل بنا في أي وقت"
                             : "Call us anytime:"}{" "}
-                        </span>
+                        </li>
+                        <li >
                         <a href="tel:025-555-292" className="text-dark">
-                        025-555-292
+                          025-555-292
                         </a>
-                      </div>
+                        </li> 
+                      </ul>
+                     
                     </li>
                     <li className="d-flex mb-6">
                       <div className="ico pr-3 flex-shrink-0 d-flex align-items-center">

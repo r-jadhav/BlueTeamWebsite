@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import { Icon } from "@iconify/react";
 import { getAnalytics, logEvent } from "firebase/analytics";
-import api from "../constant/api"; 
+import api from "../constant/api";
 import Input from "react-phone-number-input/input";
 import message from "../constant/Message";
 import { ToastContainer } from "react-toastify";
@@ -11,7 +11,7 @@ import moment from "moment/moment";
 
 const Contact = () => {
   const { t } = useTranslation();
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = React.useState("");
 
   const [values, setValues] = React.useState({
     wc_name: "",
@@ -45,7 +45,7 @@ const Contact = () => {
                   "success"
                 );
                 setTimeout(() => {
-                  window.location.reload()
+                  window.location.reload();
                 }, 2500);
               } else {
                 message("Try Again Later", "error");
@@ -169,7 +169,6 @@ const Contact = () => {
                         className="btn btn-warning text-uppercase fwEbold"
                         onClick={() => {
                           submitContact();
-                          
                         }}
                       >
                         {i18next.language == "ar"
@@ -181,7 +180,7 @@ const Contact = () => {
                 </div>
                 <div className="col-12 col-md-4 alignRight">
                   <ul className="contSideList list-unstyled mb-8 mb-lg-11 pt-md-1">
-                    <li className="d-flex">
+                    {/* <li className="d-flex">
                       <div className="ico mr-2 mr-lg-3 mt-1">
                         <Icon
                           icon="solar:phone-outline"
@@ -205,6 +204,55 @@ const Contact = () => {
                           </a>
                         </li>
                       </ul>
+                    </li> */}
+                    {/* <li className="d-flex mb-3">
+                      <div className="ico mr-2 mr-lg-3 mt-1">
+                        <Icon
+                          icon="solar:phone-outline"
+                          color="#0b4b8a"
+                          fontSize={50}
+                        />
+                      </div>
+                      <div className="tmeWrap">
+                        <h2 className="headingXI text-capitalize fwSemibold mb-2">
+                          {i18next.language == "ar"
+                            ? "اتصل بنا في أي وقت"
+                            : "Call us anytime:"}{" "}
+                        </h2>
+                        <ul className="list-unstyled tmeList mb-0">
+                          <li className="mb-1">
+                            <a
+                              style={{ color: "#0b4b8a" }}
+                              href="tel:025555292"
+                              className="tell"
+                            >
+                              025-555-292
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li> */}
+                      <li className="d-flex">
+                      <div className="ico mr-2 mr-lg-3 mt-1">
+                        <Icon
+                          icon="solar:phone-outline"
+                          color="#0b4b8a"
+                          fontSize={50}
+                        />
+                      </div>
+                      <div className="addressWrap">
+                        <h2 className="headingXI text-capitalize fwSemibold mb-2">
+                        {i18next.language == "ar"
+                            ? "اتصل بنا في أي وقت"
+                            : "Call us anytime:"}{" "}
+                        </h2>
+                        <ul className="list-unstyled mb-0">
+                          <li className="mb-1">
+                          025-555-292
+                          </li>
+                          
+                        </ul>
+                      </div>
                     </li>
                     <li className="d-flex">
                       <div className="ico mr-2 mr-lg-3 mt-1">

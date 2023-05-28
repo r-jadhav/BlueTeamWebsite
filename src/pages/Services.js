@@ -57,6 +57,7 @@ const Services = () => {
                       padding: 20,
                       justifyContent: "center",
                       boxSizing: "border-box",
+                      width:'100%'
                     }}
                   >
                     <div className="imgHolder overflow-hidden mb-5 position-relative mx-auto d-flex justify-content-center">
@@ -74,7 +75,7 @@ const Services = () => {
                           : ele.service_category_name_en}
                       </p>
                     </h2>
-                    <p>We do all kinds of polishing and ceramics</p>
+                    {/* <p>We do all kinds of polishing and ceramics</p> */}
                     <span className="readMore fwEbold text-uppercase">
                       {i18next.language == "ar"
                         ? "اطلع على الباقات"

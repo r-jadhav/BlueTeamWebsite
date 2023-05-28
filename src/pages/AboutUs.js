@@ -144,60 +144,7 @@ const AboutUs = () => {
           </ul>
         </div>
       </aside>
-      <aside className="pt-10 pt-sm-12 pb-6 pb-md-8 pt-md-14 pt-lg-16 pb-xl-10">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-              <div className="header text-center ltrSpce mb-8 mb-sm-10 mb-xl-15">
-                <h2 className="headingI fwEbold mb-2 mb-md-3 mb-lg-4">
-                  We offer Distinguished service{" "}
-                </h2>
-                <p>
-                  We have partnered with Turtlewax to provide you with the most
-                  advanced fair price estimates
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-12 col-md-6 col-lg-4">
-              <article className="text-center px-lg-2 px-xl-5 hlpcBlock mb-6">
-                <span className="icoHolder mb-3 mb-xl-4 mx-auto rounded-circle d-flex align-items-center justify-content-center">
-                  <AiOutlineProfile color="#0b4b8a" size={40} />
-                </span>
-                <h2 className="headingIX fwSemibold mb-1">Estimations</h2>
-                <p>
-                  We offer you the most accurate & fair car wash price estimates
-                </p>
-                {/* <a href="location.html" className="btn btn-light text-uppercase font-weight-bold py-3">find location</a> */}
-              </article>
-            </div>
-            <div className="col-12 col-md-6 col-lg-4">
-              <article className="text-center px-lg-2 px-xl-5 hlpcBlock mb-6">
-                <span className="icoHolder mb-3 mb-xl-4 mx-auto rounded-circle d-flex align-items-center justify-content-center">
-                  <AiOutlineLike color="#0b4b8a" size={40} />
-                </span>
-                <h2 className="headingIX fwSemibold mb-1">Trust</h2>
-                <p>
-                  Reliable team, which is certified for high-quality
-                  performance.
-                </p>
-                {/* <a href="Unlimited%20Wash%20Club.html" className="btn btn-light text-uppercase font-weight-bold py-3">JOIN WASH CLUB</a> */}
-              </article>
-            </div>
-            <div className="col-12 col-md-6 col-lg-4">
-              <article className="text-center px-lg-2 px-xl-5 hlpcBlock mb-6">
-                <span className="icoHolder mb-3 mb-xl-4 mx-auto rounded-circle d-flex align-items-center justify-content-center">
-                  <BsStopwatch color="#0b4b8a" size={40} />
-                </span>
-                <h2 className="headingIX fwSemibold mb-1">Warranties</h2>
-                <p>Clean, polish, and wax anywhere, anytime.</p>
-                {/* <a href="javascript:void(0);" className="btn btn-light text-uppercase font-weight-bold py-3">Go to Store</a> */}
-              </article>
-            </div>
-          </div>
-        </div>
-      </aside>
+    
 
       <aside
         className="dscntcSec position-relative d-flex bgCover overlay"

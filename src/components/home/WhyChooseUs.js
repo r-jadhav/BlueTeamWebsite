@@ -1,19 +1,21 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { useTranslation } from "react-i18next";
 
 export default function WhyChooseUs() {
+  const { t } = useTranslation();
   return (
     <section className="chooseSec pb-6">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="header text-center font-weight-light mb-11">
-              <h3 className="h3 fwEbold mb-4 pt-12"> Why Choose Us? </h3>
+              <h3 className="h3 fwEbold mb-4 pt-12"> {t('why_choose_us')} </h3>
               <p className="psudo">
-                Here’s Why our product beats all other competitors in market.
+                {t('why_choose_us_subhead')}
               </p>
             </div>
-          </div>
+          </div> 
         </div>
         <div
           className="row"

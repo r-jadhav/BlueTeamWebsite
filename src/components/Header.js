@@ -188,10 +188,12 @@ const Header = ({services}) => {
 
                 <ReactFlagsSelect
                   onSelect={onSelect}
-                  countries={["GB", "AR"]}
+                  countries={["GB", "AE"]}
                   selected={select}
-                  customLabels={{ GB: "EN", AR: "AR" }}
+                  customLabels={{ GB: "English", AE: "عربي" }}
                   placeholder="Language"
+                  
+                  
                 />
 
                 {/* <div id="collapseExample" className="collapse searchFormCollapse position-absolute">

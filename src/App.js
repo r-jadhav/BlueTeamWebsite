@@ -14,7 +14,11 @@ import Packages from './pages/Packages';
 import PackagesDetails from './pages/PackagesDetails';
 import api from './constant/api';
 import React from "react"
+import { useTranslation } from 'react-i18next';
+
 const App = () => {
+  const { t, i18n } = useTranslation();
+  document.body.dir = i18n.dir();
   const [services, setService] = React.useState();
   const getServices = () => {
     api
