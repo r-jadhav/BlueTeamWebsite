@@ -25,7 +25,7 @@ const Services = () => {
       <section className="wsisSec pt-12 pt-lg-16 pb-4">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+            <div className="col-12">
               <div className="header ltrSpce text-center mb-10 mb-xl-11">
                 <h3 className="headingI fwEbold mb-2 mb-xl-4 h3">
                   {i18next.language == "ar" ? "الفئات" : "Categories "}

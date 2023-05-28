@@ -1,7 +1,7 @@
 {
     "english":"إنجليزي",
     "Arabic":"عربي",
-    "home":"بيت",
+    "home":"الرئيسية",
     "AboutHeading":"عن الشركة ",
     "Services":"خدماتنا",
     "Membership-Cards":" بطاقات العضوية",
@@ -9,6 +9,12 @@
     "contact-us":"تواصل معنا",
     "book-Appoint":"احجز موعد ",
     "book-Appoint-head":"نظام حجز مواعيد الكتروني سهل الاستخدام",
+    "book_Enq": "معلومات الحجز",
+    "book_now":"اتصل الآن",
+    "category":"الفئة",
+    "package":"الباقة",
+    "book&send":"احجز وأرسل",
+    "view_details":"انظر التفاصيل",
     "gallery_main_head":"حافظ على سيارتك نظيفة كل يوم من أيام السنة!",
     "gallery_sub_head":"انظر إلى معرض الصور الخاص بنا",
     "About_sub_Heading":"بلوتيم ١١ عاماً من الخبرة",
@@ -87,7 +93,7 @@
     ,"Modifications-to-this-Privacy-Policy-des":"قد نقوم بتحديث بيان الخصوصية هذا ليوائم التغييرات التي تطرأ على الممارسات الخاصة بالمعلومات لدينا. إذا قمنا بإجراء أي تغييرات جوهرية ، فسنعلمك عبر البريد الإلكتروني (يتم إرساله إلى عنوان البريد الإلكتروني المحدد في حسابك) أو عن طريق إشعار على هذا الموقع قبل أن يصبح التغيير ساريًا. نحن نشجعكم على مراجعة هذه الصفحة بشكل دوري للحصول على أحدث المعلومات حول ممارسات الخصوصية الخاصة. "
     ,"TermsCondition":"الشروط والأحكام "
     ,"information-for-appointments":"البيانات اللازمة للحجز"
-    ,"information-for-appointments-des":" \n ●Customer data: customer name, customer number, and customer identification number. \n ●Vehicle data: vehicle plate numbers, vehicle form. \n ●Papers and permits related to any change to the vehicle, such as 'a permit paper to change the color or add a sticker'"
+    ,"information-for-appointments-des":" \n ● Customer data: customer name, customer number, and customer identification number. \n ●Vehicle data: vehicle plate numbers, vehicle form. \n ●Papers and permits related to any change to the vehicle, such as 'a permit paper to change the color or add a sticker'"
     ,"Maintenance":"شروط العناية والصيانة "
     ,"Important-Notes":"ملاحظات هامة:"
     ,"Important-Notes-des":""
@@ -97,5 +103,14 @@
     ,"terms-note2":" نحن نخلي مسؤوليتنا من أي كفالة لمنتجات مسوقة نوعية أو ملائمة لأي غرض كان غير المنتجات المنصوص عليه في الضمان "
     ,"category_subtitle":"سوف تجد في بلو تيم كل الخدمات التي تحتاجها لسيارتك من غسيل وصيانة وتلميع يمكنك الاطلاع على خدماتنا و الباقات المميزة لتختار الأنسب لك. "    
     ,"why_choose_us":"لم تختارنا ؟ ",
-    "why_choose_us_subhead":"إليكم سبب تفوق خدماتنا على جميع المنافسين الآخرين في السوق."
+    "why_choose_us_subhead":"إليكم سبب تفوق خدماتنا على جميع المنافسين الآخرين في السوق.",
+    "trusted_services":"خدمات موثوقة :",
+    "trusted_services_des":" نقدم لك خدمة غسيل السيارات الأكثر دقة وذات أنسب سعر على الصعيد الوطني.",
+    "organic_products":"منتجات عضوية:",
+    "organic_products_des":"سيارة نظيفة، بيئة نظيفة واستدامة. نستخدم أفضل المنتجات الصديقة للبيئة لنبقي سيارتك نظيفة ",
+    "talented_workers":"عمال موهوبين:",
+    "talented_workers_des":"لأن سرعة الخدمة تهمك بقدر ما تهمك نظافة سيارتك. يعمل عمالنا بكفاءة وسرعة عالية لتقديم أفضل خدمة ",
+    "about_subheading":"بلو تيم  أفضل خدمة غسيل سيارات في الإمارات العربية المتحدة ",
+    "service_provide":"الخدمة التي نوفرها ",
+    "service_provide_des":"لدينا أكثر من 20 عامًا من الخبرة في تقديم خدمات غسيل وصيانة السيارات  لكل من الشركات والأفراد دون المساومة على الجودة."
 }

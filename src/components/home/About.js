@@ -7,10 +7,10 @@ export default function About() {
     <section className="abtSec pt-12 pt-md-15 ">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+          <div className="col-12">
             <div className="header ltrSpce text-center mb-10 mb-xl-11">
               <h1 className="headingI fwEbold mb-2 mb-xl-4">About Blue Team</h1>
-              <p className="psudo">Best Car Wash Service in UAE</p>
+              <p className="psudo">{t("about_subheading")}</p>
             </div>
           </div>
         </div>

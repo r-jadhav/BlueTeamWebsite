@@ -35,11 +35,10 @@ export default function WhyChooseUs() {
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Trusted Services
+                  {t('trusted_services')}
                 </h5>
                 <p>
-                  We bring you the most accurate &amp; fair-price service
-                  carwash detailing service nation wide.
+                  {t('trusted_services_des')}
                 </p>
               </div>
             </div>
@@ -56,11 +55,10 @@ export default function WhyChooseUs() {
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Organic Products
+                  {t('organic_products')}
                 </h5>
                 <p>
-                  Give all your surfaces the attention they professional auto
-                  detail clean you can affordable.{" "}
+                  {t('organic_products_des')}
                 </p>
               </div>
             </div>
@@ -77,11 +75,10 @@ export default function WhyChooseUs() {
               </div>
               <div className="txtHolder">
                 <h5 className="headingIX bdrBtm position-relative text-capitalize font-weight-normal pb-4 mb-3">
-                  Talented Workers
+                  {t('talented_workers')}
                 </h5>
                 <p>
-                  Because sometimes you don’t just have the need for a clean
-                  car. You have a deeper for speed.
+                 {t('talented_workers_des')}
                 </p>
               </div>
             </div>

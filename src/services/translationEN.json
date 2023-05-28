@@ -9,6 +9,12 @@
   "contact-us": "Contact Us",
   "book-Appoint": "book an appointment",
   "book-Appoint-head": "Easy Online Carwash Booking System",
+  "book_Enq": "Book Enquiry",
+  "book_now":"Book Now",
+  "category":"Category",
+  "package":"Package",
+  "book&send":"book & Send",
+  "view_details":"View Details",
   "gallery_main_head": "Keep Your Car Clean Everyday of The Year!",
   "gallery_sub_head": "See some of Images from Our Gallery.",
   "About_sub_Heading": "Blue team 11 years of experience ",
@@ -95,6 +101,15 @@
   "terms-note2": "We disclaim any warranty for marketed products of quality or fitness for any purpose other than the products stated in the warranty",
   "category_subtitle": "In Blue Team you will find all the services you need for your car, including washing, maintenance and polishing. You can view our services and special packages to choose the perfect one for you"
   ,"why_choose_us":"Why Choose Us?",
-  "why_choose_us_subhead":"Here’s Why our services beats all other competitors in market."
+  "why_choose_us_subhead":"Here’s Why our services beats all other competitors in market.",
+  "trusted_services":"Trusted Services:",
+  "trusted_services_des":"We bring you the most accurate & fair-price service carwash detailing service nation wide.",
+  "organic_products":"Organic Products:",
+  "organic_products_des":"Clean car, clean environment, and sustainability.  We use the best environmentally friendly products to keep your car clean",
+  "talented_workers":"Talented Workers:",
+  "talented_workers_des":"Because sometimes you don’t just have the need for a clean car. You have a deeper for speed.",
+  "about_subheading":"About Blue Team Best Car Wash Service in UAE",
+  "service_provide":"Services We Provide",
+  "service_provide_des":"We have over 20 years of experience providing carwash & detail services for both Commercial and individuals without compromise quality."
 }
 

@@ -21,8 +21,7 @@ const Header = ({services}) => {
   };
  
   const [show, setShow] = React.useState(false);
-
-  
+  const menuClassName = `navbar-toggler toggleBar position-relative ${i18next.language === 'ar' ? 'left' : 'right'}`;
   
   return (
     <>
@@ -138,7 +137,7 @@ const Header = ({services}) => {
                   aria-controls="collapseExample"
                 ></a>
                 <button
-                  className="navbar-toggler toggleBar position-relative"
+                  className={menuClassName}
                   type="button"
                   data-toggle="collapse"
                   data-target="#navbarNav"

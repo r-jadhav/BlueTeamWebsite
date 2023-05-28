@@ -7,6 +7,8 @@ import api from "../../constant/api";
 import message from "../../constant/Message";
 import i18next from "i18next";
 import { ToastContainer } from "react-toastify";
+import { useTranslation } from "react-i18next";
+
 function BookingEnquiry({
   show,
   setShow,
@@ -70,12 +72,8 @@ function BookingEnquiry({
       .catch((err) => {
         message("Please Check your internet Connection", "error");
       });
-    
-    
   };
-  
-     
-     
+   
    };
   const handleInputs = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -87,6 +85,7 @@ function BookingEnquiry({
     
   }, [show])
   
+  const { t } = useTranslation();
 
   return (
     <>
@@ -97,7 +96,7 @@ function BookingEnquiry({
             <Row>
               <Col sm={11}>
                 <h4 className="mb-3 mb-xl-4 headingIX text-capitalize text-white">
-                  Book Enquiry
+                  {t("book_Enq")}
                 </h4>
               </Col>
               <Col sm={1}>
@@ -119,7 +118,7 @@ function BookingEnquiry({
                   className="form-control form-select"
                   name="we_category"
                 >
-                  <option selected>Category</option>
+                  <option selected>{t("category")}</option>
                   {category &&
                     category.map((cat) => (
                       <option
@@ -142,7 +141,7 @@ function BookingEnquiry({
                   name="we_package"
                   className="form-control form-select"
                 >
-                  <option selected>Package</option>
+                  <option selected>{t("package")}</option>
                   {packages &&
                     packages.map((pack) => (
                       <option
@@ -197,7 +196,9 @@ function BookingEnquiry({
                 <input
                   type="email"
                   className="form-control rounded"
-                  placeholder="Email Address"
+                  placeholder= {i18next.language == "ar"
+                  ? "عنوان البريد الإلكتروني "
+                  : "email address"}
                   name="we_email"
                   onChange={handleInputs}
                 />
@@ -221,7 +222,7 @@ function BookingEnquiry({
                   className="mt-5 btn btnTheme text-uppercase  w-100 fwEbold rounded border-white"
                   style={{ borderWidth: 1, borderColor: "#fff !important" }}
                 >
-                  Send & Book
+                  {t("book&send")}
                 </button>
               </Col>
             </Row>

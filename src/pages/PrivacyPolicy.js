@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
       <section className="faqWrapSec cwsSec pt-12 pt-md-15 py-md-9 pt-lg-17 pb-10 pb-lg-10 pt-xl-19 pb-xl-13">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-lg-12">
+            <div className="col-12">
               <div className="headerII ltrSpce mb-8 mb-md-10 mb-lg-12 px-md-6 px-xl-10">
                 <h3 className="h3 text-center fwEbold mb-4 mb-sm-5 mb-xl-6 mx-lg-12">
                   {t("Privacy-Policy")}

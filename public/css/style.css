@@ -1,7 +1,6 @@
 .pt-90{
     padding-top: 90px !important;
 }
-
 .stickyPhone {
     position: fixed;
     border-radius: 50%;
@@ -153,8 +152,13 @@ button:focus {
     .menuHolder {
         padding: 8px 0px!important;
     }
-    .navHolder .toggleBar {
+    .navHolder .toggleBar.left {
+        margin-right: auto !important;
+        margin-left: 10px;
+    }
+    .navHolder .toggleBar.right {
         margin-left: auto !important;
+        margin-left: 10px;
     }
     .ReactFlagsSelect-module_selectBtn__19wW7 {
         color: #4d4d4d !important;
@@ -205,10 +209,20 @@ button:focus {
         padding: 3px;
     }
     .navbar-dark .navbar-toggler {
-        border-color: #333 !important;
+        border-color: #333 !important;top: -2px !important;
     }
     .navbar-dark .navbar-toggler-icon {
         filter: grayscale(100%);
+    }
+    .text-center-mobile{
+        text-align: center;
+    }
+    .text-center-mobile ul {
+        margin: auto;
+        padding: 0;
+    }
+    .justify-content-center-mobile{
+        justify-content: center;
     }
 }
 

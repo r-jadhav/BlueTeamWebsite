@@ -11,7 +11,7 @@ const Faq = () => {
       <section className="abtWSec pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-xl-10 offset-xl-1">
+            <div className="col-12">
               <div className="header ltrSpce text-center mb-8 mb-sm-10 mb-md-12 mb-xl-14 px-lg-20 px-xl-4">
                 <h3 className="h3 fwEbold mb-2">{t("FaqMainHead")}</h3>
               </div>

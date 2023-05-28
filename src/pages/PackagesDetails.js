@@ -7,11 +7,10 @@ import { Row } from "react-bootstrap";
 import { Col } from "reactstrap";
 import api from "../constant/api";
 import BookingEnquiry from "../components/Home/BookingEnquiry";
-
-// import { useParams } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 const PackagesDetails = () => {
-  // const { id } = useParams();
+  const { t } = useTranslation();
   const location = useLocation();
   const [show, setShow] = React.useState(false);
   const [banners, setBanners] = React.useState();
@@ -46,10 +45,10 @@ const PackagesDetails = () => {
         defaultCategory={location.state.selected_cat}
         defaultPackage={location.state.sp_name_ar}
       ></BookingEnquiry>
-      <section className="mt-sm-10 serviceDetail py-10 py-sm-12 py-md-14 py-lg-16">
+      <section className="wsisSec pt-12 pt-lg-16 pb-4">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+            <div className="col-12">
               <div className="header text-center font-weight-light mb-4">
                 <h1 className="headingI text-capitalize mb-3 fwEbold">
                   {i18next.language == "ar"
@@ -69,7 +68,7 @@ const PackagesDetails = () => {
                         className="btn btnTheme text-uppercase fwEbold py-2"
                       >
                         <span className="far fa-calendar-check mr-1 mr-lg-2"></span>
-                        Book Now
+                        {t("book_now")}
                       </button>
                     </Col>
 
@@ -86,7 +85,7 @@ const PackagesDetails = () => {
                         <span className=" mr-1 mr-lg-2">
                           <Icon fontSize={15} icon="ic:round-phone"></Icon>
                         </span>
-                        Call Now
+                        {t("call_now")}
                       </a>
                     </Col>
                   </Row>

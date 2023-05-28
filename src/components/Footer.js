@@ -206,13 +206,6 @@ const Footer = () => {
               <ul className="contList list-unstyled mb-0 d-flex flex-wrap justify-content-center">
                 <li className="d-flex align-items-center mb-md-0">
                   <div className="ico mr-1">
-                    {/* <img
-                      src="images/ico16.svg"
-                      alt="images description"
-                      width="25"
-                      height="39"
-                      className="img-fluid contact-icon"
-                    /> */}
                     <Icon
                       icon="solar:phone-outline"
                       color="#fff"
@@ -270,7 +263,7 @@ const Footer = () => {
         </div>
         <div className="container pt-10 pt-lg-13">
           <div className="row">
-            <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
+            <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0 text-center-mobile">
               <div className="txtHolder w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-sm-5 mb-lg-6">
                   {t("AboutHeading")}
@@ -294,7 +287,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-2 d-md-flex mb-8 mb-sm-4 mb-lg-0">
+            <div className="col-12 col-sm-6 col-lg-2 d-md-flex mb-8 mb-sm-4 mb-lg-0 text-center-mobile">
               <div className="w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
                   {i18next.language == "ar" ? "المواقع" : "Location pages"}
@@ -328,7 +321,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0">
+            <div className="col-12 col-sm-6 col-lg-3 d-md-flex mb-8 mb-sm-4 mb-lg-0 text-center-mobile">
               <div className="w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
                   {i18next.language == "ar" ? "خدماتنا" : "Our Services"}
@@ -368,7 +361,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-4 d-md-flex mb-sm-4 mb-lg-0">
+            <div className="col-12 col-sm-6 col-lg-4 d-md-flex mb-sm-4 mb-lg-0 text-center-mobile">
               <div className="txtHolder w-100">
                 <h6 className="h6 text-capitalize fwEbold mb-4 mb-lg-6">
                   contact info

@@ -4,6 +4,7 @@ import "react-animated-slider/build/horizontal.css";
 import "../../assets/css/slider-animations.css";
 import "../../assets/css/style.css";
 import { logEvent ,getAnalytics} from "firebase/analytics";
+import { useTranslation } from "react-i18next";
 
 const content = [
   {
@@ -44,6 +45,7 @@ const settings = {
 
 function Banner({ setShow }) {
   const analytics = getAnalytics();
+  const { t } = useTranslation();
 
   return (
     <section className="bannerSec bannerSlide">
@@ -87,7 +89,7 @@ function Banner({ setShow }) {
                             }}
                             className="btn btnTheme text-uppercase fwEbold py-3 px-4 py-md-4 px-md-6"
                           >
-                            Book Now
+                            {t("book_now")}
                           </button>
                         </div>
                       </div>

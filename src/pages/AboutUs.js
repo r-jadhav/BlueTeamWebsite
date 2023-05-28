@@ -36,7 +36,7 @@ const AboutUs = () => {
       <section className="abtWSec pt-sm-12 pt-md-16 pb-6 pb-sm-4 pb-md-8 pb-lg-0 pb-xl-6">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+            <div className="col-12">
               <div className="header text-center ltrSpce mb-8 mb-sm-10 mb-xl-15">
                 <h3 className="headingI h3 fwEbold mb-2 mb-md-3 mb-lg-4">
                   {t("AboutHeading")}
