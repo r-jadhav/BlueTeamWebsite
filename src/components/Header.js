@@ -7,34 +7,38 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 import BookingEnquiry from "./Home/BookingEnquiry";
 import api from "../constant/api";
 
-const Header = ({services}) => {
+const Header = ({ services }) => {
   const { t } = useTranslation();
   const analytics = getAnalytics();
-  const [select, setSelect] = useState("AR");
+  const [select, setSelect] = useState("AE");
   const onSelect = (code) => {
     setSelect(code);
-    if (code == "AR") {
+    if (code == "AE") {
       i18next.changeLanguage("ar");
     } else {
       i18next.changeLanguage("en");
     }
   };
- 
+
   const [show, setShow] = React.useState(false);
-  const menuClassName = `navbar-toggler toggleBar position-relative ${i18next.language === 'ar' ? 'left' : 'right'}`;
-  
+  const menuClassName = `navbar-toggler toggleBar position-relative ${
+    i18next.language === "ar" ? "left" : "right"
+  }`;
+
   return (
     <>
-    <BookingEnquiry category={services}
+      <BookingEnquiry
+        category={services}
         show={show}
-        setShow={setShow}></BookingEnquiry>
+        setShow={setShow}
+      ></BookingEnquiry>
       <header id="header" className="bg-white">
         <div className="midBar pt-2 pt-lg-6 pb-lg-6 pt-xl-8 pb-xl-7">
           <div className="container">
             <div className="row">
               <div className="col-6 col-md-4">
                 <div className="logo position-relative">
-                  <a href="homepage.html">
+                  <a href="/">
                     <img
                       src="images/logo.png"
                       alt="Auto &amp; Detailing template"
@@ -87,9 +91,13 @@ const Header = ({services}) => {
                           ? "لديك سؤال؟"
                           : "Have any questions?"}
                       </span>
-                      <a onClick={()=>{
-                        logEvent(analytics, "header_call_button");
-                      }} className="tell fwSemibold" href="tel:025555292">
+                      <a
+                        onClick={() => {
+                          logEvent(analytics, "header_call_button");
+                        }}
+                        className="tell fwSemibold"
+                        href="tel:025555292"
+                      >
                         025-555-292
                       </a>
                     </div>
@@ -97,11 +105,11 @@ const Header = ({services}) => {
                 </ul>
                 <div className="btnHolder ml-xl-8 d-none d-md-block">
                   <button
-                    onClick={()=>{
-                      setShow(true)
+                    onClick={() => {
+                      logEvent(analytics, "header_booknow_button");
+                      setShow(true);
                     }}
                     className="btn btn-warning py-xl-4 text-uppercase fwEbold"
-                    
                   >
                     {t("book-Appoint")}
                   </button>
@@ -196,8 +204,6 @@ const Header = ({services}) => {
                   selected={select}
                   customLabels={{ GB: "English", AE: "عربي" }}
                   placeholder={t("language")}
-                  
-                  
                 />
               </nav>
             </div>
