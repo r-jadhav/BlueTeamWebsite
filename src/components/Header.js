@@ -21,9 +21,7 @@ const Header = ({ services }) => {
   };
 
   const [show, setShow] = React.useState(false);
-  const menuClassName = `navbar-toggler toggleBar position-relative ${
-    i18next.language === "ar" ? "left" : "right"
-  }`;
+  const menuClassName = `navbar-toggler toggleBar position-relative ${i18next.language === 'ar' ? 'left' : 'right'}`;
 
   return (
     <>
@@ -161,37 +159,51 @@ const Header = ({ services }) => {
                 >
                   <ul className="navbar-nav">
                     <li className="nav-item active dropdown">
-                      <NavLink to="/" className="nav-link">
+                      <NavLink to="/" className="nav-link"
+                      data-toggle="collapse"
+                      data-target="#navbarNav">
                         {t("home")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/aboutus" className="nav-link">
+                      <NavLink to="/aboutus" className="nav-link"
+                      data-toggle="collapse"
+                      data-target="#navbarNav">
                         {t("AboutHeading")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/services" className="nav-link">
+                      <NavLink to="/services" className="nav-link"
+                      data-toggle="collapse"
+                      data-target="#navbarNav">
                         {t("Services")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/membership" className="nav-link">
+                      <NavLink to="/membership" className="nav-link"
+                      data-toggle="collapse"
+                      data-target="#navbarNav">
                         {t("Membership-Cards")}
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink to="/mobilefleetmanagement" className="nav-link">
+                      <NavLink to="/mobilefleetmanagement" className="nav-link"
+                      data-toggle="collapse"
+                      data-target="#navbarNav">
                         {t("mobilefleetmanagement")}
                       </NavLink>
                     </li>
                     <li className="nav-item dropdown">
-                      <NavLink to="/faq" className="nav-link">
+                      <NavLink to="/faq" className="nav-link"
+                      data-toggle="collapse"
+                      data-target="#navbarNav">
                         {t("faq")}
                       </NavLink>
                     </li>
                     <li className="nav-item dropdown">
-                      <NavLink to="/contactus" className="nav-link">
+                      <NavLink to="/contactus" className="nav-link"
+                      data-toggle="collapse"
+                      data-target="#navbarNav">
                         {t("contact-us")}
                       </NavLink>
                     </li>
